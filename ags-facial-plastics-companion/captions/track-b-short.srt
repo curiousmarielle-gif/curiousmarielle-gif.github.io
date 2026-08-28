@@ -12,7 +12,7 @@ A-G-S is an acquired I-G-E mediated allergy to galactose-alpha-1,3-galactose in 
 
 4
 00:00:37,677 --> 00:00:49,513
-Entry question, all patients: compatible history? Delayed, 2 to 6 hours, urticaria, G-I symptoms, or anaphylaxis after mammalian meat; tick exposure; or residence in an endemic, lone-star tick, region.
+Entry question, all patients: compatible history? Delayed, 3 to 6 hours, urticaria, G-I symptoms, or anaphylaxis after mammalian meat; tick exposure; or residence in an endemic, lone-star tick, region.
 
 5
 00:00:49,863 --> 00:01:03,741
@@ -36,7 +36,7 @@ The C-D-C identified 90,018 suspected U.S. cases from 2017 through 2022 and esti
 
 10
 00:01:54,470 --> 00:02:04,266
-Route determines timing. Oral: delayed 2 to 6 hours. Parenteral: may be immediate. Implants can prolong exposure. Food-challenge thresholds do not establish product safety.
+Route determines timing. Oral: delayed 3 to 6 hours. Parenteral: may be immediate. Implants can prolong exposure. Food-challenge thresholds do not establish product safety.
 
 11
 00:02:04,616 --> 00:02:12,780
