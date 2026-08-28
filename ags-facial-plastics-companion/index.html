@@ -76,6 +76,21 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .plain-lang strong{display:block;margin:0 0 6px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
 .audio-note{margin:0 0 14px;font-size:15px}
 .transcript-link{display:inline-block;margin:6px 0 0;font-size:14px;font-weight:800}
+abbr{text-decoration:underline dotted;text-underline-offset:.16em;cursor:help}
+.glossary{margin:12px 0 18px;padding:14px 18px;background:var(--ivory);border:2px solid var(--ink);border-radius:8px}
+.glossary h2{margin:0 0 8px;font-size:15px;letter-spacing:.05em;text-transform:uppercase}
+.glossary dl{margin:0;display:grid;grid-template-columns:minmax(90px,140px) 1fr;gap:6px 14px;font-size:15px}
+.glossary dt{font-weight:800}
+.glossary dd{margin:0}
+.hero-actions .button.poster{background:#E69F00;color:#001F3F;border:1px solid #001F3F;letter-spacing:.08em}
+.hero-actions .button.poster:hover,.hero-actions .button.poster:focus-visible{background:#001F3F !important;color:#F0E442 !important;border-color:#F0E442 !important}
+.sr-toggle{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;margin-right:8px;border-radius:22px;border:2px solid #004D40;background:#009E73;color:#001F3F;font:inherit;font-size:14px;font-weight:800;cursor:pointer;letter-spacing:.04em;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 0 #004D40,0 6px 12px rgba(0,0,0,.25)}
+.sr-toggle:hover,.sr-toggle:focus-visible,.sr-toggle[aria-pressed="true"]{background:#004D40;color:#F0E442;border-color:#F0E442}
+.poster-toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px;align-items:center}
+.poster-frame{background:#fff;border:3px solid var(--ink);border-radius:8px;min-height:70vh;overflow:auto}
+.poster-frame object,.poster-frame iframe{display:block;width:100%;height:80vh;border:0}
+.poster-frame[data-poster-cb="on"]{filter:grayscale(1) contrast(1.28)}
+.sr-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
 .nav{position:sticky;top:0;z-index:100;background:rgba(7,20,40,.9);border-bottom:3px solid var(--gold);overflow-x:auto;white-space:nowrap;box-shadow:0 10px 28px rgba(0,0,0,.35);backdrop-filter:blur(10px)}
 .nav-inner{display:flex;gap:4px;max-width:1120px;margin:auto;padding:8px 12px;min-width:max-content}
 .nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border-radius:22px;color:var(--cream);text-decoration:none;font-size:15px;font-weight:700}
@@ -350,7 +365,8 @@ html.theme-dark .take-label{color:#d6eef7}
 [data-theme="dark"] .action-card.tier-1 .act{background:#0B3A5C;color:#E6F2FA}
 [data-theme="dark"] .action-card.tier-2 .act{background:#5C4300;color:#FFF3C4}
 [data-theme="dark"] .action-card.tier-3 .act{background:#1A0C36;color:#F7F1FF}
-[data-theme="dark"] .cb-toggle{background:#2e1065;color:#f5f3ff;border-color:#c4b5fd}
+[data-theme="dark"] .glossary{background:#273544;color:#eef3f8;border-color:#7d8b99}
+[data-theme="dark"] .sr-toggle{background:#004D40;color:#F0E442;border-color:#F0E442}
 [data-theme="dark"] .access-kicker{background:#001018;color:#eef3f8}
 [data-theme="dark"] .access-kicker a{color:#F0E442}
 [data-theme="dark"] .plain-lang{background:#273544;color:#eef3f8;border-color:#9bd4ee}
@@ -365,10 +381,12 @@ html.theme-dark .take-label{color:#d6eef7}
   <div class="nav-inner">
     <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">Dark view</button>
     <button type="button" class="cb-toggle" id="cb-toggle" aria-pressed="false">Color-blind view</button>
+    <button type="button" class="sr-toggle" id="sr-toggle" aria-pressed="false">Read page</button>
     <a href="#decision">1 · Action pathway</a>
     <a href="#materials">2 · Materials</a>
     <a href="#ags">3 · AGS</a>
     <a href="#mechanism">4 · Mechanism</a>
+    <a href="#poster">Poster PDF</a>
     <a href="#audio">Text + audio</a>
     <a class="preval" href="#rater">Prevalidation questionnaire</a>
     <a href="#reviews">Feedback</a>
@@ -422,6 +440,7 @@ html.theme-dark .take-label{color:#d6eef7}
       <button type="button" class="button audio-author" data-play="#track-a-player" data-label="▶ Author · 6:32">▶ Author · 6:32</button>
       <button type="button" class="button audio-ai-a" data-play="#track-a-short-player" data-label="▶ AI poster · 2:22">▶ AI poster · 2:22</button>
       <button type="button" class="button audio-ai-b" data-play="#track-b-short-player" data-label="▶ AI companion · 3:17">▶ AI companion · 3:17</button>
+      <a class="button poster" href="#poster">Poster PDF</a>
       <a class="button preval" href="#rater">Prevalidation questionnaire</a>
       <a class="button refs" href="#references">References</a>
     </div>
@@ -429,18 +448,37 @@ html.theme-dark .take-label{color:#d6eef7}
 </header>
 
 <main id="main" tabindex="-1">
-  <p class="access-kicker">This page is the accessible text track. Audio is optional and fully duplicated here as captions and transcripts. No information is audio-only. <a href="#audio">Captions and transcripts</a></p>
+  <p class="access-kicker" data-readable>This page is the accessible text track. Audio is optional and fully duplicated here as captions and transcripts. No information is audio-only. <a href="#audio">Captions and transcripts</a> · <a href="#poster">Poster PDF</a></p>
+  <aside class="glossary" id="abbrev" data-readable>
+    <h2>Abbreviations expanded</h2>
+    <dl>
+      <dt>AGS</dt><dd>alpha-gal syndrome (acquired allergy to galactose-alpha-1,3-galactose)</dd>
+      <dt>α-gal</dt><dd>alpha-gal; galactose-alpha-1,3-galactose, a sugar on non-primate mammal tissue</dd>
+      <dt>IgE</dt><dd>immunoglobulin E (allergy antibody)</dd>
+      <dt>sIgE</dt><dd>allergen-specific immunoglobulin E (blood test)</dd>
+      <dt>UFH</dt><dd>unfractionated heparin</dd>
+      <dt>HA</dt><dd>hyaluronic acid</dd>
+      <dt>PLLA</dt><dd>poly-L-lactic acid</dd>
+      <dt>PMMA</dt><dd>polymethyl methacrylate</dd>
+      <dt>CaHA</dt><dd>calcium hydroxylapatite</dd>
+      <dt>IFU</dt><dd>instructions for use (current product label)</dd>
+      <dt>CDC</dt><dd>Centers for Disease Control and Prevention</dd>
+      <dt>FDA</dt><dd>U.S. Food and Drug Administration</dd>
+      <dt>IV</dt><dd>intravenous</dd>
+      <dt>kU/L</dt><dd>kilo-units per liter (IgE assay units)</dd>
+    </dl>
+  </aside>
   <p class="principle">SCREEN → STRATIFY → ACT</p>
 
 <details class="section" id="decision" open>
   <summary><span class="section-num">1</span><span role="heading" aria-level="2">Clinical action pathway — read this first</span></summary>
   <div class="section-body">
-    <p class="algo-lead"><strong>Sensitized ≠ reactive.</strong> AGS = compatible history + α-gal IgE. Screening detects current sensitization, not future risk. Confirmation defines the diagnosis; it is not a per-procedure laboratory gate.<sup><a href="#ref9">9</a>,<a href="#ref3">3</a>,<a href="#ref30">30</a></sup></p>
+    <p class="algo-lead" data-readable><strong>Sensitized does not equal reactive.</strong> <abbr title="alpha-gal syndrome">AGS</abbr> means a compatible history plus <abbr title="alpha-gal (galactose-alpha-1,3-galactose)">alpha-gal</abbr> <abbr title="immunoglobulin E">IgE</abbr>. Screening detects current sensitization, not future risk. Confirmation defines the diagnosis; it is not a per-procedure laboratory gate.<sup><a href="#ref9">9</a>,<a href="#ref3">3</a>,<a href="#ref30">30</a></sup></p>
     <div class="algo-entry">
       <p class="kicker" style="margin:0 0 6px">Entry question (all patients)</p>
       <p style="margin:0">Compatible history? — delayed (2–6 h) urticaria, GI symptoms, or anaphylaxis after mammalian meat; tick exposure; or residence in an endemic (lone-star tick) region.</p>
     </div>
-    <p class="plain-lang"><strong>In plain language</strong> If there is no delayed reaction to mammal meat and no relevant tick history, do not add alpha-gal tests or change materials for this reason. If the history is suggestive but unconfirmed, test and prefer non-mammalian products until results return. If alpha-gal allergy is confirmed, use non-mammalian substitutes when possible and be ready to treat anaphylaxis.</p>
+    <p class="plain-lang" data-readable><strong>In plain language</strong> If there is no delayed reaction to mammal meat and no relevant tick history, do not add alpha-gal tests or change materials for this reason. If the history is suggestive but unconfirmed, test and prefer non-mammalian products until results return. If alpha-gal allergy is confirmed, use non-mammalian substitutes when possible and be ready to treat anaphylaxis.</p>
     <p class="small">Tier labels are identical throughout this companion. Color is reinforcement only — each card also carries <strong>low / caution / act</strong> in the title.</p>
     <div class="action-grid" role="list">
       <article class="action-card tier-1" role="listitem">
@@ -530,7 +568,7 @@ html.theme-dark .take-label{color:#d6eef7}
             <td>Class-level perioperative anaphylaxis; not a brand assay.<sup><a href="#ref1">1</a>,<a href="#ref5">5</a>,<a href="#ref13">13</a>,<a href="#ref14">14</a></sup></td>
           </tr>
           <tr>
-            <td>Porcine UFH<br><span class="small">Porcine mucosa</span></td>
+            <td>Porcine <abbr title="unfractionated heparin">UFH</abbr><br><span class="small">Porcine mucosa</span></td>
             <td>Clinical signal</td>
             <td>Substitute if feasible; caution high-dose IV</td>
             <td>Route/dose dependent. High-dose IV cardiac: 4/17 severe (24%); 4/8 with recent titers (50%). Lower-dose inpatient: 1/39 UFH (2.6%); 0/22 enoxaparin (0%). Not an absolute contraindication.<sup><a href="#ref4">4</a>,<a href="#ref15">15</a>,<a href="#ref19">19</a></sup></td>
@@ -542,7 +580,7 @@ html.theme-dark .take-label{color:#d6eef7}
             <td>Adjacent-specialty precedent; no prospective cosmetic or aesthetic cohort.<sup><a href="#ref3">3</a>,<a href="#ref16">16</a>,<a href="#ref17">17</a></sup></td>
           </tr>
           <tr>
-            <td>Collagen fillers / catgut<br><span class="small">Bovine / porcine collagen · e.g. PMMA–collagen</span></td>
+            <td>Collagen fillers / catgut<br><span class="small">Bovine / porcine collagen · e.g. <abbr title="polymethyl methacrylate">PMMA</abbr>–collagen</span></td>
             <td>Theoretical</td>
             <td>Verify species/lot; document; prefer synthetic suture</td>
             <td>Composition-based only; no aesthetic AGS reaction series.<sup><a href="#ref22">22</a>,<a href="#ref26">26</a>,<a href="#ref18">18</a></sup></td>
@@ -554,13 +592,13 @@ html.theme-dark .take-label{color:#d6eef7}
             <td>α-gal: mammalian-extract N-glycans; no AGS cases reported. Separate, label-documented non-AGS anaphylaxis risk remains for all hyaluronidase (see †).<sup><a href="#ref36">36</a>,<a href="#ref33">33</a>,<a href="#ref32">32</a></sup></td>
           </tr>
           <tr>
-            <td>HA / CaHA / PLLA / lidocaine<br><span class="small">Bacterial HA, synthetic, or non-mammalian after source check</span></td>
+            <td><abbr title="hyaluronic acid">HA</abbr> / <abbr title="calcium hydroxylapatite">CaHA</abbr> / <abbr title="poly-L-lactic acid">PLLA</abbr> / lidocaine<br><span class="small">Bacterial hyaluronic acid, synthetic, or non-mammalian after source check</span></td>
             <td>No AGS-specific risk identified in the available literature</td>
             <td>Standard use</td>
             <td>Other hypersensitivity still possible. Older avian HA is not mammalian. Verify source. Absence of AGS-specific literature ≠ proven safe.<sup><a href="#ref2">2</a>,<a href="#ref6">6</a>,<a href="#ref26">26</a>,<a href="#ref27">27</a></sup></td>
           </tr>
           <tr>
-            <td>Botulinum toxin<br><span class="small">Human albumin excipient — verify IFU</span></td>
+            <td>Botulinum toxin<br><span class="small">Human albumin excipient — verify <abbr title="instructions for use">IFU</abbr></span></td>
             <td>No AGS-specific risk identified in the available literature</td>
             <td>Standard use after IFU check</td>
             <td>No α-gal reaction data identified. Historically animal-stabilized lots would warrant IFU review. Absence of AGS-specific literature ≠ proven safe.<sup><a href="#ref26">26</a></sup></td>
@@ -579,6 +617,22 @@ html.theme-dark .take-label{color:#d6eef7}
         <li>Sutures/grafts: synthetic, human, or autologous options when feasible.</li>
       </ul></article>
       <article class="card"><h3>AGS evidence gaps</h3><p>No prospective cosmetic or aesthetic cohort, validated procedure-specific screening threshold, product-specific reaction rate, reaction registry, or brand-level α-gal assay exists.</p><p class="small">“No AGS-specific risk identified in the available literature” is not evidence of safety and is not a brand assay.</p></article>
+    </div>
+  </div>
+</details>
+
+<details class="section" id="poster">
+  <summary><span class="section-num" aria-hidden="true">▣</span><span role="heading" aria-level="2">Printed poster (PDF)</span></summary>
+  <div class="section-body">
+    <p data-readable>Standard conference poster. The companion text on this page is the accessible version of the same content. Replace <code>poster/poster.pdf</code> with the final file when you upload it. Optional color-blind export: <code>poster/poster-cb.pdf</code>.</p>
+    <div class="poster-toolbar">
+      <button type="button" class="cb-toggle" id="poster-cb-toggle" aria-pressed="false">Color-blind poster</button>
+      <a class="button poster" href="poster/poster.pdf" download>Download PDF</a>
+    </div>
+    <div class="poster-frame" id="poster-frame" data-poster-cb="off">
+      <object id="poster-object" data="/poster/poster.pdf" type="application/pdf" aria-label="Conference poster PDF">
+        <p>The poster PDF is not available in this browser. <a href="poster/poster.pdf">Download the PDF</a>. This companion remains the accessible text track.</p>
+      </object>
     </div>
   </div>
 </details>
@@ -966,9 +1020,65 @@ document.querySelectorAll('sup a[href^="#ref"]').forEach(link=>{
 document.querySelectorAll('a[href="#disclosures"]').forEach(link=>{
   link.addEventListener("click",()=>{const t=document.querySelector("#disclosures"); if(t) t.open=true;});
 });
-document.querySelectorAll('a[href="#audio"],a[href="#poster-transcript"],a[href="#poster-ai-transcript"],a[href="#companion-transcript"]').forEach(link=>{
-  link.addEventListener("click",()=>{const audio=document.querySelector("#audio"); if(audio) audio.open=true;});
+document.querySelectorAll('a[href="#audio"],a[href="#poster"],a[href="#poster-transcript"],a[href="#poster-ai-transcript"],a[href="#companion-transcript"]').forEach(link=>{
+  link.addEventListener("click",()=>{
+    const href=link.getAttribute("href");
+    const id=href==="#poster"?"#poster":"#audio";
+    const t=document.querySelector(id);
+    if(t) t.open=true;
+  });
 });
+(function(){
+  const speakBtn=document.getElementById("sr-toggle");
+  const status=document.createElement("p");
+  status.className="sr-status";
+  status.setAttribute("role","status");
+  status.setAttribute("aria-live","polite");
+  document.body.appendChild(status);
+  const stopSpeak=()=>{
+    try{ window.speechSynthesis&&speechSynthesis.cancel(); }catch(_){}
+    if(speakBtn){ speakBtn.setAttribute("aria-pressed","false"); speakBtn.textContent="Read page"; }
+    status.textContent="";
+  };
+  const spokenText=()=>{
+    const chunks=[...document.querySelectorAll("[data-readable]")].map(el=>el.innerText.replace(/[αΑ]/g,"alpha ").replace(/≠/g," does not equal ").replace(/→/g," then "));
+    return chunks.join(". ");
+  };
+  speakBtn?.addEventListener("click",()=>{
+    if(!window.speechSynthesis){ status.textContent="Page reading is not available in this browser. Use the transcripts."; return; }
+    if(speechSynthesis.speaking){ stopSpeak(); return; }
+    document.querySelectorAll("audio").forEach(a=>a.pause());
+    const u=new SpeechSynthesisUtterance(spokenText());
+    u.lang="en-US"; u.rate=0.95;
+    u.onend=stopSpeak;
+    u.onerror=stopSpeak;
+    speakBtn.setAttribute("aria-pressed","true");
+    speakBtn.textContent="Stop reading";
+    status.textContent="Reading the accessible text.";
+    speechSynthesis.speak(u);
+  });
+  document.querySelectorAll("audio.audio-player").forEach(a=>{
+    a.addEventListener("play", stopSpeak);
+  });
+  const posterBtn=document.getElementById("poster-cb-toggle");
+  const frame=document.getElementById("poster-frame");
+  const obj=document.getElementById("poster-object");
+  const applyPosterCb=(on)=>{
+    if(!frame) return;
+    frame.setAttribute("data-poster-cb", on?"on":"off");
+    if(posterBtn){ posterBtn.setAttribute("aria-pressed", on?"true":"false"); posterBtn.textContent=on?"Standard poster":"Color-blind poster"; }
+    if(!obj) return;
+    if(!on){ obj.setAttribute("data","/poster/poster.pdf"); return; }
+    fetch("/poster/poster-cb.pdf",{method:"HEAD"}).then(r=>{
+      obj.setAttribute("data", r.ok?"/poster/poster-cb.pdf":"/poster/poster.pdf");
+    }).catch(()=>obj.setAttribute("data","/poster/poster.pdf"));
+  };
+  posterBtn?.addEventListener("click",()=>{
+    applyPosterCb(frame?.getAttribute("data-poster-cb")!=="on");
+    const poster=document.querySelector("#poster");
+    if(poster) poster.open=true;
+  });
+})();
 const players=[...document.querySelectorAll("audio.audio-player")];
 players.forEach(el=>{
   el.addEventListener("play",()=>{
