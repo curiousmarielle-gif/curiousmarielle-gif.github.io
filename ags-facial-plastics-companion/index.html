@@ -72,6 +72,19 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .skip:focus{top:12px}
 .access-kicker{margin:0;padding:8px 16px 10px 18px;background:#001F3F;color:#F7FBFF;font-size:13px;line-height:1.45;font-weight:700}
 .access-kicker a{color:#F0E442;font-weight:800}
+.clin-only{display:revert}
+.acc-only{display:none}
+.glossary,.access-kicker{display:none}
+html[data-access="on"] .acc-only,body[data-access="on"] .acc-only,[data-access="on"] .acc-only{display:revert}
+html[data-access="on"] .clin-only,body[data-access="on"] .clin-only,[data-access="on"] .clin-only{display:none}
+html[data-access="on"] .glossary,html[data-access="on"] .access-kicker,
+body[data-access="on"] .glossary,body[data-access="on"] .access-kicker,
+[data-access="on"] .glossary,[data-access="on"] .access-kicker{display:block}
+html[data-access="on"] abbr[title]::after,body[data-access="on"] abbr[title]::after,[data-access="on"] abbr[title]::after{
+  content:" (" attr(title) ")";
+  font-weight:600;
+  font-size:.92em;
+}
 .plain-lang{margin:0 0 16px;padding:16px 18px;background:var(--ivory);border-left:8px solid var(--ink);border:2px solid var(--ink);border-left-width:8px;border-radius:8px}
 .plain-lang strong{display:block;margin:0 0 6px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
 .audio-note{margin:0 0 14px;font-size:15px}
@@ -85,7 +98,8 @@ abbr{text-decoration:underline dotted;text-underline-offset:.16em;cursor:help}
 .hero-actions .button.poster{background:#E69F00;color:#001F3F;border:1px solid #001F3F;letter-spacing:.08em}
 .hero-actions .button.poster:hover,.hero-actions .button.poster:focus-visible{background:#001F3F !important;color:#F0E442 !important;border-color:#F0E442 !important}
 .sr-toggle{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;margin-right:8px;border-radius:22px;border:2px solid #004D40;background:#009E73;color:#001F3F;font:inherit;font-size:14px;font-weight:800;cursor:pointer;letter-spacing:.04em;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 0 #004D40,0 6px 12px rgba(0,0,0,.25)}
-.sr-toggle:hover,.sr-toggle:focus-visible,.sr-toggle[aria-pressed="true"]{background:#004D40;color:#F0E442;border-color:#F0E442}
+.access-toggle{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;margin-right:8px;border-radius:22px;border:2px solid #1e3a5f;background:#e8f1f8;color:#073451;font:inherit;font-size:14px;font-weight:800;cursor:pointer;letter-spacing:.04em;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 0 #1e3a5f,0 6px 12px rgba(0,0,0,.25)}
+.access-toggle:hover,.access-toggle:focus-visible,.access-toggle[aria-pressed="true"]{background:#073451;color:#F0E442;border-color:#F0E442}
 .poster-toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px;align-items:center}
 .poster-frame{background:#fff;border:3px solid var(--ink);border-radius:8px;min-height:40vh;overflow:auto;max-height:85vh}
 .poster-frame img{display:block;width:100%;height:auto}
@@ -366,7 +380,7 @@ html.theme-dark .take-label{color:#d6eef7}
 [data-theme="dark"] .action-card.tier-2 .act{background:#5C4300;color:#FFF3C4}
 [data-theme="dark"] .action-card.tier-3 .act{background:#1A0C36;color:#F7F1FF}
 [data-theme="dark"] .glossary{background:#273544;color:#eef3f8;border-color:#7d8b99}
-[data-theme="dark"] .sr-toggle{background:#004D40;color:#F0E442;border-color:#F0E442}
+[data-theme="dark"] .access-toggle{background:#1e3a5f;color:#e8f1f8;border-color:#9bd4ee}
 [data-theme="dark"] .access-kicker{background:#001018;color:#eef3f8}
 [data-theme="dark"] .access-kicker a{color:#F0E442}
 [data-theme="dark"] .plain-lang{background:#273544;color:#eef3f8;border-color:#9bd4ee}
@@ -376,18 +390,19 @@ html.theme-dark .take-label{color:#d6eef7}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to accessible text</a>
+<a class="skip" href="#main">Skip to content</a>
 <nav class="nav" aria-label="Companion sections">
   <div class="nav-inner">
     <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">Dark view</button>
     <button type="button" class="cb-toggle" id="cb-toggle" aria-pressed="false">Color-blind view</button>
+    <button type="button" class="access-toggle" id="access-toggle" aria-pressed="false">Accessible text</button>
     <button type="button" class="sr-toggle" id="sr-toggle" aria-pressed="false">Read page</button>
     <a href="#decision">1 · Action pathway</a>
     <a href="#materials">2 · Materials</a>
     <a href="#ags">3 · AGS</a>
     <a href="#mechanism">4 · Mechanism</a>
     <a href="#poster">Poster PDF</a>
-    <a href="#audio">Text + audio</a>
+    <a href="#audio"><span class="clin-only">Audio</span><span class="acc-only">Text + audio</span></a>
     <a class="preval" href="#rater">Prevalidation questionnaire</a>
     <a href="#reviews">Feedback</a>
     <a href="#methods">Methods</a>
@@ -409,7 +424,8 @@ html.theme-dark .take-label{color:#d6eef7}
       <div class="banner-lockup">
         <span class="banner-kicker">AAFPRS Las Vegas 2026</span>
         <span class="banner-title">AGS Companion</span>
-        <span class="banner-sub">Accessible text + audio</span>
+        <span class="banner-sub clin-only">Clinical decision tools</span>
+        <span class="banner-sub acc-only">Accessible text + audio</span>
       </div>
       <div class="logo-item">
         <img class="aafprs" src="affiliations/aafprs-lockup.png" alt="AAFPRS">
@@ -433,7 +449,8 @@ html.theme-dark .take-label{color:#d6eef7}
       <a class="typein-qr" href="https://tinyurl.com/AGS-FPRS" aria-label="Accessible text and audio: tinyurl.com/AGS-FPRS">
         <img src="qr/ags-fprs-qr.png" width="88" height="88" alt="QR code. Accessible text and audio at tinyurl.com/AGS-FPRS">
       </a>
-      <p class="typein-copy">Accessible text + audio via QR<br><a href="https://tinyurl.com/AGS-FPRS" style="color:var(--gold);font-weight:800">tinyurl.com/AGS-FPRS</a></p>
+      <p class="typein-copy clin-only">Scan or type-in:<br><a href="https://tinyurl.com/AGS-FPRS" style="color:var(--gold);font-weight:800">tinyurl.com/AGS-FPRS</a></p>
+      <p class="typein-copy acc-only">Accessible text + audio via QR<br><a href="https://tinyurl.com/AGS-FPRS" style="color:var(--gold);font-weight:800">tinyurl.com/AGS-FPRS</a></p>
     </div>
     </div>
     <div class="hero-actions">
@@ -672,7 +689,7 @@ html.theme-dark .take-label{color:#d6eef7}
             <a class="transcript-link" href="#poster-ai-transcript">AI poster transcript</a>
             </div>
         </div>
-        <details class="transcript" open>
+        <details class="transcript">
           <summary>Read author transcript (full text of the 6:32 recording)</summary>
           <div class="transcript-body" id="poster-transcript">
             <div class="cue"><button class="cue-time" type="button" data-seek="1">0:01</button><p>This is the audio narration for the poster “Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures”</p></div>
@@ -703,7 +720,7 @@ html.theme-dark .take-label{color:#d6eef7}
             <div class="cue"><button class="cue-time" type="button" data-seek="388">6:28</button><p>Narrated by Marielle He. End of narration.</p></div>
           </div>
         </details>
-        <details class="transcript" open>
+        <details class="transcript">
           <summary>Read AI poster transcript (full text of the 7:22 recording)</summary>
           <div class="transcript-body" id="poster-ai-transcript">
             <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="1">0:01</button><p>This poster is titled Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures. The authors are Marielle He, M-D, M-S; Jordan Kai Simmons, M-D; and Babak Azizzadeh, M-D, F-A-C-S. They are affiliated with the CENTER for Advanced Facial Plastic Surgery in Beverly Hills, California, and the Division of Otolaryngology–Head and Neck Surgery at Cedars-Sinai Medical Center in Los Angeles.</p></div>
@@ -752,7 +769,7 @@ html.theme-dark .take-label{color:#d6eef7}
             </div>
           </div>
         </div>
-        <details class="transcript" open>
+        <details class="transcript">
           <summary>Read AI companion transcript (full text of the 3:14 recording)</summary>
           <div class="transcript-body" id="companion-transcript">
             <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="1">0:01</button><p>Alpha-Gal Audio Companion. Track B. Welcome. Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures, by Marielle He, Jordan Kai Simmons, and Babak Azizzadeh. Screen. Stratify. Act.</p></div>
@@ -1025,6 +1042,18 @@ document.querySelectorAll("[data-release-stamp]").forEach(el=>{el.textContent=RE
     const on=document.documentElement.getAttribute("data-cb")!=="on";
     try{ localStorage.setItem("ags-companion-cb",on?"on":"off"); }catch(_){ }
     applyCb(on);
+  });
+  const applyAccess=on=>{
+    root.forEach(el=>{ if(on) el.setAttribute("data-access","on"); else el.removeAttribute("data-access"); });
+    const btn=document.getElementById("access-toggle");
+    if(btn){ btn.setAttribute("aria-pressed",on?"true":"false"); btn.textContent=on?"Clinical text":"Accessible text"; }
+    document.querySelectorAll("details.transcript").forEach(d=>{ d.open=on; });
+  };
+  try{ applyAccess(localStorage.getItem("ags-companion-access")==="on"); }catch(_){ }
+  document.getElementById("access-toggle")?.addEventListener("click",()=>{
+    const on=document.documentElement.getAttribute("data-access")!=="on";
+    try{ localStorage.setItem("ags-companion-access",on?"on":"off"); }catch(_){ }
+    applyAccess(on);
   });
 })();
 document.querySelectorAll('.nav a,.hero-actions a[href^="#"]').forEach(link=>{
