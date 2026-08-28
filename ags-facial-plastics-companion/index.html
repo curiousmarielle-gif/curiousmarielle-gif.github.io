@@ -70,6 +70,12 @@ a{color:var(--burgundy-deep);text-underline-offset:.16em}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--burgundy);outline-offset:3px}
 .skip{position:fixed;left:12px;top:-80px;z-index:1000;padding:10px 14px;background:var(--white);color:var(--ink);border:2px solid var(--gold);border-radius:6px}
 .skip:focus{top:12px}
+.access-kicker{margin:0;padding:8px 16px 10px 18px;background:#001F3F;color:#F7FBFF;font-size:13px;line-height:1.45;font-weight:700}
+.access-kicker a{color:#F0E442;font-weight:800}
+.plain-lang{margin:0 0 16px;padding:16px 18px;background:var(--ivory);border-left:8px solid var(--ink);border:2px solid var(--ink);border-left-width:8px;border-radius:8px}
+.plain-lang strong{display:block;margin:0 0 6px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
+.audio-note{margin:0 0 14px;font-size:15px}
+.transcript-link{display:inline-block;margin:6px 0 0;font-size:14px;font-weight:800}
 .nav{position:sticky;top:0;z-index:100;background:rgba(7,20,40,.9);border-bottom:3px solid var(--gold);overflow-x:auto;white-space:nowrap;box-shadow:0 10px 28px rgba(0,0,0,.35);backdrop-filter:blur(10px)}
 .nav-inner{display:flex;gap:4px;max-width:1120px;margin:auto;padding:8px 12px;min-width:max-content}
 .nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border-radius:22px;color:var(--cream);text-decoration:none;font-size:15px;font-weight:700}
@@ -255,6 +261,7 @@ footer p:last-child{margin:0}
 footer strong{color:var(--gold)}
 footer a{color:var(--gold);font-weight:800}
 .table-hint{margin:0 0 8px;font-size:14px;font-weight:700;color:var(--graphite)}
+caption{caption-side:top;text-align:left;padding:0 0 8px;font-size:14px;font-weight:700;color:var(--graphite)}
 .action-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .action-card{padding:22px 24px;border:2px solid #6f6254;border-radius:9px;background:var(--ivory);box-shadow:inset 0 1px 0 #fff}
 .action-card h3{margin:0 0 10px;font-size:18px;line-height:1.25}
@@ -344,12 +351,16 @@ html.theme-dark .take-label{color:#d6eef7}
 [data-theme="dark"] .action-card.tier-2 .act{background:#5C4300;color:#FFF3C4}
 [data-theme="dark"] .action-card.tier-3 .act{background:#1A0C36;color:#F7F1FF}
 [data-theme="dark"] .cb-toggle{background:#2e1065;color:#f5f3ff;border-color:#c4b5fd}
+[data-theme="dark"] .access-kicker{background:#001018;color:#eef3f8}
+[data-theme="dark"] .access-kicker a{color:#F0E442}
+[data-theme="dark"] .plain-lang{background:#273544;color:#eef3f8;border-color:#9bd4ee}
 [data-theme="dark"] .algo-entry{background:#273544;color:#eef3f8;border-color:#7d8b99}
 [data-theme="dark"] .table-hint{color:#c5d0da}
+[data-theme="dark"] caption{color:#c5d0da}
 </style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to companion content</a>
+<a class="skip" href="#main">Skip to accessible text</a>
 <nav class="nav" aria-label="Companion sections">
   <div class="nav-inner">
     <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">Dark view</button>
@@ -358,7 +369,7 @@ html.theme-dark .take-label{color:#d6eef7}
     <a href="#materials">2 · Materials</a>
     <a href="#ags">3 · AGS</a>
     <a href="#mechanism">4 · Mechanism</a>
-    <a href="#audio">▶ Audio</a>
+    <a href="#audio">Text + audio</a>
     <a class="preval" href="#rater">Prevalidation questionnaire</a>
     <a href="#reviews">Feedback</a>
     <a href="#methods">Methods</a>
@@ -380,7 +391,7 @@ html.theme-dark .take-label{color:#d6eef7}
       <div class="banner-lockup">
         <span class="banner-kicker">AAFPRS Las Vegas 2026</span>
         <span class="banner-title">AGS Companion</span>
-        <span class="banner-sub">Clinical decision tools</span>
+        <span class="banner-sub">Accessible text + audio</span>
       </div>
       <div class="logo-item">
         <img class="aafprs" src="affiliations/aafprs-lockup.png" alt="AAFPRS">
@@ -401,10 +412,10 @@ html.theme-dark .take-label{color:#d6eef7}
     <p class="affiliation"><sup>1</sup> CENTER for Advanced Facial Plastic Surgery, Beverly Hills, CA<br>
     <sup>2</sup> Division of Otolaryngology–Head and Neck Surgery, Cedars-Sinai Medical Center, Los Angeles, CA</p>
     <div class="typein-row">
-      <a class="typein-qr" href="https://tinyurl.com/AGS-FPRS" aria-label="Open tinyurl.com/AGS-FPRS">
-        <img src="qr/ags-fprs-qr.png" width="88" height="88" alt="QR code to tinyurl.com/AGS-FPRS">
+      <a class="typein-qr" href="https://tinyurl.com/AGS-FPRS" aria-label="Accessible text and audio: tinyurl.com/AGS-FPRS">
+        <img src="qr/ags-fprs-qr.png" width="88" height="88" alt="QR code. Accessible text and audio at tinyurl.com/AGS-FPRS">
       </a>
-      <p class="typein-copy">Scan or type-in:<br><a href="https://tinyurl.com/AGS-FPRS" style="color:var(--gold);font-weight:800">tinyurl.com/AGS-FPRS</a></p>
+      <p class="typein-copy">Accessible text + audio via QR<br><a href="https://tinyurl.com/AGS-FPRS" style="color:var(--gold);font-weight:800">tinyurl.com/AGS-FPRS</a></p>
     </div>
     </div>
     <div class="hero-actions">
@@ -417,7 +428,8 @@ html.theme-dark .take-label{color:#d6eef7}
   </div>
 </header>
 
-<main id="main">
+<main id="main" tabindex="-1">
+  <p class="access-kicker">This page is the accessible text track. Audio is optional and fully duplicated here as captions and transcripts. No information is audio-only. <a href="#audio">Captions and transcripts</a></p>
   <p class="principle">SCREEN → STRATIFY → ACT</p>
 
 <details class="section" id="decision" open>
@@ -428,6 +440,7 @@ html.theme-dark .take-label{color:#d6eef7}
       <p class="kicker" style="margin:0 0 6px">Entry question (all patients)</p>
       <p style="margin:0">Compatible history? — delayed (2–6 h) urticaria, GI symptoms, or anaphylaxis after mammalian meat; tick exposure; or residence in an endemic (lone-star tick) region.</p>
     </div>
+    <p class="plain-lang"><strong>In plain language</strong> If there is no delayed reaction to mammal meat and no relevant tick history, do not add alpha-gal tests or change materials for this reason. If the history is suggestive but unconfirmed, test and prefer non-mammalian products until results return. If alpha-gal allergy is confirmed, use non-mammalian substitutes when possible and be ready to treat anaphylaxis.</p>
     <p class="small">Tier labels are identical throughout this companion. Color is reinforcement only — each card also carries <strong>low / caution / act</strong> in the title.</p>
     <div class="action-grid" role="list">
       <article class="action-card tier-1" role="listitem">
@@ -500,7 +513,7 @@ html.theme-dark .take-label{color:#d6eef7}
     <p class="table-hint">On a phone, swipe the table sideways. Named products illustrate class as of the 2 August 2026 review date; re-verify current IFUs. Evidence strength is not the same as clinical action.</p>
     <div class="table-wrap">
       <table>
-        <caption class="sr-only">Materials: evidence strength versus clinical risk and action</caption>
+        <caption>Materials: evidence strength versus clinical risk and action. Named products are class examples, not a brand-level α-gal assay.</caption>
         <thead>
           <tr>
             <th scope="col">Exposure</th>
@@ -571,8 +584,9 @@ html.theme-dark .take-label{color:#d6eef7}
 </details>
 
 <details class="section" id="audio">
-  <summary><span class="section-num" aria-hidden="true">▶</span><span role="heading" aria-level="2">Audio and transcripts</span></summary>
+  <summary><span class="section-num" aria-hidden="true">▶</span><span role="heading" aria-level="2">Audio (optional) and transcripts</span></summary>
   <div class="section-body">
+    <p class="audio-note">Audio is a parallel track for people who cannot read small print. Deaf and hard-of-hearing readers should use this page’s text, the captions on each player, and the transcripts below. Every spoken sentence is also written here. There is no video. Downloadable text: <a href="captions/ai-poster-script.txt">AI poster script</a> · <a href="captions/ai-companion-script.txt">AI companion script</a></p>
     <div class="audio-panel">
       <article class="audio-card">
         <h3>Track A · Printed poster</h3>
@@ -581,25 +595,29 @@ html.theme-dark .take-label{color:#d6eef7}
             <span class="take-label">Author narration · 6:32</span>
             <div class="play-row">
               <button type="button" class="play-btn" data-play="#track-a-player">Play</button>
-              <audio id="track-a-player" class="audio-player" controls preload="metadata" playsinline>
+              <audio id="track-a-player" class="audio-player" controls preload="metadata" playsinline aria-label="Author poster narration, 6 minutes 32 seconds" aria-describedby="poster-transcript">
               <source src="audio/track-a.m4a" type="audio/mp4">
               <source src="audio/track-a.mp3" type="audio/mpeg">
               <track kind="captions" src="captions/track-a.vtt" srclang="en" label="English captions" default>
+              <track kind="subtitles" src="captions/track-a.vtt" srclang="en" label="English subtitles">
             </audio>
+            <a class="transcript-link" href="#poster-transcript">Author transcript</a>
             </div>
           </div>
           <div>
             <span class="take-label">AI · 2:22</span>
             <div class="play-row">
               <button type="button" class="play-btn" data-play="#track-a-short-player">Play</button>
-              <audio id="track-a-short-player" class="audio-player" controls preload="metadata" playsinline>
+              <audio id="track-a-short-player" class="audio-player" controls preload="metadata" playsinline aria-label="AI poster narration, 2 minutes 22 seconds" aria-describedby="poster-ai-transcript">
               <source src="audio/track-a-short.mp3" type="audio/mpeg">
               <track kind="captions" src="captions/track-a-short.vtt" srclang="en" label="English captions" default>
+              <track kind="subtitles" src="captions/track-a-short.vtt" srclang="en" label="English subtitles">
             </audio>
+            <a class="transcript-link" href="#poster-ai-transcript">AI poster transcript</a>
             </div>
         </div>
-        <details class="transcript">
-          <summary>Read author transcript</summary>
+        <details class="transcript" open>
+          <summary>Read author transcript (full text of the 6:32 recording)</summary>
           <div class="transcript-body" id="poster-transcript">
             <div class="cue"><button class="cue-time" type="button" data-seek="1">0:01</button><p>This is the audio narration for the poster “Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures”</p></div>
             <div class="cue"><button class="cue-time" type="button" data-seek="9">0:09</button><p>by Marielle He, Jordan Kai Simmons, and Babak Azizzadeh of the CENTER for Advanced Facial Plastic Surgery, Beverly Hills, and the Division of Otolaryngology–Head and Neck Surgery, Cedars-Sinai Medical Center, Los Angeles.</p></div>
@@ -629,8 +647,8 @@ html.theme-dark .take-label{color:#d6eef7}
             <div class="cue"><button class="cue-time" type="button" data-seek="388">6:28</button><p>Narrated by Marielle He. End of narration.</p></div>
           </div>
         </details>
-        <details class="transcript">
-          <summary>Read AI transcript</summary>
+        <details class="transcript" open>
+          <summary>Read AI poster transcript (full text of the 2:22 recording)</summary>
           <div class="transcript-body" id="poster-ai-transcript">
             <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="1">0:01</button><p>Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures. Marielle He, Jordan Kai Simmons, and Babak Azizzadeh. Screen. Stratify. Act.</p></div>
             <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="8">0:07</button><p>Alpha-gal syndrome, or A-G-S, is an acquired immunoglobulin E, or I-G-E mediated, allergy to galactose-alpha-1,3-galactose in non-primate mammalian tissue and products. Diagnosis requires compatible history plus alpha-gal I-G-E. Sensitized does not equal reactive. Confirmation defines the diagnosis; it is not a per-procedure laboratory gate.</p></div>
@@ -652,15 +670,18 @@ html.theme-dark .take-label{color:#d6eef7}
             <span class="take-label">AI · 3:17</span>
             <div class="play-row">
               <button type="button" class="play-btn" data-play="#track-b-short-player">Play</button>
-              <audio id="track-b-short-player" class="audio-player" controls preload="metadata" playsinline>
+              <audio id="track-b-short-player" class="audio-player" controls preload="metadata" playsinline aria-label="AI companion narration, 3 minutes 17 seconds" aria-describedby="companion-transcript">
               <source src="audio/track-b-short.mp3" type="audio/mpeg">
               <track kind="captions" src="captions/track-b-short.vtt" srclang="en" label="English captions" default>
+              <track kind="subtitles" src="captions/track-b-short.vtt" srclang="en" label="English subtitles">
             </audio>
+            <a class="transcript-link" href="#companion-transcript">AI companion transcript</a>
             </div>
           </div>
         </div>
         <details class="transcript">
-          <summary>Read Track B transcript</summary>
+        <details class="transcript" open>
+          <summary>Read AI companion transcript (full text of the 3:17 recording)</summary>
           <div class="transcript-body" id="companion-transcript">
             <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="1">0:01</button><p>Alpha-Gal Audio Companion. Track B. Welcome. Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures, by Marielle He, Jordan Kai Simmons, and Babak Azizzadeh. Screen. Stratify. Act.</p></div>
             <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="11">0:10</button><p>No study has quantified cosmetic or aesthetic alpha-gal reactions or assayed a product brand. The evidence tiers are precautionary.</p></div>
@@ -699,7 +720,7 @@ html.theme-dark .take-label{color:#d6eef7}
       <article class="card"><h3>Why cosmetic and aesthetic practice</h3><p>Some hemostats, animal matrices, grafts, sutures, collagen carriers, heparin, hyaluronidase, implants, and excipients may be mammalian-derived. No aesthetic-specific literature directly establishes epitope content in cosmetic brands; risk is inferred from mechanism (mammalian-derived = potential α-gal) plus adjacent-specialty reports. Verify source and finished formulation.<sup><a href="#ref1">1</a>,<a href="#ref3">3</a>,<a href="#ref21">21</a>,<a href="#ref22">22</a></sup></p></article>
     </div>
     <figure class="card" style="margin-top:14px">
-      <img src="https://www.cdc.gov/mmwr/volumes/72/wr/figures/mm7230a2-F-large.gif" alt="Map of suspected alpha-gal syndrome cases per 1 million population per year in United States counties, 2017 through 2022" style="display:block;width:100%;height:auto">
+      <img src="https://www.cdc.gov/mmwr/volumes/72/wr/figures/mm7230a2-F-large.gif" alt="Static county map of the United States showing suspected alpha-gal syndrome cases per 1 million population per year, 2017 through 2022. Highest rates are in the southeastern, south-central, and mid-Atlantic states, matching the lone-star tick range." style="display:block;width:100%;height:auto">
       <figcaption class="small" style="margin-top:8px">Geographic distribution of suspected AGS cases per 1 million population per year, United States, 2017–2022. CDC/MMWR.<sup><a href="#ref12">12</a></sup> This is a suspected-case map, not the separate 2024–2025 blood-donor seroprevalence study.</figcaption>
     </figure>
   </div>
@@ -945,6 +966,9 @@ document.querySelectorAll('sup a[href^="#ref"]').forEach(link=>{
 });
 document.querySelectorAll('a[href="#disclosures"]').forEach(link=>{
   link.addEventListener("click",()=>{const t=document.querySelector("#disclosures"); if(t) t.open=true;});
+});
+document.querySelectorAll('a[href="#audio"],a[href="#poster-transcript"],a[href="#poster-ai-transcript"],a[href="#companion-transcript"]').forEach(link=>{
+  link.addEventListener("click",()=>{const audio=document.querySelector("#audio"); if(audio) audio.open=true;});
 });
 const players=[...document.querySelectorAll("audio.audio-player")];
 players.forEach(el=>{
