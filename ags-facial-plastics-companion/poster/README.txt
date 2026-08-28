@@ -1,9 +1,8 @@
-POSTER PDF
-==========
-Place the conference poster here as:
+POSTER
+======
+poster.pdf       Submitted conference poster (v2, 28 Aug 2026)
+poster.png       On-page standard view
+poster-cb.png    High-contrast grayscale (color-blind toggle)
 
-  poster.pdf          standard (normal) poster
-  poster-cb.pdf       optional color-blind-safe export (used when Color-blind poster is on)
-
-The companion button "Poster PDF" opens the in-page viewer.
-Until the final file is uploaded, poster.pdf is a placeholder page.
+Companion button "Poster PDF" opens the in-page viewer.
+Download uses poster.pdf.

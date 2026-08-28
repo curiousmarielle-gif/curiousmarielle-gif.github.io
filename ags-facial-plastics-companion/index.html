@@ -87,9 +87,8 @@ abbr{text-decoration:underline dotted;text-underline-offset:.16em;cursor:help}
 .sr-toggle{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;margin-right:8px;border-radius:22px;border:2px solid #004D40;background:#009E73;color:#001F3F;font:inherit;font-size:14px;font-weight:800;cursor:pointer;letter-spacing:.04em;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 0 #004D40,0 6px 12px rgba(0,0,0,.25)}
 .sr-toggle:hover,.sr-toggle:focus-visible,.sr-toggle[aria-pressed="true"]{background:#004D40;color:#F0E442;border-color:#F0E442}
 .poster-toolbar{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 12px;align-items:center}
-.poster-frame{background:#fff;border:3px solid var(--ink);border-radius:8px;min-height:70vh;overflow:auto}
-.poster-frame object,.poster-frame iframe{display:block;width:100%;height:80vh;border:0}
-.poster-frame[data-poster-cb="on"]{filter:grayscale(1) contrast(1.28)}
+.poster-frame{background:#fff;border:3px solid var(--ink);border-radius:8px;min-height:40vh;overflow:auto;max-height:85vh}
+.poster-frame img{display:block;width:100%;height:auto}
 .sr-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
 .nav{position:sticky;top:0;z-index:100;background:rgba(7,20,40,.9);border-bottom:3px solid var(--gold);overflow-x:auto;white-space:nowrap;box-shadow:0 10px 28px rgba(0,0,0,.35);backdrop-filter:blur(10px)}
 .nav-inner{display:flex;gap:4px;max-width:1120px;margin:auto;padding:8px 12px;min-width:max-content}
@@ -624,15 +623,13 @@ html.theme-dark .take-label{color:#d6eef7}
 <details class="section" id="poster">
   <summary><span class="section-num" aria-hidden="true">▣</span><span role="heading" aria-level="2">Printed poster (PDF)</span></summary>
   <div class="section-body">
-    <p data-readable>Standard conference poster. The companion text on this page is the accessible version of the same content. Replace <code>poster/poster.pdf</code> with the final file when you upload it. Optional color-blind export: <code>poster/poster-cb.pdf</code>.</p>
+    <p data-readable>Submitted conference poster (v2, 28 August 2026). This companion is the accessible text of the same work. Pinch or scroll to zoom the figure. Color-blind poster is a high-contrast grayscale of the same file.</p>
     <div class="poster-toolbar">
       <button type="button" class="cb-toggle" id="poster-cb-toggle" aria-pressed="false">Color-blind poster</button>
-      <a class="button poster" href="poster/poster.pdf" download>Download PDF</a>
+      <a class="button poster" href="poster/poster.pdf" download="AGS-poster.pdf">Download PDF</a>
     </div>
     <div class="poster-frame" id="poster-frame" data-poster-cb="off">
-      <object id="poster-object" data="/poster/poster.pdf" type="application/pdf" aria-label="Conference poster PDF">
-        <p>The poster PDF is not available in this browser. <a href="poster/poster.pdf">Download the PDF</a>. This companion remains the accessible text track.</p>
-      </object>
+      <img id="poster-image" src="poster/poster.png" alt="Submitted poster: Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures. Screen, Stratify, Act clinical decision; material-risk table; alpha-gal syndrome summary. Full accessible text is this companion page.">
     </div>
   </div>
 </details>
@@ -1062,16 +1059,12 @@ document.querySelectorAll('a[href="#audio"],a[href="#poster"],a[href="#poster-tr
   });
   const posterBtn=document.getElementById("poster-cb-toggle");
   const frame=document.getElementById("poster-frame");
-  const obj=document.getElementById("poster-object");
+  const img=document.getElementById("poster-image");
   const applyPosterCb=(on)=>{
     if(!frame) return;
     frame.setAttribute("data-poster-cb", on?"on":"off");
     if(posterBtn){ posterBtn.setAttribute("aria-pressed", on?"true":"false"); posterBtn.textContent=on?"Standard poster":"Color-blind poster"; }
-    if(!obj) return;
-    if(!on){ obj.setAttribute("data","/poster/poster.pdf"); return; }
-    fetch("/poster/poster-cb.pdf",{method:"HEAD"}).then(r=>{
-      obj.setAttribute("data", r.ok?"/poster/poster-cb.pdf":"/poster/poster.pdf");
-    }).catch(()=>obj.setAttribute("data","/poster/poster.pdf"));
+    if(img) img.setAttribute("src", on?"/poster/poster-cb.png":"/poster/poster.png");
   };
   posterBtn?.addEventListener("click",()=>{
     applyPosterCb(frame?.getAttribute("data-poster-cb")!=="on");
