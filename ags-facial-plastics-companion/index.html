@@ -33,6 +33,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .nav a:hover,.nav a:focus-visible{background:#7ec8e3;color:var(--ink)}
 .theme-toggle{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;margin-right:8px;border-radius:22px;border:2px solid #0b4f70;background:#7ec8e3;color:#0b1220;font:inherit;font-size:14px;font-weight:800;cursor:pointer;letter-spacing:.04em;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 0 #0b4f70,0 6px 12px rgba(0,0,0,.25)}
 .theme-toggle:hover,.theme-toggle:focus-visible{background:#0b4f70;color:#e8f4fa;border-color:#7ec8e3}
+.cb-toggle{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;margin-right:8px;border-radius:22px;border:2px solid #3b0764;background:#ede9fe;color:#3b0764;font:inherit;font-size:14px;font-weight:800;cursor:pointer;letter-spacing:.04em;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 0 #3b0764,0 6px 12px rgba(0,0,0,.25)}
+.cb-toggle:hover,.cb-toggle:focus-visible,.cb-toggle[aria-pressed="true"]{background:#3b0764;color:#f5f3ff;border-color:#c4b5fd}
 .logo-strip{display:grid;grid-template-columns:minmax(200px,1.3fr) repeat(3,auto);align-items:center;gap:16px 36px;padding:18px 28px;max-width:1120px;margin:0 auto;width:100%}
 .masthead{background:linear-gradient(180deg,rgba(4,28,56,.58),rgba(7,20,40,.9));color:var(--white);border-bottom:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 10px 20px rgba(0,20,40,.2),0 28px 56px rgba(0,20,40,.28)}
 .logo-strip-wrap{background:linear-gradient(105deg,rgba(4,70,130,.55) 0%,rgba(0,140,180,.4) 48%,rgba(8,80,140,.55) 100%);border-bottom:3px solid var(--gold);width:100%;backdrop-filter:blur(8px);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(0,0,0,.2)}
@@ -65,9 +67,9 @@ h1{max-width:900px;margin:0;font-size:clamp(34px,6vw,62px);line-height:1.03;lett
 .algo-expand{margin:12px 0 0;font-size:15px;font-weight:500}
 .algo-expand ul{margin:6px 0 0;padding-left:1.2em}
 .algo-expand li{margin:6px 0}
-.action-card.proceed{border-top:8px solid #6b7280}
-.action-card.suspect{border-top:8px solid #b45309}
-.action-card.avoid{border-top:8px solid #9a3412}
+.action-card.tier-1{border-top:8px solid #0072B2}
+.action-card.tier-2{border-top:8px solid #E69F00}
+.action-card.tier-3{border-top:8px solid #2B1654}
 .hero-actions .button,.hero-actions button.button{width:100%;text-align:center;min-height:50px;padding:13px 31px;border-radius:10em;font:inherit;font-size:13px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 3px 0 rgba(0,0,0,.28),0 8px 16px rgba(0,20,40,.28);transition:background-color 180ms ease,color 180ms ease,border-color 180ms ease,box-shadow 180ms ease,transform 180ms ease}
 .hero-actions .button:hover,.hero-actions .button:focus-visible{transform:translateY(2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 0 rgba(0,0,0,.2),0 4px 8px rgba(0,20,40,.2)}
 .hero-actions .button.audio-author{background:#7ec8e3;color:var(--ink);border:1px solid #4aa9c4;letter-spacing:.08em}
@@ -215,12 +217,21 @@ footer a{color:var(--gold);font-weight:800}
 .action-card h3{margin:0 0 10px;font-size:18px;line-height:1.25}
 .action-card p{margin:0}
 .action-card .act{margin:14px 0 0;padding:12px 14px;border-radius:6px;font-weight:800;font-size:15px;line-height:1.45}
-.action-card.proceed{border-top:6px solid #2f6b4f}
-.action-card.proceed .act{background:#e4f3ea;color:#143226}
-.action-card.suspect{border-top:6px solid #b5811a}
-.action-card.suspect .act{background:#f7eddb;color:#3a2a08}
-.action-card.avoid{border-top:6px solid #8a3410}
-.action-card.avoid .act{background:#f8e4d8;color:#3a1408}
+.action-card.tier-1{border-top:8px solid #0072B2}
+.action-card.tier-1 .act{background:#E6F2FA;color:#003A5C}
+.action-card.tier-2{border-top:8px solid #E69F00}
+.action-card.tier-2 .act{background:#FFF3C4;color:#3D2E00}
+.action-card.tier-3{border-top:8px solid #2B1654}
+.action-card.tier-3 .act{background:#2B1654;color:#F7F1FF}
+.tier-handle{display:block;margin:0 0 4px;font-size:13px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+[data-cb="on"] .action-card.tier-1{background:#E6F2FA;border-color:#0072B2;background-image:none}
+[data-cb="on"] .action-card.tier-1 .act{background:#FFFFFF;color:#003A5C;border:2px solid #0072B2}
+[data-cb="on"] .action-card.tier-2{background:#FFF3C4;border-color:#E69F00;background-image:repeating-linear-gradient(45deg,rgba(0,0,0,.08) 0 8px,transparent 8px 16px)}
+[data-cb="on"] .action-card.tier-2 .act{background:#FFFFFF;color:#3D2E00;border:2px solid #E69F00}
+[data-cb="on"] .action-card.tier-3{background:#2B1654;border-color:#CC79A7;color:#F7F1FF;background-image:repeating-linear-gradient(-45deg,rgba(255,255,255,.12) 0 6px,transparent 6px 12px)}
+[data-cb="on"] .action-card.tier-3 h3,[data-cb="on"] .action-card.tier-3 p,[data-cb="on"] .action-card.tier-3 .tier-handle{color:#F7F1FF}
+[data-cb="on"] .action-card.tier-3 .act{background:#1A0C36;color:#F7F1FF;border:2px solid #F0E442}
+[data-cb="on"] .action-card.tier-3 a{color:#F0E442}
 .scope-list{margin:8px 0 0;padding-left:20px}
 .scope-list li{margin:8px 0}
 .badge{display:inline-block;padding:2px 8px;border:1px solid var(--ink);border-radius:999px;font-size:12px;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
@@ -286,9 +297,10 @@ html.theme-dark .principle,
 [data-theme="dark"] .take-label,
 html.theme-dark .take-label{color:#d6eef7}
 [data-theme="dark"] .action-card{background:#273544;color:#eef3f8;border-color:#7d8b99}
-[data-theme="dark"] .action-card.proceed .act{background:#2a3340;color:#d5dde6}
-[data-theme="dark"] .action-card.suspect .act{background:#3a3424;color:#f7eddb}
-[data-theme="dark"] .action-card.avoid .act{background:#3a1c12;color:#f8e4d8}
+[data-theme="dark"] .action-card.tier-1 .act{background:#0B3A5C;color:#E6F2FA}
+[data-theme="dark"] .action-card.tier-2 .act{background:#5C4300;color:#FFF3C4}
+[data-theme="dark"] .action-card.tier-3 .act{background:#1A0C36;color:#F7F1FF}
+[data-theme="dark"] .cb-toggle{background:#2e1065;color:#f5f3ff;border-color:#c4b5fd}
 [data-theme="dark"] .algo-entry{background:#273544;color:#eef3f8;border-color:#7d8b99}
 [data-theme="dark"] .table-hint{color:#c5d0da}
 </style>
@@ -298,6 +310,7 @@ html.theme-dark .take-label{color:#d6eef7}
 <nav class="nav" aria-label="Companion sections">
   <div class="nav-inner">
     <button type="button" class="theme-toggle" id="theme-toggle" aria-pressed="false">Dark view</button>
+    <button type="button" class="cb-toggle" id="cb-toggle" aria-pressed="false">Color-blind view</button>
     <a href="#decision">1 · Action pathway</a>
     <a href="#materials">2 · Materials</a>
     <a href="#ags">3 · AGS</a>
@@ -372,39 +385,42 @@ html.theme-dark .take-label{color:#d6eef7}
       <p class="kicker" style="margin:0 0 6px">Entry question (all patients)</p>
       <p style="margin:0">Compatible history? — delayed (2–6 h) urticaria, GI symptoms, or anaphylaxis after mammalian meat; tick exposure; or residence in an endemic (lone-star tick) region.</p>
     </div>
-    <p class="small">State labels and triggers match the poster face. Detail below is what the face defers to this companion.</p>
+    <p class="small">Tier labels are identical throughout this companion. Color is reinforcement only — each card also carries <strong>low / caution / act</strong> in the title.</p>
     <div class="action-grid" role="list">
-      <article class="action-card proceed" role="listitem">
-        <h3>STATE 1 — No suggestive history</h3>
-        <p><strong>Trigger:</strong> No compatible symptoms, no relevant tick/endemic exposure.</p>
-        <p class="act">Do not screen α-gal IgE and do not restrict materials on an AGS basis. Proceed with standard care; remain alert to unexplained peri-procedural reactions.</p>
+      <article class="action-card tier-1" role="listitem">
+        <span class="tier-handle">Tier 1 · low</span>
+        <h3>Tier 1 · No suggestive history</h3>
+        <p><strong>Trigger:</strong> No compatible symptoms; no relevant tick/endemic exposure (endemic residence alone, without symptoms, stays Tier 1).</p>
+        <p class="act">Do not screen α-gal sIgE and do not restrict materials on an AGS basis. Proceed with standard care; remain alert to reactions.</p>
         <div class="algo-expand">
           <p><strong>Companion detail</strong></p>
           <ul>
             <li>α-gal sensitization is common and does not equal clinical reactivity. Do not test without a compatible history — asymptomatic sensitization risks false-positive labeling.<sup><a href="#ref10">10</a>,<a href="#ref12">12</a>,<a href="#ref30">30</a></sup></li>
-            <li>No material restriction is warranted on an AGS basis in this state. Standard allergy/anaphylaxis vigilance still applies.<sup><a href="#ref38">38</a></sup></li>
-            <li>A new suggestive event moves the patient to State 2.</li>
+            <li>No material restriction is warranted on an AGS basis in this tier. Standard allergy/anaphylaxis vigilance still applies.<sup><a href="#ref38">38</a></sup></li>
+            <li>A new suggestive event moves the patient to Tier 2 · Suspected AGS.</li>
           </ul>
         </div>
       </article>
-      <article class="action-card suspect" role="listitem">
-        <h3>STATE 2 — Suspected AGS</h3>
+      <article class="action-card tier-2" role="listitem">
+        <span class="tier-handle">Tier 2 · caution</span>
+        <h3>Tier 2 · Suspected AGS</h3>
         <p><strong>Trigger:</strong> Compatible history/exposure, not yet confirmed.</p>
-        <p class="act">Order α-gal sIgE; refer to allergy/immunology; prefer non-mammalian materials pending results. If urgent, treat as State 3 until proven otherwise. → see Materials, panel 02</p>
+        <p class="act">Order α-gal sIgE; refer to allergy/immunology; prefer non-mammalian materials pending results. If urgent and cannot wait → manage as Tier 3. → see Materials, panel 02</p>
         <div class="algo-expand">
           <p><strong>Companion detail</strong></p>
           <ul>
-            <li>Order α-gal–specific IgE — a value ≥0.1 kU/L is suggestive; interpret with the compatible history. Sensitization alone is not diagnostic and is not a cosmetic-product cutoff.<sup><a href="#ref9">9</a>,<a href="#ref11">11</a>,<a href="#ref30">30</a></sup></li>
+            <li>Order α-gal–specific IgE — a value ≥0.1 kU/L is detectable/suggestive; conventional positivity is commonly ≥0.35 kU/L. Interpret with the compatible history. Titer correlates imperfectly with reactivity and is not a cosmetic-product cutoff.<sup><a href="#ref9">9</a>,<a href="#ref11">11</a>,<a href="#ref30">30</a></sup></li>
             <li>Refer to allergy/immunology, particularly after any systemic or anaphylactic reaction.<sup><a href="#ref30">30</a>,<a href="#ref20">20</a></sup></li>
             <li>Prefer source-verified non-mammalian materials pending results for elective mammalian-derived exposure (→ <a href="#materials">Materials table</a>).</li>
-            <li>If an elective procedure can wait, complete workup first; if urgent, manage as State 3 until AGS is excluded.</li>
+            <li>If an elective procedure can wait, complete workup first; if urgent, manage as Tier 3 · Established AGS until AGS is excluded.</li>
           </ul>
         </div>
       </article>
-      <article class="action-card avoid" role="listitem">
-        <h3>STATE 3 — Established AGS</h3>
-        <p><strong>Trigger:</strong> Compatible history + positive α-gal IgE.</p>
-        <p class="act">Default to source-verified non-mammalian substitutes; allergy/immunology involvement; anaphylaxis readiness. → see Materials, panel 02</p>
+      <article class="action-card tier-3" role="listitem">
+        <span class="tier-handle">Tier 3 · act</span>
+        <h3>Tier 3 · Established AGS</h3>
+        <p><strong>Trigger:</strong> Compatible history + positive α-gal sIgE (commonly ≥0.35 kU/L; titer correlates imperfectly with reactivity).</p>
+        <p class="act">Default to source-verified non-mammalian substitutes; involve allergy/immunology; anaphylaxis plan with epinephrine immediately available. Not an absolute contraindication — shared decision-making if no non-mammalian option exists. → see Materials, panel 02</p>
         <div class="algo-expand">
           <p><strong>Companion detail</strong></p>
           <ul>
@@ -908,6 +924,20 @@ html.theme-dark .take-label{color:#d6eef7}
 <script>
 const RELEASE_STAMP="v2.0 • reviewed 2026-08-28";
 document.querySelectorAll("[data-release-stamp]").forEach(el=>{el.textContent=RELEASE_STAMP;});
+(function(){
+  const root=[document.documentElement,document.body];
+  const applyCb=on=>{
+    root.forEach(el=>{ if(on) el.setAttribute("data-cb","on"); else el.removeAttribute("data-cb"); });
+    const btn=document.getElementById("cb-toggle");
+    if(btn){ btn.setAttribute("aria-pressed",on?"true":"false"); btn.textContent=on?"Color-blind on":"Color-blind view"; }
+  };
+  try{ applyCb(localStorage.getItem("ags-companion-cb")==="on"); }catch(_){ }
+  document.getElementById("cb-toggle")?.addEventListener("click",()=>{
+    const on=document.documentElement.getAttribute("data-cb")!=="on";
+    try{ localStorage.setItem("ags-companion-cb",on?"on":"off"); }catch(_){ }
+    applyCb(on);
+  });
+})();
 document.querySelectorAll('.nav a,.hero-actions a[href^="#"]').forEach(link=>{
   link.addEventListener("click",()=>{
     const target=document.querySelector(link.getAttribute("href"));
