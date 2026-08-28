@@ -82,16 +82,14 @@ td:nth-child(2){font-weight:900;color:var(--burgundy-deep)}
 sup a{font-size:.72em;font-weight:800;text-decoration:none}
 .audio-panel{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .audio-card{padding:18px;border:2px solid var(--gold);border-radius:10px;background:var(--ink);color:var(--white)}
-.audio-card h3{margin:0 0 6px;color:var(--white);font-size:22px}.audio-card p{margin:0 0 12px;color:var(--stone)}
-.audio-controls{display:flex;flex-wrap:wrap;gap:8px}
-.tts-button{min-height:44px;padding:8px 12px;font-size:15px}
-.tts-button.secondary{background:transparent;color:var(--white);border-color:var(--stone)}
-.audio-status{min-height:26px;margin:12px 0 0;color:var(--gold);font-size:15px;font-weight:700}
+.audio-card h3{margin:0 0 10px;color:var(--white);font-size:22px}
+.takes{display:grid;gap:12px}
+.take-label{display:block;margin:0 0 5px;color:var(--gold);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.audio-player{display:block;width:100%;margin:0;height:36px}
 .transcript{margin-top:12px;border-top:1px solid rgba(255,255,255,.28);padding-top:10px}
 .transcript summary{cursor:pointer;font-weight:800;color:var(--white)}
 .transcript-body{margin-top:12px;color:var(--cream-2)}
 .transcript-body p{margin:0 0 13px}
-.audio-player{display:block;width:100%;margin:4px 0 12px;min-height:44px}
 .cue{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px;align-items:start;margin:0 0 12px}
 .cue p{margin:0}
 .cue-time{appearance:none;background:transparent;border:0;padding:2px 0;margin:0;color:var(--gold);font:inherit;font-size:13px;font-weight:800;letter-spacing:.02em;text-align:left;cursor:pointer;min-height:28px;font-variant-numeric:tabular-nums}
@@ -170,14 +168,23 @@ footer{padding:26px 20px;background:var(--ink);border-top:5px solid var(--gold);
     <div class="audio-panel">
       <article class="audio-card">
         <h3>Track A · Printed poster</h3>
-        <p>Measured human duration: 6:32 · narrated by Marielle He</p>
-        <audio id="track-a-player" class="audio-player" controls preload="metadata" playsinline>
-          <source src="audio/track-a.m4a" type="audio/mp4">
-          <source src="audio/track-a.mp3" type="audio/mpeg">
-          <track kind="captions" src="captions/track-a.vtt" srclang="en" label="English captions" default>
-          <track kind="chapters" src="captions/track-a-chapters.vtt" srclang="en" label="Chapters">
-        </audio>
-        <p class="audio-status" id="poster-status" role="status" aria-live="polite">Human narration ready.</p>
+        <div class="takes">
+          <div>
+            <span class="take-label">Human · 6:32</span>
+            <audio id="track-a-player" class="audio-player" controls preload="metadata" playsinline>
+              <source src="audio/track-a.m4a" type="audio/mp4">
+              <source src="audio/track-a.mp3" type="audio/mpeg">
+              <track kind="captions" src="captions/track-a.vtt" srclang="en" label="English captions" default>
+            </audio>
+          </div>
+          <div>
+            <span class="take-label">Shorter AI · 2:34</span>
+            <audio id="track-a-short-player" class="audio-player" controls preload="metadata" playsinline>
+              <source src="audio/track-a-short.mp3" type="audio/mpeg">
+              <track kind="captions" src="captions/track-a-short.vtt" srclang="en" label="English captions" default>
+            </audio>
+          </div>
+        </div>
         <details class="transcript">
           <summary>Read Track A transcript</summary>
           <div class="transcript-body" id="poster-transcript">
@@ -212,14 +219,23 @@ footer{padding:26px 20px;background:var(--ink);border-top:5px solid var(--gold);
       </article>
       <article class="audio-card">
         <h3>Track B · Digital companion</h3>
-        <p>Measured human duration: 14:11 · narrated by Marielle He</p>
-        <audio id="track-b-player" class="audio-player" controls preload="metadata" playsinline>
-          <source src="audio/track-b.m4a" type="audio/mp4">
-          <source src="audio/track-b.mp3" type="audio/mpeg">
-          <track kind="captions" src="captions/track-b.vtt" srclang="en" label="English captions" default>
-          <track kind="chapters" src="captions/track-b-chapters.vtt" srclang="en" label="Chapters">
-        </audio>
-        <p class="audio-status" id="companion-status" role="status" aria-live="polite">Human narration ready.</p>
+        <div class="takes">
+          <div>
+            <span class="take-label">Human · 14:11</span>
+            <audio id="track-b-player" class="audio-player" controls preload="metadata" playsinline>
+              <source src="audio/track-b.m4a" type="audio/mp4">
+              <source src="audio/track-b.mp3" type="audio/mpeg">
+              <track kind="captions" src="captions/track-b.vtt" srclang="en" label="English captions" default>
+            </audio>
+          </div>
+          <div>
+            <span class="take-label">Shorter AI · 3:17</span>
+            <audio id="track-b-short-player" class="audio-player" controls preload="metadata" playsinline>
+              <source src="audio/track-b-short.mp3" type="audio/mpeg">
+              <track kind="captions" src="captions/track-b-short.vtt" srclang="en" label="English captions" default>
+            </audio>
+          </div>
+        </div>
         <details class="transcript">
           <summary>Read Track B transcript</summary>
           <div class="transcript-body" id="companion-transcript">
@@ -467,20 +483,19 @@ document.querySelectorAll('.nav a,.hero-actions a[href^="#"]').forEach(link=>{
 document.querySelectorAll('sup a[href^="#ref"]').forEach(link=>{
   link.addEventListener("click",()=>{document.querySelector("#references").open=true;});
 });
-const player=document.querySelector("#track-a-player");
-const statusEl=document.querySelector("#poster-status");
-function setAudioStatus(text){ if(statusEl) statusEl.textContent=text; }
-if(player){
-  player.addEventListener("play",()=>setAudioStatus("Narration playing."));
-  player.addEventListener("pause",()=>setAudioStatus(player.ended ? "Narration complete." : "Narration paused."));
-  player.addEventListener("ended",()=>setAudioStatus("Narration complete."));
-  player.addEventListener("error",()=>setAudioStatus("Audio could not play. Please use the transcript."));
-}
+const players=[...document.querySelectorAll("audio.audio-player")];
+players.forEach(el=>{
+  el.addEventListener("play",()=>{
+    players.forEach(other=>{ if(other!==el) other.pause(); });
+  });
+});
 document.querySelectorAll("[data-seek]").forEach(button=>{
   button.addEventListener("click",()=>{
-    if(!player) return;
-    player.currentTime=Number(button.getAttribute("data-seek"))||0;
-    player.play().catch(()=>setAudioStatus("Audio could not play. Please use the transcript."));
+    const sel=button.getAttribute("data-player");
+    const target=sel ? document.querySelector(sel) : button.closest(".audio-card")?.querySelector("audio");
+    if(!target) return;
+    target.currentTime=Number(button.getAttribute("data-seek"))||0;
+    target.play().catch(()=>{});
   });
 });
 </script>
