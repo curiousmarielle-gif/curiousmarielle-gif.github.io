@@ -15,6 +15,49 @@
   --preval:#5b21b6;--preval-deep:#3b0764;
   --ivory:#fffcf6;--well:#c9bba8;
 }
+html[data-cb="on"],body[data-cb="on"],[data-cb="on"]{
+  --ink:#001F3F;--graphite:#003D6B;--burgundy:#0072B2;--burgundy-deep:#003D6B;
+  --gold:#E69F00;--cream:#F7FBFF;--cream-2:#E6F2FA;--stone:#D0DCE6;
+  --taupe:#334E68;--white:#fff;--line:#003D6B;--shadow:rgba(0,31,63,.28);
+  --alert-bg:#FFF3C4;--alert-ink:#3D2E00;--alert-edge:#D55E00;
+  --preval:#882255;--preval-deep:#661144;
+  --ivory:#FFFFFF;--well:#C5D4E0;
+}
+html[data-cb="on"],html[data-cb="on"] body{background:#003D6B}
+html[data-cb="on"] body::before,body[data-cb="on"]::before{filter:grayscale(.5) saturate(.55) contrast(1.15) brightness(.82);background-color:#003D6B}
+html[data-cb="on"] .nav{background:#001F3F;border-bottom-color:#E69F00}
+html[data-cb="on"] .nav a:hover,html[data-cb="on"] .nav a:focus-visible{background:#56B4E9;color:#001F3F}
+html[data-cb="on"] .theme-toggle{background:#56B4E9;color:#001F3F;border-color:#001F3F}
+html[data-cb="on"] .theme-toggle:hover,html[data-cb="on"] .theme-toggle:focus-visible{background:#001F3F;color:#56B4E9;border-color:#56B4E9}
+html[data-cb="on"] .hero-actions .button.audio-author{background:#56B4E9;color:#001F3F;border-color:#0072B2}
+html[data-cb="on"] .hero-actions .button.audio-author:hover,html[data-cb="on"] .hero-actions .button.audio-author:focus-visible{background:#001F3F !important;color:#56B4E9 !important;border-color:#E69F00 !important}
+html[data-cb="on"] .hero-actions .button.audio-ai-a{background:#0072B2;color:#fff;border-color:#E69F00}
+html[data-cb="on"] .hero-actions .button.audio-ai-a:hover,html[data-cb="on"] .hero-actions .button.audio-ai-a:focus-visible{background:#E69F00 !important;color:#001F3F !important;border-color:#001F3F !important}
+html[data-cb="on"] .hero-actions .button.audio-ai-b{background:#009E73;color:#001F3F;border-color:#001F3F}
+html[data-cb="on"] .hero-actions .button.audio-ai-b:hover,html[data-cb="on"] .hero-actions .button.audio-ai-b:focus-visible{background:#001F3F !important;color:#F0E442 !important;border-color:#F0E442 !important}
+html[data-cb="on"] .hero-actions .button.preval,html[data-cb="on"] .button.preval{background:#882255;color:#fff;border-color:#661144}
+html[data-cb="on"] .hero-actions .button.preval:hover,html[data-cb="on"] .button.preval:hover,html[data-cb="on"] .button.preval:focus-visible{background:#661144 !important;color:#F0E442 !important;border-color:#F0E442 !important}
+html[data-cb="on"] .hero-actions .button.refs{background:#4D4D4D;color:#fff}
+html[data-cb="on"] .hero-actions .button.refs:hover{background:#000 !important;color:#F0E442 !important}
+html[data-cb="on"] .principle{background:#E6F2FA;color:#001F3F;border-color:#0072B2}
+html[data-cb="on"] .section>summary{background:#003D6B;color:#fff}
+html[data-cb="on"] .section[open]>summary{background:#001F3F}
+html[data-cb="on"] .section-num{background:#E69F00;color:#001F3F}
+html[data-cb="on"] tbody tr:nth-child(odd){background:#E6F2FA}
+html[data-cb="on"] tbody tr:nth-child(even){background:#FFF3C4}
+html[data-cb="on"] .table-wrap{background:#E6F2FA;border-color:#003D6B}
+html[data-cb="on"] .disclaimer{background:#FFF3C4;color:#3D2E00;border-color:#D55E00}
+html[data-cb="on"] .masthead{background:#001F3F}
+html[data-cb="on"] .logo-strip-wrap{background:#003D6B;border-bottom-color:#E69F00}
+html[data-cb="on"] .banner-kicker,html[data-cb="on"] .subtitle,html[data-cb="on"] .eyebrow{color:#E69F00}
+html[data-cb="on"] footer{background:#001F3F;border-top-color:#E69F00}
+html[data-theme="dark"][data-cb="on"],html[data-theme="dark"][data-cb="on"] body,[data-theme="dark"][data-cb="on"]{
+  --ink:#E6F2FA;--graphite:#9BD4EE;--burgundy:#56B4E9;--burgundy-deep:#9BD4EE;
+  --gold:#F0E442;--well:#0B2744;--ivory:#0F2238;--preval:#CC79A7;--preval-deep:#882255;
+  --alert-bg:#5C4300;--alert-ink:#FFF3C4;--alert-edge:#E69F00;--line:#56B4E9;
+}
+html[data-theme="dark"][data-cb="on"] tbody tr:nth-child(odd){background:#0B3A5C}
+html[data-theme="dark"][data-cb="on"] tbody tr:nth-child(even){background:#5C4300}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;background:#045a86}
 body{margin:0;background:transparent;color:var(--ink);font-family:Arial,"Helvetica Neue",sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
