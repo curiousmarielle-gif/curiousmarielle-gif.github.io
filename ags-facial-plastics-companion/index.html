@@ -60,10 +60,14 @@ h1{max-width:900px;margin:0;font-size:clamp(34px,6vw,62px);line-height:1.03;lett
 .typein-qr img{display:block;width:100%;height:100%}
 .typein-copy{margin:0;color:var(--cream-2);font-size:15px;line-height:1.4}
 .principle{display:block;margin:0 0 16px;padding:14px 18px;background:#d6eef7;color:#073451;border:3px solid #073451;border-radius:10px;font-size:18px;font-weight:800;letter-spacing:.12em;text-align:center;box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 8px 20px rgba(0,20,40,.2)}
-.hero-actions .button{width:100%;text-align:center;min-height:50px;padding:13px 31px;border-radius:10em;font:inherit;font-size:13px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 3px 0 rgba(0,0,0,.28),0 8px 16px rgba(0,20,40,.28);transition:background-color 180ms ease,color 180ms ease,border-color 180ms ease,box-shadow 180ms ease,transform 180ms ease}
+.hero-actions .button,.hero-actions button.button{width:100%;text-align:center;min-height:50px;padding:13px 31px;border-radius:10em;font:inherit;font-size:13px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 3px 0 rgba(0,0,0,.28),0 8px 16px rgba(0,20,40,.28);transition:background-color 180ms ease,color 180ms ease,border-color 180ms ease,box-shadow 180ms ease,transform 180ms ease}
 .hero-actions .button:hover,.hero-actions .button:focus-visible{transform:translateY(2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 0 rgba(0,0,0,.2),0 4px 8px rgba(0,20,40,.2)}
-.hero-actions .button.primary{background:#7ec8e3;color:var(--ink);border:1px solid #4aa9c4}
-.hero-actions .button.primary:hover,.hero-actions .button.primary:focus-visible{background:#0b4f70 !important;color:#e8f4fa !important;border-color:#7ec8e3 !important}
+.hero-actions .button.audio-author{background:#7ec8e3;color:var(--ink);border:1px solid #4aa9c4;letter-spacing:.08em}
+.hero-actions .button.audio-author:hover,.hero-actions .button.audio-author:focus-visible{background:#0b4f70 !important;color:#e8f4fa !important;border-color:#7ec8e3 !important}
+.hero-actions .button.audio-ai-a{background:#125a7a;color:#e8f4fa;border:1px solid #7ec8e3;letter-spacing:.08em}
+.hero-actions .button.audio-ai-a:hover,.hero-actions .button.audio-ai-a:focus-visible{background:#9bd4ee !important;color:#073451 !important;border-color:#073451 !important}
+.hero-actions .button.audio-ai-b{background:#3d5c6e;color:#f4f7fb;border:1px solid #9bd4ee;letter-spacing:.08em}
+.hero-actions .button.audio-ai-b:hover,.hero-actions .button.audio-ai-b:focus-visible{background:#cfe8f5 !important;color:#073451 !important;border-color:#073451 !important}
 .hero-actions .button.preval{background:var(--preval);color:#f5f3ff;border:1px solid var(--preval)}
 .hero-actions .button.preval:hover,.hero-actions .button.preval:focus-visible{background:#3b0764 !important;color:#e9d5ff !important;border-color:#c4b5fd !important}
 .hero-actions .button.refs{background:#6b7280;color:#f4f1ea;border:1px solid #4b5563}
@@ -325,7 +329,9 @@ html.theme-dark .take-label{color:#d6eef7}
     </div>
     </div>
     <div class="hero-actions">
-      <a class="button primary" href="#audio" aria-label="Open audio narration and transcripts">Listen or read transcript</a>
+      <button type="button" class="button audio-author" data-play="#track-a-player" data-label="▶ Author · 6:32">▶ Author · 6:32</button>
+      <button type="button" class="button audio-ai-a" data-play="#track-a-short-player" data-label="▶ AI poster · 2:34">▶ AI poster · 2:34</button>
+      <button type="button" class="button audio-ai-b" data-play="#track-b-short-player" data-label="▶ AI companion · 3:17">▶ AI companion · 3:17</button>
       <a class="button preval" href="#rater">Prevalidation questionnaire</a>
       <a class="button refs" href="#references">References</a>
     </div>
@@ -848,6 +854,24 @@ players.forEach(el=>{
   el.addEventListener("play",()=>{
     players.forEach(other=>{ if(other!==el) other.pause(); });
   });
+});
+document.querySelectorAll("[data-play]").forEach(button=>{
+  const sel=button.getAttribute("data-play");
+  const player=sel?document.querySelector(sel):null;
+  if(!player) return;
+  const idle=button.getAttribute("data-label")||"Play";
+  const sync=()=>{button.textContent=player.paused?idle:"❚❚ Pause";};
+  button.addEventListener("click",()=>{
+    const audio=document.querySelector("#audio");
+    if(audio?.tagName==="DETAILS") audio.open=true;
+    if(player.paused){
+      players.forEach(other=>{ if(other!==player) other.pause(); });
+      player.play().catch(()=>{button.textContent=idle;});
+    }else player.pause();
+  });
+  player.addEventListener("play",sync);
+  player.addEventListener("pause",sync);
+  player.addEventListener("ended",sync);
 });
 document.querySelectorAll("[data-seek]").forEach(button=>{
   button.addEventListener("click",()=>{
