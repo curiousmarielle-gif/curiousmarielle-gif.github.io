@@ -74,17 +74,20 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .access-kicker a{color:#F0E442;font-weight:800}
 .clin-only{display:revert}
 .acc-only{display:none}
-.glossary,.access-kicker{display:none}
+.glossary,.access-kicker,.plain-lang,.acc-expand{display:none}
 html[data-access="on"] .acc-only,body[data-access="on"] .acc-only,[data-access="on"] .acc-only{display:revert}
 html[data-access="on"] .clin-only,body[data-access="on"] .clin-only,[data-access="on"] .clin-only{display:none}
-html[data-access="on"] .glossary,html[data-access="on"] .access-kicker,
-body[data-access="on"] .glossary,body[data-access="on"] .access-kicker,
-[data-access="on"] .glossary,[data-access="on"] .access-kicker{display:block}
+html[data-access="on"] .glossary,html[data-access="on"] .access-kicker,html[data-access="on"] .plain-lang,html[data-access="on"] .acc-expand,
+body[data-access="on"] .glossary,body[data-access="on"] .access-kicker,body[data-access="on"] .plain-lang,body[data-access="on"] .acc-expand,
+[data-access="on"] .glossary,[data-access="on"] .access-kicker,[data-access="on"] .plain-lang,[data-access="on"] .acc-expand{display:block}
+html[data-access="on"] .clin-compact,body[data-access="on"] .clin-compact,[data-access="on"] .clin-compact{display:none}
 html[data-access="on"] abbr[title]::after,body[data-access="on"] abbr[title]::after,[data-access="on"] abbr[title]::after{
   content:" (" attr(title) ")";
   font-weight:600;
   font-size:.92em;
 }
+html[data-access="on"] main{font-size:18px;line-height:1.55}
+.access-chip{margin:0 0 14px;padding:8px 12px;border:2px solid var(--ink);border-radius:8px;font-size:13px;font-weight:800;letter-spacing:.04em;text-transform:uppercase;background:var(--ivory)}
 .plain-lang{margin:0 0 16px;padding:16px 18px;background:var(--ivory);border-left:8px solid var(--ink);border:2px solid var(--ink);border-left-width:8px;border-radius:8px}
 .plain-lang strong{display:block;margin:0 0 6px;font-size:13px;letter-spacing:.06em;text-transform:uppercase}
 .audio-note{margin:0 0 14px;font-size:15px}
@@ -449,8 +452,8 @@ html.theme-dark .take-label{color:#d6eef7}
       <a class="typein-qr" href="https://tinyurl.com/AGS-FPRS" aria-label="Accessible text and audio: tinyurl.com/AGS-FPRS">
         <img src="qr/ags-fprs-qr.png" width="88" height="88" alt="QR code. Accessible text and audio at tinyurl.com/AGS-FPRS">
       </a>
-      <p class="typein-copy clin-only">Accessible text and audio at<br><a href="https://tinyurl.com/AGS-FPRS" style="color:var(--gold);font-weight:800">tinyurl.com/AGS-FPRS</a></p>
-      <p class="typein-copy acc-only">Accessible text and audio at<br><a href="https://tinyurl.com/AGS-FPRS" style="color:var(--gold);font-weight:800">tinyurl.com/AGS-FPRS</a></p>
+      <p class="typein-copy clin-only">Scan or type-in:<br><a href="https://tinyurl.com/AGS-FPRS" style="color:var(--gold);font-weight:800">tinyurl.com/AGS-FPRS</a></p>
+      <p class="typein-copy acc-only">Accessible text and audio (abbreviations expanded, glossary on):<br><a href="https://tinyurl.com/AGS-FPRS" style="color:var(--gold);font-weight:800">tinyurl.com/AGS-FPRS</a></p>
     </div>
     </div>
     <div class="hero-actions">
@@ -469,6 +472,8 @@ html.theme-dark .take-label{color:#d6eef7}
 </header>
 
 <main id="main" tabindex="-1">
+  <p class="access-chip clin-only">Clinical view · abbreviations kept short</p>
+  <p class="access-chip acc-only">Accessible text view · terms expanded · glossary on</p>
   <p class="access-kicker" data-readable>This page is the accessible text track. Audio is optional and fully duplicated here as captions and transcripts. No information is audio-only. <a href="#audio">Captions and transcripts</a> · <a href="#poster">Poster PDF</a></p>
   <aside class="glossary" id="abbrev" data-readable>
     <h2>Abbreviations expanded</h2>
@@ -506,7 +511,8 @@ html.theme-dark .take-label{color:#d6eef7}
         <span class="tier-handle">Tier 1 · low</span>
         <h3>Tier 1 · No suggestive history</h3>
         <p><strong>Trigger:</strong> No compatible symptoms; no relevant tick/endemic exposure (endemic residence alone, without symptoms, stays Tier 1).</p>
-        <p class="act">Do not screen α-gal sIgE and do not restrict materials on an AGS basis. Proceed with standard care; remain alert to reactions.</p>
+        <p class="act clin-only">Do not screen α-gal sIgE and do not restrict materials on an AGS basis. Proceed with standard care; remain alert to reactions.</p>
+        <p class="act acc-only">Do not order an alpha-gal specific immunoglobulin E blood test, and do not restrict products just because of alpha-gal syndrome. Use usual care. Stay alert for allergic reactions.</p>
         <div class="algo-expand">
           <p><strong>Companion detail</strong></p>
           <ul>
@@ -520,7 +526,8 @@ html.theme-dark .take-label{color:#d6eef7}
         <span class="tier-handle">Tier 2 · caution</span>
         <h3>Tier 2 · Suspected AGS</h3>
         <p><strong>Trigger:</strong> Compatible history/exposure, not yet confirmed.</p>
-        <p class="act">Order α-gal sIgE; refer to allergy/immunology; prefer non-mammalian materials pending results. If urgent and cannot wait → manage as Tier 3. → see Materials, panel 02</p>
+        <p class="act clin-only">Order α-gal sIgE; refer to allergy/immunology; prefer non-mammalian materials pending results. If urgent and cannot wait → manage as Tier 3. → see Materials, panel 02</p>
+        <p class="act acc-only">Order an alpha-gal specific immunoglobulin E blood test. Refer to allergy. Prefer products not made from mammal tissue until the result is back. If the case cannot wait, treat as established alpha-gal syndrome. See the materials list.</p>
         <div class="algo-expand">
           <p><strong>Companion detail</strong></p>
           <ul>
@@ -535,7 +542,8 @@ html.theme-dark .take-label{color:#d6eef7}
         <span class="tier-handle">Tier 3 · act</span>
         <h3>Tier 3 · Established AGS</h3>
         <p><strong>Trigger:</strong> Compatible history + positive α-gal sIgE (commonly ≥0.35 kU/L; titer correlates imperfectly with reactivity).</p>
-        <p class="act">Default to source-verified non-mammalian substitutes; involve allergy/immunology; anaphylaxis plan with epinephrine immediately available. Not an absolute contraindication — shared decision-making if no non-mammalian option exists. → see Materials, panel 02</p>
+        <p class="act clin-only">Default to source-verified non-mammalian substitutes; involve allergy/immunology; anaphylaxis plan with epinephrine immediately available. Not an absolute contraindication — shared decision-making if no non-mammalian option exists. → see Materials, panel 02</p>
+        <p class="act acc-only">Use source-checked products that are not from mammal tissue. Involve allergy. Have epinephrine ready. This is not an absolute ban — decide together if no substitute exists. See the materials list.</p>
         <div class="algo-expand">
           <p><strong>Companion detail</strong></p>
           <ul>
@@ -569,8 +577,8 @@ html.theme-dark .take-label{color:#d6eef7}
   <summary><span class="section-num">2</span><span role="heading" aria-level="2">Materials verification</span></summary>
   <div class="section-body">
     <p>No aesthetic-specific literature directly assays α-gal epitope content in cosmetic products. Rows grade <strong>literature evidence</strong> separately from the <strong>action that evidence supports</strong>. A weak evidence grade can still warrant a simple substitution (e.g., recombinant hyaluronidase).<sup><a href="#ref21">21</a>,<a href="#ref22">22</a>,<a href="#ref20">20</a></sup></p>
-    <p class="table-hint">On a phone, swipe the table sideways. Named products illustrate class as of the 2 August 2026 review date; re-verify current IFUs. Evidence strength is not the same as clinical action.</p>
-    <div class="table-wrap">
+    <p class="table-hint clin-compact">On a phone, swipe the table sideways. Named products illustrate class as of the 2 August 2026 review date; re-verify current IFUs. Evidence strength is not the same as clinical action.</p>
+    <div class="table-wrap clin-compact">
       <table>
         <caption>Materials: evidence strength versus clinical risk and action. Named products are class examples, not a brand-level α-gal assay.</caption>
         <thead>
@@ -626,6 +634,18 @@ html.theme-dark .take-label{color:#d6eef7}
           </tr>
         </tbody>
       </table>
+    </div>
+    <div class="acc-expand" aria-label="Materials in plain language">
+      <p><strong>Materials in plain language.</strong> Named products are class examples as of 2 August 2026, not a brand-level alpha-gal test. Check the current instructions for use before use.</p>
+      <ul>
+        <li><strong>Gelatin hemostats</strong> (cow or pig; examples Gelfoam, Floseal). Evidence: demonstrated. Action: avoid; use a non-gelatin option. This is class-level operating-room anaphylaxis, not a brand assay.</li>
+        <li><strong>Pig unfractionated heparin</strong> (pig gut lining). Evidence: clinical signal. Action: substitute if you can; be extra careful with high-dose intravenous use. High-dose heart-surgery series: 4 of 17 severe (24%); 4 of 8 with recent antibody levels (50%). Lower-dose hospital series: 1 of 39 unfractionated heparin (2.6%); 0 of 22 enoxaparin (0%). Not an absolute ban.</li>
+        <li><strong>Mammal tissue matrices</strong> (pig or cow; examples Strattice, SurgiMend). Evidence: mechanistic inference. Action: check the source; consider another product. Precedent is from other specialties; there is no prospective cosmetic or aesthetic study group.</li>
+        <li><strong>Collagen fillers / catgut</strong> (cow or pig collagen; example polymethyl methacrylate–collagen). Evidence: theoretical. Action: check species and lot; prefer synthetic suture. Based on composition only; no aesthetic alpha-gal reaction series.</li>
+        <li><strong>Testicular hyaluronidase</strong> (sheep or cow testis; examples Vitrase, Amphadase/Hydase). Evidence: theoretical for alpha-gal only. Action: prefer recombinant human hyaluronidase (Hylenex). “Theoretical” does not mean low overall risk. A separate, labeled non–alpha-gal anaphylaxis risk remains for hyaluronidase.</li>
+        <li><strong>Hyaluronic acid / calcium hydroxylapatite / poly-L-lactic acid / lidocaine</strong> after a source check. Evidence: no alpha-gal–specific risk identified in the available literature. Action: usual use. Other allergies are still possible. Older bird-derived hyaluronic acid is not mammal; still check the source. Missing literature is not proof of safety.</li>
+        <li><strong>Botulinum toxin</strong> (human albumin in some formulas — check the label). Evidence: no alpha-gal–specific risk identified. Action: usual use after checking the current label. Some older formulas used animal stabilizers.</li>
+      </ul>
     </div>
     <div class="callout"><strong>Detectable α-gal IgE does not reliably predict clinical reactivity.</strong> Some sensitized patients tolerate mammalian-derived products. Framework is risk stratification, not reflexive exclusion. Evidence strength and clinical risk are reported separately because a material can be well-documented yet variable in practice, or mechanistically plausible yet poorly studied.<sup><a href="#ref3">3</a>,<a href="#ref25">25</a>,<a href="#ref29">29</a>,<a href="#ref24">24</a></sup></div>
     <div class="callout"><strong>DELAYED REACTIONS DO NOT EQUAL ALPHA-GAL.</strong> Delayed filler or acellular-dermal-matrix reactions are not α-gal evidence, and α-gal screening will not detect them.<sup><a href="#ref2">2</a>,<a href="#ref6">6</a>–<a href="#ref8">8</a></sup></div>
@@ -1048,6 +1068,10 @@ document.querySelectorAll("[data-release-stamp]").forEach(el=>{el.textContent=RE
     const btn=document.getElementById("access-toggle");
     if(btn){ btn.setAttribute("aria-pressed",on?"true":"false"); btn.textContent=on?"Clinical text":"Accessible text"; }
     document.querySelectorAll("details.transcript").forEach(d=>{ d.open=on; });
+    const audio=document.getElementById("audio");
+    if(audio) audio.open=on;
+    const poster=document.getElementById("poster");
+    if(on && poster) poster.open=true;
   };
   try{ applyAccess(localStorage.getItem("ags-companion-access")==="on"); }catch(_){ }
   document.getElementById("access-toggle")?.addEventListener("click",()=>{
