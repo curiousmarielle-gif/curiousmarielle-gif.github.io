@@ -130,11 +130,12 @@ main{max-width:1120px;margin:0 auto 40px;padding:20px 20px 72px;background:rgba(
 .flow{font-size:clamp(18px,4vw,26px);font-weight:900;line-height:1.4}
 .evidence-line{margin-top:12px;padding:10px 14px;background:var(--burgundy-deep);color:var(--white);font-weight:800}
 .pathway.hypothesis .evidence-line{background:var(--graphite)}
-.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:#dceaf1}
 table{width:100%;border-collapse:collapse;min-width:820px;font-size:16px}
 th{padding:14px 16px;background:var(--ink);color:var(--white);text-align:left;font-size:14px;letter-spacing:.035em;text-transform:uppercase}
 td{padding:16px 16px;border-bottom:1px solid var(--line);vertical-align:top}
-tbody tr:nth-child(even){background:var(--ivory)}
+tbody tr:nth-child(odd){background:#eef6fa}
+tbody tr:nth-child(even){background:#d4e4ee}
 tbody tr:last-child td{border-bottom:0}
 td:nth-child(2),td:nth-child(3){font-weight:800}
 td:nth-child(3){color:var(--burgundy-deep)}
@@ -245,7 +246,9 @@ body[data-theme="dark"]::after{background:radial-gradient(70% 55% at 16% 6%,rgba
 [data-theme="dark"] .callout strong{color:#b8e0f0}
 [data-theme="dark"] .callout.gold{background:#3a3424;color:#eef3f8;border-color:var(--gold)}
 [data-theme="dark"] .callout.dark{background:#0b1220;color:#fff}
-[data-theme="dark"] tbody tr:nth-child(even){background:#273544}
+[data-theme="dark"] .table-wrap{background:#15222c}
+[data-theme="dark"] tbody tr:nth-child(odd){background:#1e3344}
+[data-theme="dark"] tbody tr:nth-child(even){background:#152830}
 [data-theme="dark"] td{color:#eef3f8;border-bottom-color:#4d5d6a}
 [data-theme="dark"] .review-form fieldset{background:#273544;border-color:#c5d0da;color:#eef3f8}
 [data-theme="dark"] .review-form legend,
