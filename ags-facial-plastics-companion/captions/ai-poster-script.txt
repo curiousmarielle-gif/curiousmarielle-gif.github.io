@@ -1,19 +1,53 @@
-Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures. Marielle He, Jordan Kai Simmons, and Babak Azizzadeh. Screen. Stratify. Act.
+This poster is titled Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures. The authors are Marielle He, M-D, M-S; Jordan Kai Simmons, M-D; and Babak Azizzadeh, M-D, F-A-C-S. They are affiliated with the CENTER for Advanced Facial Plastic Surgery in Beverly Hills, California, and the Division of Otolaryngology–Head and Neck Surgery at Cedars-Sinai Medical Center in Los Angeles.
 
-Alpha-gal syndrome, or A-G-S, is an acquired immunoglobulin E, or I-G-E mediated, allergy to galactose-alpha-1,3-galactose in non-primate mammalian tissue and products. Diagnosis requires compatible history plus alpha-gal I-G-E. Sensitized does not equal reactive. Confirmation defines the diagnosis; it is not a per-procedure laboratory gate.
+Section one: Alpha-gal syndrome overview. The central concept is that being sensitized is not the same as being reactive. Alpha-gal syndrome, abbreviated A-G-S, requires both a compatible clinical history and alpha-gal–specific I-G-E. Elevated I-G-E alone does not establish the diagnosis.
 
-The established pathway is tick-induced alpha-gal I-G-E reacting to a later mammalian exposure; a hypothesized product-associated sensitization pathway remains unestablished.
+What it is: Alpha-gal syndrome is an I-G-E–mediated allergy to galactose-alpha-1,3-galactose, called alpha-gal, a sugar found in non-primate mammalian tissues and products.
 
-The C-D-C identified 90,018 suspected U.S. cases from 2017 through 2022, and estimated 96,000 to 450,000 affected since 2010. Seropositivity is not clinical disease.
+Why it matters: In cosmetic and aesthetic practice, this creates a potential anaphylaxis risk from gelatin hemostats, collagen-containing fillers, mammalian grafts, catgut sutures, and various excipients.
 
-Three tiers. Tier 1, low: no suggestive history. Do not screen alpha-gal I-G-E and do not restrict materials on an A-G-S basis. Endemic residence alone, without symptoms, stays Tier 1. Tier 2, caution: suspected A-G-S. Order alpha-gal specific I-G-E; refer to allergy; prefer non-mammalian materials pending results. If urgent, manage as Tier 3. Tier 3, act: established A-G-S. Default to source-verified non-mammalian substitutes; allergy involvement; epinephrine immediately available. Not an absolute contraindication.
+Epidemiology: According to C-D-C Morbidity and Mortality Weekly Report data from 2017 to 2022, there were about 90,018 suspected cases. An estimated 96,000 to 450,000 people have been affected since 2010. Importantly, being seropositive does not equal having disease—for example, seropositivity reached 31.2 percent in Arkansas and 26 percent in Missouri. Geographically, cases cluster in the southern and eastern United States.
 
-Oral exposure is delayed 2 to 6 hours. Parenteral may be immediate. Implants can prolong exposure. Food-challenge thresholds do not establish product safety.
+Review design: The authors reviewed literature published from January 2010 through July 2026, with a final search on August 2, 2026, prioritizing surgical and perioperative alpha-gal data.
 
-Porcine unfractionated heparin, or U-F-H: high-dose intravenous cardiac exposure caused severe reactions in 4 of 17 patients, or 24 percent. Heparin is not an absolute contraindication.
+Limits: There is no prospective cosmetic or aesthetic cohort, no reaction registry, and no validated product-specific I-G-E threshold or brand-level alpha-gal assay.
 
-Gelatin hemostats: demonstrated. Porcine heparin: clinical signal. Mammalian matrices: mechanistic inference, with no prospective cosmetic or aesthetic cohort. Collagen P-M-M-A and catgut: theoretical. Testicular hyaluronidase: theoretical for alpha-gal only; it also has an independent, non-A-G-S anaphylaxis risk. Source-verified H-A, calcium hydroxylapatite, poly-L-lactic acid, or P-L-L-A, and lidocaine: no A-G-S-specific risk identified in the available literature. That is not proven safe.
+Section two: Clinical decision-making. The framework is Screen, then Stratify, then Act.
 
-No prospective cosmetic or aesthetic cohort, validated procedure-specific screening threshold, or brand-level alpha-gal assay exists. Named products are class examples, not a brand-level assay.
+Under Screen: Step one, take a history of prior reactions and tick exposure. Step two, establish the diagnosis once, based on a compatible history plus alpha-gal I-G-E.
 
-This narration is decision support for licensed clinicians, not medical advice. Premedication does not reliably prevent anaphylaxis. Narrated by Marielle He. End of narration.
+Under Stratify: Step three, audit all materials—hemostats, fillers, grafts, sutures, and excipients. Step four, verify the species, source, excipients, and lot number.
+
+Under Act: Step five, substitute with source-verified hyaluronic acid and non-gelatin options. Step six, prepare with epinephrine and a reaction plan, and consult allergy if the situation is uncertain.
+
+Three key clinical caveats accompany this framework.
+
+First, food data does not equal product cutoffs. Reference thresholds—such as 2.0 kilounits per liter or 0.75 percent total I-G-E giving greater than 95 percent positive predictive value, and greater than 5.5 kilounits per liter or 2.12 percent giving roughly 95 percent modeled probability—are not validated for cosmetic products.
+
+Second, route changes timing. Oral exposure causes delayed reactions at three to six hours. Parenteral exposure may be immediate. Implants cause prolonged exposure. Parenteral delivery bypasses gut processing.
+
+Third, source and lot matter. Verify species, source, excipients, and lot, because formulations change and labels may be incomplete.
+
+Section three: Material risk, graded by evidence.
+
+The recurring principle: sensitized is not reactive—history plus alpha-gal I-G-E define A-G-S risk. Evidence is graded from strongest to weakest as follows: documented reaction, then clinical signal, then mechanism, then theory, then no A-G-S-specific literature.
+
+Gelatin hemostats, such as Gelfoam and Floseal, have demonstrated evidence. There is class-level perioperative anaphylaxis, though not every brand is implicated.
+
+Porcine unfractionated heparin, at cardiac-dose intravenous levels, shows a clinical signal. Risk is strongest with high-dose I-V; route and dose matter.
+
+Mammalian matrices, such as Strattice and SurgiMend, have mechanistic evidence. There is surgical precedent but no aesthetic cohort.
+
+Collagen, P-M-M-A, and catgut—for example Bellafill and surgical gut—are rated theoretical. Concern is composition-based, with no A-G-S reaction series.
+
+Animal hyaluronidase, such as Amphadase and Vitrase, is also theoretical. These are testicular extracts. Recombinant human hyaluronidase—Hylenex—is a non-animal-extract alternative.
+
+Finally, source-verified substitutes—hyaluronic acid, calcium hydroxylapatite, poly-L-lactic acid, and lidocaine—have no A-G-S-specific literature, though other hypersensitivity mechanisms remain possible.
+
+Three closing notes. On hyaluronidase: animal-derived ovine and bovine testicular products carry independent, non-A-G-S allergy and anaphylaxis risk; recombinant human Hylenex is the non-animal-extract alternative. On neutrality: brands are cited to illustrate material classes—this is not endorsement, and no brand-level alpha-gal assays were performed. On currency: examples are current as of August 2026; always verify the current F-D-A label and instructions for use, plus species, source, excipients, and lot.
+
+The take-home message: In alpha-gal syndrome, sensitization does not equal reactivity—diagnosis requires both a compatible history and alpha-gal-specific I-G-E. For cosmetic and aesthetic procedures, screen for history and tick exposure, stratify by auditing and verifying all mammalian-derived materials, and act by substituting source-verified non-gelatin, non-animal options while preparing for anaphylaxis when risk is uncertain.
+
+A digital companion with full citations, accessible text, and audio is available at the Q-R code, at tinyurl.com/AGS-FPRS.
+
+This concludes the transcript.
