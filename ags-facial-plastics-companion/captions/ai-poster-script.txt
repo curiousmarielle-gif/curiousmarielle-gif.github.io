@@ -1,39 +1,19 @@
-1
-00:00:00,300 --> 00:00:07,647
 Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures. Marielle He, Jordan Kai Simmons, and Babak Azizzadeh. Screen. Stratify. Act.
 
-2
-00:00:07,997 --> 00:00:26,364
 Alpha-gal syndrome, or A-G-S, is an acquired immunoglobulin E, or I-G-E mediated, allergy to galactose-alpha-1,3-galactose in non-primate mammalian tissue and products. Diagnosis requires compatible history plus alpha-gal I-G-E. Sensitized does not equal reactive. Confirmation defines the diagnosis; it is not a per-procedure laboratory gate.
 
-3
-00:00:26,714 --> 00:00:34,878
 The established pathway is tick-induced alpha-gal I-G-E reacting to a later mammalian exposure; a hypothesized product-associated sensitization pathway remains unestablished.
 
-4
-00:00:35,228 --> 00:00:46,656
 The C-D-C identified 90,018 suspected U.S. cases from 2017 through 2022, and estimated 96,000 to 450,000 affected since 2010. Seropositivity is not clinical disease.
 
-5
-00:00:47,006 --> 00:01:16,394
 Three tiers. Tier 1, low: no suggestive history. Do not screen alpha-gal I-G-E and do not restrict materials on an A-G-S basis. Endemic residence alone, without symptoms, stays Tier 1. Tier 2, caution: suspected A-G-S. Order alpha-gal specific I-G-E; refer to allergy; prefer non-mammalian materials pending results. If urgent, manage as Tier 3. Tier 3, act: established A-G-S. Default to source-verified non-mammalian substitutes; allergy involvement; epinephrine immediately available. Not an absolute contraindication.
 
-6
-00:01:16,744 --> 00:01:26,132
 Oral exposure is delayed 2 to 6 hours. Parenteral may be immediate. Implants can prolong exposure. Food-challenge thresholds do not establish product safety.
 
-7
-00:01:26,482 --> 00:01:37,094
 Porcine unfractionated heparin, or U-F-H: high-dose intravenous cardiac exposure caused severe reactions in 4 of 17 patients, or 24 percent. Heparin is not an absolute contraindication.
 
-8
-00:01:37,444 --> 00:02:01,934
 Gelatin hemostats: demonstrated. Porcine heparin: clinical signal. Mammalian matrices: mechanistic inference, with no prospective cosmetic or aesthetic cohort. Collagen P-M-M-A and catgut: theoretical. Testicular hyaluronidase: theoretical for alpha-gal only; it also has an independent, non-A-G-S anaphylaxis risk. Source-verified H-A, calcium hydroxylapatite, poly-L-lactic acid, or P-L-L-A, and lidocaine: no A-G-S-specific risk identified in the available literature. That is not proven safe.
 
-9
-00:02:02,284 --> 00:02:12,080
 No prospective cosmetic or aesthetic cohort, validated procedure-specific screening threshold, or brand-level alpha-gal assay exists. Named products are class examples, not a brand-level assay.
 
-10
-00:02:12,430 --> 00:02:22,226
 This narration is decision support for licensed clinicians, not medical advice. Premedication does not reliably prevent anaphylaxis. Narrated by Marielle He. End of narration.
