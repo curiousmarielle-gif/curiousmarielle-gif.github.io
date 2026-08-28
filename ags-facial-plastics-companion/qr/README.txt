@@ -9,7 +9,5 @@ Resolves to:
 Print / type-in:
   tinyurl.com/AGS-FPRS
 
-tinyurl.com/tphags still points at a dead grok.me page — do not use.
-
 Files
   ags-fprs-qr.png / existing-poster-qr.png   Official TinyURL QR
