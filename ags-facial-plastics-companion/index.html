@@ -1194,39 +1194,55 @@ document.querySelectorAll('a[href="#audio"],a[href="#poster"],a[href="#poster-tr
   status.setAttribute("role","status");
   status.setAttribute("aria-live","polite");
   document.body.appendChild(status);
+  const spokenText=()=>{
+    const restore=[];
+    document.querySelectorAll("main details").forEach(d=>{
+      if(d.classList.contains("transcript")){
+        if(d.open){ d.open=false; restore.push(()=>{ d.open=true; }); }
+        return;
+      }
+      if(!d.open){ d.open=true; restore.push(()=>{ d.open=false; }); }
+    });
+    const bits=[".disclaimer",".face-stamp","header.masthead","#main","footer"]
+      .map(sel=>document.querySelector(sel))
+      .filter(Boolean)
+      .map(el=>el.innerText||"");
+    restore.reverse().forEach(fn=>fn());
+    return bits.join(". ")
+      .replace(/[αΑ]/g,"alpha ")
+      .replace(/≠/g," does not equal ")
+      .replace(/→/g," then ")
+      .replace(/\s+/g," ")
+      .trim();
+  };
+  let speakQueue=[];
   const stopSpeak=()=>{
+    speakQueue=[];
     try{ window.speechSynthesis&&speechSynthesis.cancel(); }catch(_){}
     if(speakBtn){ speakBtn.setAttribute("aria-pressed","false"); speakBtn.textContent="Read page"; }
     status.textContent="";
   };
-  const spokenText=()=>{
-    const clean=s=>(s||"").replace(/[αΑ]/g,"alpha ").replace(/≠/g," does not equal ").replace(/→/g," then ").replace(/\s+/g," ").trim();
-    const parts=[];
-    const grab=(sel)=>{ const el=document.querySelector(sel); if(el) parts.push(clean(el.innerText||el.textContent)); };
-    grab(".disclaimer"); grab(".face-stamp"); grab("h1"); grab(".authors"); grab(".affiliation");
-    ["decision","materials","ags","mechanism","methods","disclosures","history"].forEach(id=>{
-      const sec=document.getElementById(id);
-      if(!sec) return;
-      const sum=sec.querySelector("summary");
-      const body=sec.querySelector(".section-body");
-      if(sum) parts.push(clean(sum.innerText||sum.textContent));
-      if(body) parts.push(clean(body.textContent));
-    });
-    grab("footer");
-    return parts.filter(Boolean).join(". ");
-  };
   speakBtn?.addEventListener("click",()=>{
     if(!window.speechSynthesis){ status.textContent="Page reading is not available in this browser. Use the transcripts."; return; }
-    if(speechSynthesis.speaking){ stopSpeak(); return; }
+    if(speechSynthesis.speaking||speakQueue.length){ stopSpeak(); return; }
     document.querySelectorAll("audio").forEach(a=>a.pause());
-    const u=new SpeechSynthesisUtterance(spokenText());
-    u.lang="en-US"; u.rate=0.95;
-    u.onend=stopSpeak;
-    u.onerror=stopSpeak;
+    const text=spokenText();
+    if(!text){ status.textContent="Nothing to read."; return; }
+    const size=12000;
+    speakQueue=[];
+    for(let i=0;i<text.length;i+=size) speakQueue.push(text.slice(i,i+size));
+    const next=()=>{
+      if(!speakQueue.length){ stopSpeak(); return; }
+      const u=new SpeechSynthesisUtterance(speakQueue.shift());
+      u.lang="en-US"; u.rate=0.95;
+      u.onend=next;
+      u.onerror=stopSpeak;
+      speechSynthesis.speak(u);
+    };
     speakBtn.setAttribute("aria-pressed","true");
     speakBtn.textContent="Stop reading";
-    status.textContent="Reading the accessible text.";
-    speechSynthesis.speak(u);
+    status.textContent="Reading the companion.";
+    next();
   });
   document.querySelectorAll("audio.audio-player").forEach(a=>{
     a.addEventListener("play", stopSpeak);
