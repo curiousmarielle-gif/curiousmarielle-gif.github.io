@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+<base href="https://curiousmarielle-gif.github.io/">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#141618">
+<title>Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures</title>
+<style>
+:root{
+  --ink:#141618;--graphite:#3f4847;--burgundy:#6b3f49;--burgundy-deep:#5a3039;
+  --gold:#b78b42;--cream:#f7f6f0;--cream-2:#f3ebdd;--stone:#d5c9bb;
+  --taupe:#786653;--white:#fff;--line:#cfc5b8;--shadow:rgba(20,22,24,.14);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--cream)}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:Arial,"Helvetica Neue",sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:var(--burgundy-deep);text-underline-offset:.16em}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--gold);outline-offset:3px}
+.skip{position:fixed;left:12px;top:-80px;z-index:1000;padding:10px 14px;background:var(--white);color:var(--ink);border:2px solid var(--gold);border-radius:6px}
+.skip:focus{top:12px}
+.nav{position:sticky;top:0;z-index:100;background:rgba(20,22,24,.97);border-bottom:3px solid var(--gold);overflow-x:auto;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,.24)}
+.nav-inner{display:flex;gap:4px;max-width:1120px;margin:auto;padding:8px 12px;min-width:max-content}
+.nav a{display:inline-flex;align-items:center;min-height:44px;padding:8px 12px;border-radius:22px;color:var(--cream);text-decoration:none;font-size:15px;font-weight:700}
+.nav a:hover{background:var(--burgundy-deep);color:var(--white)}
+.masthead{background:var(--ink);color:var(--white);border-bottom:6px solid var(--gold)}
+.masthead-inner{max-width:1120px;margin:auto;padding:34px 20px 30px}
+.eyebrow{margin:0 0 8px;color:var(--gold);font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+h1{max-width:900px;margin:0;font-size:clamp(34px,6vw,62px);line-height:1.03;letter-spacing:-.035em;font-weight:700}
+.subtitle{max-width:900px;margin:12px 0 0;color:var(--gold);font-size:clamp(19px,3vw,27px);line-height:1.2;font-weight:800}
+.authors{margin:18px 0 0;color:var(--stone);font-size:17px;font-weight:700}
+.affiliation{margin:8px 0 0;color:var(--stone);font-size:15px;line-height:1.45}
+.principle{display:inline-block;margin:22px 0 0;padding:10px 14px;background:var(--burgundy-deep);border-left:5px solid var(--gold);font-size:18px;font-weight:800;letter-spacing:.045em}
+.hero-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.button,.tts-button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 15px;border:2px solid var(--gold);border-radius:7px;background:var(--cream);color:var(--ink);font:inherit;font-size:16px;font-weight:800;text-decoration:none;cursor:pointer}
+.button.primary,.tts-button.primary{background:var(--gold);color:var(--ink)}
+.button:hover,.tts-button:hover{background:var(--cream-2)}
+.disclaimer{max-width:1120px;margin:18px auto 0;padding:14px 18px;background:var(--cream-2);border:1px solid var(--line);border-left:6px solid var(--gold);border-radius:8px;color:var(--graphite);font-size:15px}
+main{max-width:1120px;margin:auto;padding:20px 20px 72px}
+.section{margin:16px 0;border:1px solid var(--line);border-radius:12px;background:var(--white);box-shadow:0 5px 18px var(--shadow);overflow:hidden;scroll-margin-top:74px}
+.section>summary{display:flex;align-items:center;gap:12px;min-height:64px;padding:14px 18px;background:var(--cream-2);cursor:pointer;font-size:20px;font-weight:800;list-style:none}
+.section>summary::-webkit-details-marker{display:none}
+.section>summary::after{content:"＋";margin-left:auto;color:var(--burgundy);font-size:25px;line-height:1}
+.section[open]>summary::after{content:"−"}
+.section-num{display:inline-flex;align-items:center;justify-content:center;flex:0 0 34px;height:34px;border-radius:50%;background:var(--burgundy-deep);color:var(--white);font-size:15px}
+.section-body{padding:20px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.card{padding:17px;border:1px solid var(--line);border-radius:9px;background:var(--cream)}
+.card h2,.card h3,.card h4{margin:0 0 9px;line-height:1.2;color:var(--burgundy-deep)}
+.card h3{font-size:20px}.card h4{font-size:17px}
+.card p{margin:0 0 9px}.card p:last-child{margin-bottom:0}
+.card ul,.card ol{margin:6px 0 0;padding-left:22px}.card li{margin:6px 0}
+.callout{margin:14px 0;padding:17px 18px;border:2px solid var(--burgundy);border-left-width:8px;border-radius:8px;background:#f2e8e9}
+.callout strong{color:var(--burgundy-deep)}
+.callout.gold{border-color:var(--gold);background:#f7eddb}
+.callout.dark{background:var(--ink);border-color:var(--gold);color:var(--white)}
+.callout.dark strong{color:var(--white)}
+.small{font-size:15px;color:var(--graphite)}
+.kicker{margin:0 0 5px;color:var(--burgundy-deep);font-size:14px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.checklist{counter-reset:steps;display:grid;gap:9px}
+.check{counter-increment:steps;position:relative;padding:13px 14px 13px 55px;border:1px solid var(--line);border-radius:8px;background:var(--cream);font-weight:700}
+.check::before{content:counter(steps,decimal-leading-zero);position:absolute;left:13px;top:12px;color:var(--burgundy);font-size:17px;font-weight:900}
+.route{padding:15px;border:1px solid var(--line);border-top:5px solid var(--gold);border-radius:8px;background:var(--cream)}
+.route h3{margin:0 0 4px;color:var(--burgundy-deep);font-size:17px}.route p{margin:0}
+.pathway{margin:12px 0;padding:17px;border:3px solid var(--burgundy);border-radius:10px;background:#f4e9ea}
+.pathway.hypothesis{border-color:var(--graphite);border-style:dashed;background:#f0f0ed}
+.pathway h3{margin:0 0 8px;color:var(--burgundy-deep);font-size:21px}
+.pathway.hypothesis h3{color:var(--graphite)}
+.flow{font-size:clamp(18px,4vw,26px);font-weight:900;line-height:1.35}
+.evidence-line{margin-top:10px;padding:8px 10px;background:var(--burgundy-deep);color:var(--white);font-weight:800}
+.pathway.hypothesis .evidence-line{background:var(--graphite)}
+.table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+table{width:100%;border-collapse:collapse;min-width:760px;font-size:16px}
+th{padding:12px 11px;background:var(--ink);color:var(--white);text-align:left;font-size:14px;letter-spacing:.035em;text-transform:uppercase}
+td{padding:13px 11px;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:nth-child(even){background:var(--cream)}
+tbody tr:last-child td{border-bottom:0}
+td:nth-child(2){font-weight:900;color:var(--burgundy-deep)}
+sup a{font-size:.72em;font-weight:800;text-decoration:none}
+.audio-panel{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.audio-card{padding:18px;border:2px solid var(--gold);border-radius:10px;background:var(--ink);color:var(--white)}
+.audio-card h3{margin:0 0 6px;color:var(--white);font-size:22px}.audio-card p{margin:0 0 12px;color:var(--stone)}
+.audio-controls{display:flex;flex-wrap:wrap;gap:8px}
+.tts-button{min-height:44px;padding:8px 12px;font-size:15px}
+.tts-button.secondary{background:transparent;color:var(--white);border-color:var(--stone)}
+.audio-status{min-height:26px;margin:12px 0 0;color:var(--gold);font-size:15px;font-weight:700}
+.transcript{margin-top:12px;border-top:1px solid rgba(255,255,255,.28);padding-top:10px}
+.transcript summary{cursor:pointer;font-weight:800;color:var(--white)}
+.transcript-body{margin-top:12px;color:var(--cream-2)}
+.transcript-body p{margin:0 0 13px}
+.audio-player{display:block;width:100%;margin:4px 0 12px;min-height:44px}
+.cue{display:grid;grid-template-columns:52px minmax(0,1fr);gap:8px;align-items:start;margin:0 0 12px}
+.cue p{margin:0}
+.cue-time{appearance:none;background:transparent;border:0;padding:2px 0;margin:0;color:var(--gold);font:inherit;font-size:13px;font-weight:800;letter-spacing:.02em;text-align:left;cursor:pointer;min-height:28px;font-variant-numeric:tabular-nums}
+.cue-time:hover,.cue-time:focus-visible{text-decoration:underline;color:var(--cream)}
+.caption-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.references{padding-left:26px}.references li{margin:0 0 16px;padding-left:4px;scroll-margin-top:82px}
+.references a{overflow-wrap:anywhere}
+.meta-list{display:grid;grid-template-columns:minmax(140px,200px) 1fr;gap:12px 16px;margin:0;align-items:start}.meta-list dt{font-weight:900;color:var(--burgundy-deep);padding-top:2px}.meta-list dd{margin:0}
+.review-panel p{margin:0 0 12px}
+.review-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin:0 0 16px}
+.review-stats article{padding:12px;border:1px solid var(--line);border-radius:8px;background:var(--cream-2);text-align:center}
+.review-stats strong{display:block;font-size:26px;color:var(--burgundy-deep)}
+.review-stats span{font-size:13px;color:var(--stone);font-weight:700}
+.review-form{display:grid;gap:12px}
+.review-form fieldset{margin:0;padding:12px;border:1px solid var(--line);border-radius:8px}
+.review-form legend{font-weight:800;color:var(--burgundy-deep);padding:0 6px}
+.review-form label{display:grid;gap:6px;font-weight:700;color:var(--burgundy-deep)}
+.review-form select,.review-form textarea{font:inherit;padding:10px;border:2px solid var(--line);border-radius:7px;background:#fff;min-height:44px}
+.review-form textarea{min-height:88px}
+.score-row{display:flex;flex-wrap:wrap;gap:8px}
+.score{min-width:48px;min-height:48px;border:2px solid var(--burgundy);border-radius:8px;background:#fff;color:var(--burgundy-deep);font:inherit;font-weight:800;cursor:pointer}
+.score.on,.score[aria-pressed="true"]{background:var(--burgundy);color:#fff}
+.check-line{display:flex;gap:10px;align-items:flex-start;font-weight:700}
+.check-line input{width:20px;height:20px;margin-top:3px}
+.review-thanks{padding:12px;background:var(--cream-2);border-left:6px solid var(--gold);border-radius:8px;font-weight:700}
+.review-comments{margin-top:18px}
+.review-comments h3{margin:0 0 8px;color:var(--burgundy-deep)}
+.review-comments ul{margin:0;padding:0;list-style:none}
+.review-comments li{margin:0 0 12px;padding:10px 12px;background:var(--cream-2);border-radius:8px}
+footer{padding:26px 20px;background:var(--ink);border-top:5px solid var(--gold);color:var(--stone);text-align:center;font-size:14px}
+.sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+@media(max-width:760px){body{font-size:17px}.grid,.grid.three,.audio-panel{grid-template-columns:1fr}.masthead-inner{padding-top:26px}.section-body{padding:15px}.section>summary{font-size:18px}.authors{font-size:16px}.meta-list{grid-template-columns:1fr}.meta-list dd{margin-bottom:8px}.review-stats{grid-template-columns:1fr 1fr}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to companion content</a>
+<nav class="nav" aria-label="Companion sections">
+  <div class="nav-inner">
+    <a href="#audio">▶ Audio + transcript</a>
+    <a href="#ags">1 · AGS</a>
+    <a href="#decision">2 · Decision</a>
+    <a href="#mechanism">3 · Mechanism</a>
+    <a href="#materials">4 · Materials</a>
+    <a href="#methods">Methods</a>
+    <a href="#reviews">Review</a>
+    <a href="#references">References</a>
+  </div>
+</nav>
+
+<header class="masthead">
+  <div class="masthead-inner">
+    <p class="eyebrow">Digital companion · narrative review</p>
+    <h1>Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures</h1>
+    <p class="authors">Marielle He, MD, MS<sup>1</sup> · Jordan Kai Simmons, MD<sup>2</sup> · Babak Azizzadeh, MD, FACS<sup>1,2</sup></p>
+    <p class="affiliation"><sup>1</sup> CENTER for Advanced Facial Plastic Surgery, Beverly Hills, CA<br>
+    <sup>2</sup> Division of Otolaryngology–Head and Neck Surgery, Cedars-Sinai Medical Center, Los Angeles, CA</p>
+    <p class="principle">SCREEN · SUBSTITUTE · PREVENT</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#audio" aria-label="Go to audio narration and transcripts">▶ Listen or read the transcript</a>
+      <a class="button" href="#references">Full references</a>
+    </div>
+    <p class="small" style="margin:14px 0 0;color:var(--cream-2)">Type-in: <a href="https://tinyurl.com/tph-companion" style="color:var(--gold);font-weight:800">tinyurl.com/tph-companion</a></p>
+  </div>
+</header>
+
+<div class="disclaimer" role="note">
+  <strong>Clinical-use notice.</strong> Decision support for licensed clinicians; not medical advice and not a substitute for clinical judgment, allergy consultation, institutional protocols, or manufacturer verification. Premedication does not reliably prevent anaphylaxis. <strong>This companion has not undergone journal peer review.</strong> Conference attendees may rate its utility and value in the review section and may offer formal peer review during the meeting.
+</div>
+
+<main id="main">
+<details class="section" id="audio" open>
+  <summary><span class="section-num" aria-hidden="true">▶</span><span role="heading" aria-level="2">Accessible audio narration and transcripts</span></summary>
+  <div class="section-body">
+    <div class="audio-panel">
+      <article class="audio-card">
+        <h3>Track A · Printed poster</h3>
+        <p>Measured human duration: 6:32 · narrated by Marielle He</p>
+        <audio id="track-a-player" class="audio-player" controls preload="metadata" playsinline>
+          <source src="audio/track-a.m4a" type="audio/mp4">
+          <source src="audio/track-a.mp3" type="audio/mpeg">
+          <track kind="captions" src="captions/track-a.vtt" srclang="en" label="English captions" default>
+          <track kind="chapters" src="captions/track-a-chapters.vtt" srclang="en" label="Chapters">
+        </audio>
+        <p class="audio-status" id="poster-status" role="status" aria-live="polite">Human narration ready. Turn on captions in the player if needed.</p>
+        <div class="caption-links">
+          <a class="tts-button secondary" href="audio/track-a.m4a" download="track-a-poster-narration.m4a">Download human audio</a>
+          <a class="tts-button secondary" href="captions/track-a.vtt">WebVTT captions</a>
+          <a class="tts-button secondary" href="transcripts/track-a-short-script.html">Short script</a>
+        </div>
+        <p style="margin-top:16px">Short AI narration: 2:34 · includes the mechanism bridging sentence</p>
+        <audio id="track-a-short-player" class="audio-player" controls preload="metadata" playsinline>
+          <source src="audio/track-a-short.mp3" type="audio/mpeg">
+          <track kind="captions" src="captions/track-a-short.vtt" srclang="en" label="English captions" default>
+        </audio>
+        <p class="audio-status" role="status" aria-live="polite">Short AI take ready.</p>
+        <div class="caption-links">
+          <a class="tts-button secondary" href="audio/track-a-short.mp3" download="track-a-short-ai.mp3">Download short AI audio</a>
+          <a class="tts-button secondary" href="captions/track-a-short.vtt">Short captions</a>
+        </div>
+        <details class="transcript">
+          <summary>Read short AI transcript</summary>
+          <div class="transcript-body">
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="0">0:00</button><p>Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="5">0:04</button><p>Marielle He, Jordan Kai Simmons, and Babak Azizzadeh.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="9">0:09</button><p>Screen. Substitute. Prevent.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="11">0:11</button><p>Alpha-gal syndrome, or A-G-S, is an acquired immunoglobulin E, or I-G-E–mediated, allergy to galactose-alpha-1,3-galactose in non-primate mammalian tissue and products. Diagnosis requires compatible history plus alpha-gal I-G-E. Sensitized does not equal reactive.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="31">0:31</button><p>The established pathway is tick-induced alpha-gal I-G-E reacting to a later mammalian exposure; a hypothesized product-associated sensitization pathway remains unestablished.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="43">0:43</button><p>The C-D-C identified 90,018 suspected U.S. cases from 2017 through 2022, and estimated 96,000 to 450,000 affected since 2010. Seropositivity is not clinical disease.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="59">0:58</button><p>Six steps. One: history. Two: confirm history plus alpha-gal I-G-E. Three: audit products. Four: verify species, source, formulation, and lot. Five: substitute source-verified hyaluronic acid, or H-A, or non-gelatin options. Six: allergy input when risk is material, plus epinephrine readiness.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="82">1:22</button><p>Oral exposure is delayed three to six hours. Parenteral may be immediate. Implants can prolong exposure. Food-challenge thresholds do not establish product safety.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="96">1:36</button><p>Porcine unfractionated heparin, or U-F-H: high-dose intravenous cardiac exposure caused severe reactions in 4 of 17 patients, or 24 percent. Heparin is not an absolute contraindication.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="111">1:51</button><p>Gelatin hemostats: demonstrated. Porcine heparin: clinical signal. Mammalian matrices: mechanistic, with no prospective cosmetic or aesthetic cohort. Collagen P-M-M-A and catgut: theoretical. Source-verified H-A, calcium hydroxylapatite, poly-L-lactic acid, or P-L-L-A, and lidocaine: no established A-G-S-specific risk.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="133">2:12</button><p>No prospective cosmetic or aesthetic cohort, validated procedure-specific screening threshold, or brand-level alpha-gal assay exists.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-a-short-player" data-seek="141">2:21</button><p>This narration is decision support for licensed clinicians, not medical advice. Premedication does not reliably prevent anaphylaxis. Narrated by Marielle He. End of narration.</p></div>
+          </div>
+        </details>
+        <details class="transcript">
+          <summary>Read Track A timestamped transcript</summary>
+          <div class="transcript-body" id="poster-transcript">
+            <div class="cue"><button class="cue-time" type="button" data-seek="1">0:01</button><p>This is the audio narration for the poster “Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures”</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="9">0:09</button><p>by Marielle He, Jordan Kai Simmons, and Babak Azizzadeh of the CENTER for Advanced Facial Plastic Surgery, Beverly Hills, and the Division of Otolaryngology–Head and Neck Surgery, Cedars-Sinai Medical Center, Los Angeles.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="24">0:24</button><p>Scope: a targeted, non-systematic narrative review. Risk categories are extrapolated from surgical, mechanistic, and product evidence, not aesthetic outcome data.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="38">0:38</button><p>Alpha-gal syndrome, or AGS, is an acquired immunoglobulin E, or IgE-mediated, allergy to galactose-alpha-1,3-galactose in non-primate mammalian tissue and products.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="55">0:55</button><p>Diagnosis requires a compatible clinical history plus alpha-gal IgE.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="62">1:02</button><p>Sensitized doesn’t equal reactive.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="66">1:06</button><p>Epidemiology: the Centers for Disease Control and Prevention, or CDC, identified 90,018 suspected U.S. cases from 2017 through 2022, and estimated 96,000 to 450,000 affected since 2010.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="86">1:26</button><p>Based on the 300 donor samples per state across 10 states, estimated seroprevalence was 31.2% in Arkansas, 95% confidence interval 25.7 to 36.6, and 26.0% in Missouri, 95% confidence interval 22.0 to 30.0.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="114">1:54</button><p>Seropositivity is not clinical disease.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="117">1:57</button><p>A CDC county-level map shows suspected cases concentrated in the southeastern, south-central, and mid-Atlantic states, mirroring the range of the lone star tick.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="130">2:10</button><p>Clinical decision: Screen. Substitute. Prevent.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="135">2:15</button><p>Six steps. One: history of reactions and tick exposure. Two: confirm with compatible history plus alpha-gal IgE. Three: audit hemostats, fillers, grafts, sutures, and excipients. Four: verify species, source, formulation, and lot. Five: substitute source-verified hyaluronic acid or other non-gelatin options when appropriate. Six: prepare allergy input when risk is material, plus epinephrine readiness.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="178">2:58</button><p>Route determines timing. Oral exposure is typically delayed three to six hours. Parenteral exposure may be immediate. Implant material can prolong exposure.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="193">3:13</button><p>Food-challenge thresholds do not establish product safety.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="200">3:20</button><p>Perioperative anticoagulation. In confirmed AGS, porcine unfractionated heparin, or UFH, has caused reactions, strongest with high-dose intravenous cardiac exposure.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="217">3:37</button><p>In that series, severe reactions occurred in four of seventeen patients, or 24 percent. Among eight patients with recent titers, four reacted, or 50%.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="233">3:53</button><p>In the lower-dose inpatient series, reactions occurred with one of thirty-nine UFH exposures, 2.6%, and zero of twenty-two enoxaparin exposures, 0%.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="248">4:08</button><p>When feasible, consider an indication-appropriate non-mammalian anticoagulant. However, heparin remains acceptable when it is the clinically preferred agent, managed through shared decision-making with allergy input and epinephrine readiness rather than treating heparin as an absolute contraindication.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="274">4:34</button><p>Material risk by evidence tier. Gelatin hemostats lead the demonstrated tier from class-level human anaphylaxis reports. Porcine heparin is a clinical signal. Mammalian matrices are mechanistic cross-specialty precedent, with no prospective cosmetic or aesthetic cohort.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="297">4:57</button><p>Collagen-containing polymethyl methacrylate, or PMMA, filler and catgut are theoretical composition-based concerns.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="309">5:09</button><p>Source-verified hyaluronic acid, calcium hydroxylapatite, poly-lactic acid, or PLA, and lidocaine carry no established alpha-gal-specific risk, though unrelated hypersensitivity remain possible.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="327">5:27</button><p>Other mechanisms remain distinct. Delayed filler or acellular dermal matrix reactions do not constitute alpha-gal evidence, and alpha-gal screening will not detect them.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="345">5:45</button><p>Evidence gaps. No prospective cosmetic or aesthetic cohort, validated procedure-specific screening threshold, product-specific reaction rate, reaction registry, or brand-level alpha-gal assay exists.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="365">6:05</button><p>Closing. This narration is decision support for licensed clinicians. It is not medical advice and does not replace clinical judgment, allergy consultation, institutional protocols, or manufacturer verification.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="383">6:23</button><p>Premedication doesn’t reliably prevent anaphylaxis.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-seek="388">6:28</button><p>Narrated by Marielle He. End of narration.</p></div>
+          </div>
+        </details>
+      </article>
+      <article class="audio-card">
+        <h3>Track B · Digital companion</h3>
+        <p>Measured human duration: 14:11 · narrated by Marielle He</p>
+        <audio id="track-b-player" class="audio-player" controls preload="metadata" playsinline>
+          <source src="audio/track-b.m4a" type="audio/mp4">
+          <source src="audio/track-b.mp3" type="audio/mpeg">
+          <track kind="captions" src="captions/track-b.vtt" srclang="en" label="English captions" default>
+          <track kind="chapters" src="captions/track-b-chapters.vtt" srclang="en" label="Chapters">
+        </audio>
+        <p class="audio-status" id="companion-status" role="status" aria-live="polite">Human narration ready. Turn on captions in the player if needed.</p>
+        <div class="caption-links">
+          <a class="tts-button secondary" href="audio/track-b.m4a" download="track-b-companion-narration.m4a">Download human audio</a>
+          <a class="tts-button secondary" href="captions/track-b.vtt">WebVTT captions</a>
+          <a class="tts-button secondary" href="transcripts/track-b-short-script.html">Short script</a>
+        </div>
+        <p style="margin-top:16px">Short AI narration: 3:17 · same hypothesized/unestablished wording</p>
+        <audio id="track-b-short-player" class="audio-player" controls preload="metadata" playsinline>
+          <source src="audio/track-b-short.mp3" type="audio/mpeg">
+          <track kind="captions" src="captions/track-b-short.vtt" srclang="en" label="English captions" default>
+        </audio>
+        <p class="audio-status" role="status" aria-live="polite">Short AI take ready.</p>
+        <div class="caption-links">
+          <a class="tts-button secondary" href="audio/track-b-short.mp3" download="track-b-short-ai.mp3">Download short AI audio</a>
+          <a class="tts-button secondary" href="captions/track-b-short.vtt">Short captions</a>
+        </div>
+        <details class="transcript">
+          <summary>Read short AI transcript</summary>
+          <div class="transcript-body">
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="0">0:00</button><p>Alpha-Gal Audio Companion. Track B.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="3">0:03</button><p>Welcome. Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures, by Marielle He, Jordan Kai Simmons, and Babak Azizzadeh. Screen. Substitute. Prevent.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="15">0:15</button><p>No study has quantified cosmetic or aesthetic alpha-gal reactions or assayed a product brand. The tiers are precautionary.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="26">0:25</button><p>A-G-S is an acquired I-G-E–mediated allergy to galactose-alpha-1,3-galactose in non-primate mammalian tissue and products. Tick bites can induce alpha-gal I-G-E. Diagnosis requires compatible symptoms plus alpha-gal-specific I-G-E. Sensitization alone is not A-G-S.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="46">0:46</button><p>Cosmetic and aesthetic practice uses gelatin, collagen, thrombin, grafts, implants, sutures, heparin, injectables, and excipients. Some are mammalian-derived. Composition is an audit prompt, not proof of reaction.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="62">1:01</button><p>The C-D-C identified 90,018 suspected U.S. cases from 2017 through 2022 and estimated 96,000 to 450,000 affected since 2010. Seropositivity is not clinical A-G-S.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="78">1:17</button><p>Route determines timing. Oral: delayed three to six hours. Parenteral: may be immediate. Implants can prolong exposure.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="88">1:28</button><p>Six steps: history; confirm; audit; verify; substitute source-verified hyaluronic acid, or H-A, and non-gelatin options; prepare epinephrine, with allergy input if uncertain.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="101">1:41</button><p>The established pathway is tick-induced alpha-gal I-G-E reacting to a later mammalian exposure; a hypothesized product-associated sensitization pathway remains unestablished. Screening can detect existing sensitization, not a product-specific reaction.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="118">1:58</button><p>Material risk. Demonstrated: gelatin hemostats. Clinical signal: porcine unfractionated heparin, or U-F-H — 4 of 17 patients, or 24 percent, with high-dose intravenous cardiac exposure. Mechanistic: mammalian matrices, no prospective cosmetic or aesthetic cohort. Theoretical: collagen P-M-M-A and catgut. No established A-G-S-specific risk: source-verified H-A, calcium hydroxylapatite, poly-L-lactic acid, or P-L-L-A, and lidocaine.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="149">2:28</button><p>Delayed filler or matrix reactions do not prove A-G-S, and alpha-gal screening will not detect them.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="158">2:38</button><p>No prospective cosmetic or aesthetic cohort, validated procedure-specific screening threshold, reaction registry, or brand-level alpha-gal assay exists. Targeted non-systematic narrative review; 19 sources; no pooling. Disclosures none. Funding none. Artificial-intelligence assistance was used for formatting, coding, and companion design; authors verified all content.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-short-player" data-seek="184">3:03</button><p>This narration is decision support for licensed clinicians, not medical advice. Premedication does not reliably prevent anaphylaxis. Narrated by Marielle He. End of narration.</p></div>
+          </div>
+        </details>
+        <details class="transcript">
+          <summary>Read Track B timestamped transcript</summary>
+          <div class="transcript-body" id="companion-transcript">
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="1">0:01</button><p>Alpha-Gal Audio Companion. Track B, Digital Companion.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="8">0:08</button><p>The Track A script is estimated at 6 minutes 32 seconds.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="12">0:12</button><p>This Track B script is estimated at 7 minutes 49 seconds.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="17">0:17</button><p>The combined estimated duration is 14 minutes 21 seconds.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="21">0:21</button><p>Final measured times will replace these estimates after recording.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="27">0:27</button><p>Playback may be paused or stopped at any time.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="31">0:31</button><p>This companion has 10 sections.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="33">0:33</button><p>Section 1, Overview and framing statement.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="37">0:37</button><p>Section 2, What alpha-gal syndrome, or A-G-S, is.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="43">0:43</button><p>Section 3, Why it matters to cosmetic and aesthetic practice.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="49">0:49</button><p>Section 4, Epidemiology.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="52">0:52</button><p>Section 5, Route and timing of exposure.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="58">0:58</button><p>Section 6, Mechanistic context—companion detail.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="62">1:02</button><p>Section 7, Material risk by evidence tier, including the heparin clinical signal.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="70">1:10</button><p>Section 8, Substitution guidance.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="73">1:13</button><p>Section 9, Prolonged exposure and other hypersensitivity mechanisms.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="79">1:19</button><p>Section 10, Evidence gaps, methods, disclosures, artificial intelligence use statement, and references.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="89">1:29</button><p>Section 1 of 10. Overview and framing statement.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="94">1:34</button><p>Welcome to the digital companion for Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures, by Marielle He, Jordan Kai Simmons, and Babak Azizzadeh.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="111">1:51</button><p>Screen. Substitute. Prevent.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="115">1:55</button><p>No study has quantified cosmetic or aesthetic alpha-gal reactions or directly assayed a cosmetic or aesthetic product brand.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="126">2:06</button><p>The tiers are precautionary extrapolations, and no validated product-specific immunoglobulin E cutoff exists.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="136">2:16</button><p>End of Section 1.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="139">2:19</button><p>Section 2 of 10. What alpha-gal syndrome, or A-G-S, is.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="145">2:25</button><p>Alpha-gal syndrome is an acquired immunoglobulin E–mediated, or I-G-E–mediated, allergy to galactose-alpha-1,3-galactose, a carbohydrate in non-primate mammalian tissue and products.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="165">2:45</button><p>Tick bites can induce alpha-gal I-G-E.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="168">2:48</button><p>Diagnosis requires compatible symptoms plus alpha-gal-specific I-G-E. Sensitization alone is not A-G-S.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="177">2:57</button><p>End of Section 2.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="180">3:00</button><p>Section 3 of 10. Why it matters to cosmetic and aesthetic practice.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="187">3:07</button><p>Cosmetic and aesthetic practice uses gelatin, collagen, thrombin, grafts, implants, sutures, heparin, injectables, and excipients.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="198">3:18</button><p>Some are mammalian-derived, and source may vary by formulation or lot.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="205">3:25</button><p>Composition is an audit prompt, not proof of reaction. Prior tolerance is not a guarantee.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="213">3:33</button><p>End of Section 3.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="216">3:36</button><p>Section 4 of 10. Epidemiology.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="222">3:42</button><p>The C-D-C identified 90,018 suspected United States cases during 2017 through 2022, and estimated 96,000 to 450,000 affected since 2010.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="240">4:00</button><p>Suspected cases were positive alpha-gal-specific I-G-E tests without clinical data.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="247">4:07</button><p>A blood-donor serosurvey tested 300 samples per state across 10 states.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="253">4:13</button><p>Arkansas seroprevalence was 31.2 percent, 95 percent confidence interval 25.7 to 36.6. Missouri was 26.0 percent, 95 percent confidence interval 22.0 to 30.0.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="274">4:34</button><p>Seropositivity is not clinical A-G-S.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="278">4:38</button><p>End of Section 4.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="280">4:40</button><p>Section 5 of 10. Route and timing of exposure.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="285">4:45</button><p>Route determines timing. Oral reactions are delayed three to six hours. Parenteral reactions may be immediate. Implants can prolong exposure. Dose and dwell time are also relevant.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="304">5:04</button><p>In one food-challenge cohort, 2.0 kilounits per liter or 0.75 percent of total I-G-E had greater than 95 percent positive predictive value. Above 5.5 kilounits per liter or 2.12 percent corresponded to about 95 percent modeled probability. These are food-allergy results, not cosmetic-product cutoffs.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="337">5:37</button><p>The six steps are: one, history; two, confirm history plus alpha-gal I-G-E; three, audit products; four, verify species, source, excipients, and lot; five, substitute source-verified hyaluronic acid, or H-A, and non-gelatin options; six, prepare epinephrine and a reaction plan, with allergy input if uncertain.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="373">6:13</button><p>End of Section 5.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="376">6:16</button><p>Section 6 of 10. Mechanistic context—companion detail.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="386">6:26</button><p>Established pathway: tick, alpha-gal I-G-E, mammalian product, reaction. Screening can detect existing sensitization, not a product-specific reaction. Human evidence includes cetuximab reactions.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="403">6:43</button><p>Emerging question: xenogeneic product, new alpha-gal I-G-E, future reaction? Product-associated sensitization is unestablished in humans and supported only by in vitro or animal evidence. Baseline screening cannot predict future sensitization.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="425">7:05</button><p>End of Section 6.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="427">7:07</button><p>Section 7 of 10. Material risk by evidence tier, including the heparin clinical signal.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="438">7:18</button><p>First, Demonstrated: gelatin hemostats, with class-level human perioperative anaphylaxis reports, not evidence against every brand.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="447">7:27</button><p>Second, Clinical signal: porcine unfractionated heparin, or U-F-H. With high-dose intravenous cardiac exposure, severe reactions occurred in 4 of 17 patients, or 24 percent. Among 8 patients with recent titers, 4 reacted, or 50 percent.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="469">7:49</button><p>A lower-dose inpatient series found 1 of 39 U-F-H reactions, 2.6 percent, and 0 of 22 enoxaparin reactions, or 0 percent. The differing exposure settings underscore why the high-dose cardiac estimate cannot be generalized to other routes or doses.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="495">8:15</button><p>Third, Mechanistic: mammalian matrices, without a prospective cosmetic or aesthetic cohort. Fourth, Theoretical: collagen P-M-M-A filler and catgut, without an aesthetic A-G-S reaction series.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="510">8:30</button><p>Fifth, No established A-G-S-specific risk: source-verified H-A, calcium hydroxylapatite, poly-L-lactic acid, or P-L-L-A, and lidocaine. Other hypersensitivity remains possible. Review every finished formulation.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="531">8:51</button><p>End of Section 7.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="533">8:53</button><p>Section 8 of 10. Substitution guidance.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="537">8:57</button><p>Possible substitutes include oxidized regenerated cellulose for gelatin hemostats; recombinant thrombin or a verified human or synthetic sealant; source-verified H-A, calcium hydroxylapatite, P-L-L-A, or autologous fat for collagen filler; human, synthetic, or autologous grafts for xenogeneic matrices; and synthetic absorbable sutures for catgut.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="567">9:27</button><p>Verify the finished formulation, species, source, excipients, and lot.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="573">9:33</button><p>End of Section 8.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="575">9:35</button><p>Section 9 of 10. Prolonged exposure and other hypersensitivity mechanisms.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="582">9:42</button><p>Implants and matrices can prolong exposure, but duration-related A-G-S risk is not quantified in cosmetic and aesthetic practice. Delayed filler nodules or matrix reactions may be inflammatory, infectious, foreign-body, or other hypersensitivity events. They do not by themselves prove A-G-S, and alpha-gal screening does not detect those pathways.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="608">10:08</button><p>End of Section 9.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="611">10:11</button><p>Section 10 of 10. Evidence gaps, methods, disclosures, artificial intelligence use statement, and references.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="619">10:19</button><p>Evidence comes from clinical reports, adjacent specialties, product composition, in vitro and animal studies, and surveillance. There is no prospective cosmetic or aesthetic cohort, validated procedure-specific screening threshold, reaction registry, or brand-level alpha-gal assay.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="640">10:40</button><p>Methods. Design: targeted, non-systematic narrative review of mammalian-derived materials used in cosmetic and aesthetic practice and their relationship to alpha-gal syndrome.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="656">10:56</button><p>Data sources and search: PubMed, MEDLINE, Embase, and the Cochrane Library, supplemented by C-D-C M-M-W-R surveillance and F-D-A or manufacturer product labeling.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="669">11:09</button><p>Searches combined A-G-S terms with material and procedure terms. Included literature published January 2010 through July 2026. Final search August 2, 2026. Foundational pre-2010 studies were added by hand-searching reference lists when necessary.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="705">11:45</button><p>Selection: records were prioritized as A-G-S-specific human evidence; specialty-facing facial plastics and aesthetic evidence; cross-specialty clinical precedent, including cardiac surgery, transplantation, and anesthesiology; and mechanistic in vitro or animal evidence. Non-English records without a translation and reports without extractable clinical or compositional detail were excluded. Nineteen sources were retained.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="745">12:25</button><p>Appraisal: no formal risk-of-bias assessment or quantitative pooling was performed. Evidence was graded qualitatively into the five tiers shown in the material-risk table: demonstrated, clinical signal, mechanistic, theoretical, no established A-G-S-specific risk.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="767">12:47</button><p>Limitations: the evidence base is dominated by case reports and cross-specialty or mechanistic extrapolation. Direct aesthetic or cosmetic-surgery outcome data are absent. See A-G-S evidence gaps.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="785">13:05</button><p>Disclosures: none. Funding: none.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="789">13:09</button><p>Artificial-intelligence assistance was used for formatting and layout of the poster and generating code associated with the accompanying companion.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="803">13:23</button><p>The complete reference list is available in text form below the transcript. References 1 through 12 match the poster. Companion references 13 through 18 expand the poster’s collective reference 13. Companion reference 19 adds the lower-dose heparin series.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="824">13:44</button><p>End of Section 10.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="826">13:46</button><p>Closing. This narration is decision support for licensed clinicians. It is not medical advice and does not replace clinical judgment, allergy consultation, institutional protocols, or manufacturer verification. Premedication does not reliably prevent anaphylaxis.</p></div>
+            <div class="cue"><button class="cue-time" type="button" data-player="#track-b-player" data-seek="846">14:06</button><p>Narrated by Marielle He. End of narration.</p></div>
+          </div>
+        </details>
+      </article>
+    </div>
+    <p class="small" style="margin-top:14px">Shorter re-record scripts (steadier pitch and loudness): <a href="transcripts/track-a-short-script.html">Track A ~2 min</a> · <a href="transcripts/track-b-short-script.html">Track B ~3 min</a>.</p>
+  </div>
+</details>
+
+<details class="section" id="ags" open>
+  <summary><span class="section-num">1</span><span role="heading" aria-level="2">Alpha-Gal Syndrome</span></summary>
+  <div class="section-body">
+    <div class="grid three">
+      <article class="card"><h3>Definition</h3><p>IgE-mediated allergy to galactose-α-1,3-galactose in nonprimate mammalian tissue and products.<sup><a href="#ref9">9</a></sup></p></article>
+      <article class="card"><h3>Diagnosis</h3><p>Requires compatible clinical history plus α-gal IgE. Sensitization alone is not AGS.<sup><a href="#ref3">3</a>,<a href="#ref9">9</a>,<a href="#ref10">10</a></sup></p></article>
+      <article class="card"><h3>Route</h3><p>Oral exposure is commonly delayed 3–6 hours; parenteral exposure may be immediate.<sup><a href="#ref5">5</a>,<a href="#ref9">9</a></sup></p></article>
+    </div>
+    <div class="callout dark"><strong>SENSITIZED ≠ REACTIVE.</strong> Clinical history determines diagnosis. α-Gal IgE alone does not. Food thresholds ≠ product safety.</div>
+    <div class="callout gold"><strong>Food-challenge data ≠ product cutoffs:</strong> in one high-prevalence cohort, 2.0 kU/L or 0.75% of total IgE provided the best classification and &gt;95% positive predictive value; &gt;5.5 kU/L or 2.12% corresponded to approximately 95% modeled probability. <strong>Not validated for cosmetic-product decisions.</strong><sup><a href="#ref11">11</a></sup></div>
+    <div class="grid">
+      <article class="card"><h3>Epidemiology</h3><ul><li>90,018 suspected U.S. cases, 2017–2022.<sup><a href="#ref12">12</a></sup></li><li>CDC estimated 96,000–450,000 people may have been affected since 2010.<sup><a href="#ref12">12</a></sup></li><li>Blood-donor seroprevalence, 300 samples per state: Arkansas 31.2% (95% CI, 25.7–36.6); Missouri 26.0% (95% CI, 22.0–30.0). Seropositivity is not clinical AGS.<sup><a href="#ref10">10</a></sup></li></ul></article>
+      <article class="card"><h3>Why cosmetic and aesthetic practice</h3><p>Some hemostats, animal matrices, grafts, sutures, collagen carriers, heparin, implants, and excipients may be mammalian-derived. Product source and finished formulation must be verified; the cosmetic and aesthetic risk is usually inferred rather than measured.<sup><a href="#ref1">1</a>,<a href="#ref3">3</a>,<a href="#ref5">5</a></sup></p></article>
+    </div>
+    <figure class="card" style="margin-top:14px">
+      <img src="https://www.cdc.gov/mmwr/volumes/72/wr/figures/mm7230a2-F-large.gif" alt="Map of suspected alpha-gal syndrome cases per 1 million population per year in United States counties, 2017 through 2022" style="display:block;width:100%;height:auto">
+      <figcaption class="small" style="margin-top:8px">Geographic distribution of suspected AGS cases per 1 million population per year, United States, 2017–2022. CDC/MMWR.<sup><a href="#ref12">12</a></sup> This is a suspected-case map, not the separate 2024–2025 blood-donor seroprevalence study.</figcaption>
+    </figure>
+  </div>
+</details>
+
+<details class="section" id="decision" open>
+  <summary><span class="section-num">2</span><span role="heading" aria-level="2">Route-Centered Clinical Decision</span></summary>
+  <div class="section-body">
+    <p class="kicker">One-line takeaway</p><div class="callout dark"><strong>SCREEN · SUBSTITUTE · PREVENT</strong></div>
+    <div class="grid">
+      <div class="checklist" aria-label="Six-step preprocedure checklist">
+        <div class="check"><strong>HISTORY</strong> · reactions + tick exposure</div>
+        <div class="check"><strong>CONFIRM</strong> · compatible history + α-gal IgE</div>
+        <div class="check"><strong>AUDIT</strong> · hemostats · fillers · grafts · sutures</div>
+        <div class="check"><strong>VERIFY</strong> · species · source · excipients · lot</div>
+        <div class="check"><strong>SUBSTITUTE</strong> · source-verified HA + non-gelatin options when appropriate</div>
+        <div class="check"><strong>PREPARE</strong> · allergy input + epinephrine readiness</div>
+      </div>
+      <div>
+        <div class="grid three">
+          <article class="route"><h3>ORAL</h3><p>Delayed 3–6 h</p></article>
+          <article class="route"><h3>PARENTERAL</h3><p>Immediate possible</p></article>
+          <article class="route"><h3>IMPLANT</h3><p>Prolonged exposure</p></article>
+        </div>
+        <div class="card" style="margin-top:14px"><h3>What changes procedural risk</h3><ul><li>Route, dose, dwell time, and cofactors can change risk.</li><li>Prior tolerance does not guarantee future tolerance.</li><li>Verify every finished formulation and excipient.</li><li>When a mammalian product is unavoidable and risk is material, involve allergy/immunology and document shared decision-making.</li></ul></div>
+      </div>
+    </div>
+  </div>
+</details>
+
+<details class="section" id="mechanism" open>
+  <summary><span class="section-num">3</span><span role="heading" aria-level="2">Mechanistic context—companion detail</span></summary>
+  <div class="section-body">
+    <p>The established pathway is tick-induced α-gal IgE reacting to a later mammalian exposure; a hypothesized product-associated sensitization pathway remains unestablished.</p>
+    <p class="small"><strong>Solid border = human clinical evidence.</strong> <strong>Dashed border = hypothesis.</strong> The distinction does not rely on color alone.</p>
+    <article class="pathway">
+      <h3>TYPE I / IgE · pre-existing α-gal sensitization</h3>
+      <div class="flow">Tick → α-gal IgE → Mammalian product → Reaction</div>
+      <div class="evidence-line">ESTABLISHED TYPE I / IgE PATHWAY · human clinical evidence<sup><a href="#ref1">1</a>,<a href="#ref3">3</a>–<a href="#ref5">5</a></sup></div>
+    </article>
+    <article class="pathway hypothesis">
+      <h3>HYPOTHESIZED · possible product-associated sensitization</h3>
+      <div class="flow">Xenogeneic product ⇢ New α-gal IgE? ⇢ Future reaction?</div>
+      <div class="evidence-line">HYPOTHESIS ONLY · a hypothesized product-associated sensitization pathway remains unestablished<sup><a href="#ref3">3</a></sup></div>
+    </article>
+  </div>
+</details>
+
+<details class="section" id="materials" open>
+  <summary><span class="section-num">4</span><span role="heading" aria-level="2">α-Gal Material Risk by Evidence Tier</span></summary>
+  <div class="section-body">
+    <div class="table-wrap">
+      <table>
+        <caption class="sr-only">Material and exposure categories, evidence level, and clinical response</caption>
+        <thead><tr><th scope="col">Material / exposure</th><th scope="col">Evidence level</th><th scope="col">Clinical response</th></tr></thead>
+        <tbody>
+          <tr><td>Gelatin hemostats<br><span class="small">GELFOAM · FLOSEAL</span></td><td>Demonstrated</td><td>Class-level human anaphylaxis reports; not every brand.<sup><a href="#ref1">1</a>,<a href="#ref5">5</a>,<a href="#ref13">13</a>,<a href="#ref14">14</a></sup></td></tr>
+          <tr><td>Porcine UFH<br><span class="small">heparin sodium</span></td><td>Clinical signal</td><td>High-dose IV cardiac exposure: 4/17 severe reactions (24%); 4/8 (50%) among patients with recent titers. Lower-dose inpatient series: 1/39 UFH reactions (2.6%) and 0/22 enoxaparin reactions (0%). The differing exposure settings underscore why the high-dose cardiac estimate cannot be generalized to other routes or doses.<sup><a href="#ref4">4</a>,<a href="#ref15">15</a>,<a href="#ref19">19</a></sup></td></tr>
+          <tr><td>Mammalian matrices<br><span class="small">Strattice · SurgiMend</span></td><td>Mechanistic</td><td>Adjacent-specialty precedent; no prospective cosmetic or aesthetic cohort.<sup><a href="#ref3">3</a>,<a href="#ref16">16</a>,<a href="#ref17">17</a></sup></td></tr>
+          <tr><td>Collagen PMMA · catgut<br><span class="small">Bellafill · excipients</span></td><td>Theoretical</td><td>Composition-based concern; no cosmetic or aesthetic AGS reaction series.<sup><a href="#ref3">3</a>,<a href="#ref5">5</a>,<a href="#ref18">18</a></sup></td></tr>
+          <tr><td>Preferred after source check<br><span class="small">HA · CaHA · PLLA · lidocaine</span></td><td>No established AGS-specific risk</td><td>Use after source verification; unrelated hypersensitivity remains possible.<sup><a href="#ref2">2</a>,<a href="#ref3">3</a>,<a href="#ref9">9</a></sup></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="callout"><strong>OTHER HYPERSENSITIVITY MECHANISMS.</strong><br>Delayed filler or acellular-dermal-matrix reactions are not α-Gal evidence, and α-Gal screening will not detect them.<sup><a href="#ref2">2</a>,<a href="#ref6">6</a>–<a href="#ref8">8</a></sup></div>
+    <div class="grid">
+      <article class="card"><h3>Verification and substitution</h3><ul><li>Verify species, source, finished formulation, excipients, and lot.</li><li>For hemostasis, consider verified non-gelatin options when clinically appropriate.</li><li>For fillers, verified HA, CaHA, or PLLA does not carry an established α-gal risk; this is not a guarantee of freedom from other reactions.</li><li>For sutures and grafts, favor verified synthetic, human, autologous, or nonmammalian options when feasible.</li></ul></article>
+      <article class="card"><h3>AGS evidence gaps</h3><p>No prospective cosmetic or aesthetic cohort, validated procedure-specific screening threshold, product-specific reaction rate, reaction registry, or brand-level α-gal assay exists.</p><p class="small">“No established risk” means the literature has not established α-gal–mediated risk for the verified category. It is not a brand assay or blanket safety guarantee.</p></article>
+    </div>
+  </div>
+</details>
+
+<details class="section" id="methods" open>
+  <summary><span class="section-num" aria-hidden="true">•</span><span role="heading" aria-level="2">Methods, Limitations, and Disclosures</span></summary>
+  <div class="section-body">
+    <dl class="meta-list">
+      <dt>Design</dt><dd>Targeted, non-systematic narrative review of mammalian-derived materials used in cosmetic and aesthetic practice and their relationship to alpha-gal syndrome (AGS).</dd>
+      <dt>Data sources and search</dt><dd>PubMed/MEDLINE, Embase, and the Cochrane Library, supplemented by CDC/MMWR surveillance and FDA/manufacturer product labeling. Searches combined AGS terms (alpha-gal, galactose-alpha-1,3-galactose, mammalian meat allergy, tick-bite allergy) with material and procedure terms (gelatin hemostat, collagen, acellular dermal matrix, heparin, catgut, dermal filler, thrombin, excipient). Included literature published January 2010 through July 2026; final search 2 August 2026. Foundational pre-2010 studies were added by hand-searching reference lists when necessary.</dd>
+      <dt>Selection</dt><dd>Records were prioritized in the following order: (1) AGS-specific human evidence; (2) specialty-facing (facial plastics / aesthetic) evidence; (3) cross-specialty clinical precedent (e.g., cardiac surgery, transplantation, anesthesiology); and (4) mechanistic in vitro or animal evidence. Non-English records without a translation and reports without extractable clinical or compositional detail were excluded. Nineteen sources were retained.</dd>
+      <dt>Appraisal</dt><dd>No formal risk-of-bias assessment or quantitative pooling was performed; evidence was graded qualitatively into the five tiers shown in the material-risk table (demonstrated, clinical signal, mechanistic, theoretical, no established AGS-specific risk).</dd>
+      <dt>Limitations</dt><dd>The evidence base is dominated by case reports and cross-specialty or mechanistic extrapolation; direct aesthetic outcome data are absent (see “AGS evidence gaps”).</dd>
+      <dt>Disclosures</dt><dd>None.</dd>
+      <dt>Funding</dt><dd>None.</dd>
+      <dt>AI assistance</dt><dd>AI assistance was used for formatting, coding, and companion design; the authors verified all content and take full responsibility.</dd>
+    </dl>
+  </div>
+</details>
+
+<details class="section" id="references" open>
+  <summary><span class="section-num" aria-hidden="true">#</span><span role="heading" aria-level="2">Full References</span></summary>
+  <div class="section-body">
+    <p class="small">References 1–12 match the poster; companion references 13–18 expand the poster’s collective reference 13. Companion reference 19 adds the lower-dose heparin series. Product names illustrate composition, not brand-level AGS evidence; verify current instructions for use, species, source, excipients, and lot.</p>
+    <ol class="references">
+      <li id="ref1">White RZ, Kerr L, White TJ, Sampson MJ. Review of topical gelatin-based haemostatic agents; an insidious culprit of intraoperative anaphylaxis? <em>ANZ J Surg</em>. 2021;91(10):2002–2007. doi:<a href="https://doi.org/10.1111/ans.16716">10.1111/ans.16716</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33682323/">33682323</a>.</li>
+      <li id="ref2">Lisiecka MZ, Luczak J. Hypersensitivity reactions to injectable fillers and their impact on cosmetic procedure results. <em>Aesthetic Plast Surg</em>. 2026; online ahead of print. doi:<a href="https://doi.org/10.1007/s00266-026-06003-x">10.1007/s00266-026-06003-x</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42298157/">42298157</a>.</li>
+      <li id="ref3">Jacobs JW, Kaufman RM, Schwartz JY, et al. Alpha-gal syndrome: unrecognized risks of a tick-bite-associated allergy in transplantation and cellular therapy. <em>Am J Transplant</em>. 2026; online ahead of print. doi:<a href="https://doi.org/10.1016/j.ajt.2026.06.023">10.1016/j.ajt.2026.06.023</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42398920/">42398920</a>.</li>
+      <li id="ref4">Hawkins RB, Wilson JM, Mehaffey JH, Platts-Mills TAE, Ailawadi G. Safety of intravenous heparin for cardiac surgery in patients with alpha-gal syndrome. <em>Ann Thorac Surg</em>. 2021;111(6):1991–1997. doi:<a href="https://doi.org/10.1016/j.athoracsur.2020.07.050">10.1016/j.athoracsur.2020.07.050</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/33031779/">33031779</a>.</li>
+      <li id="ref5">Dunkman WJ, Rycek W, Manning MW. What does a red meat allergy have to do with anesthesia? Perioperative management of alpha-gal syndrome. <em>Anesth Analg</em>. 2019;129(5):1242–1248. doi:<a href="https://doi.org/10.1213/ANE.0000000000003460">10.1213/ANE.0000000000003460</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/29847378/">29847378</a>.</li>
+      <li id="ref6">Chung KL, Convery C, Ejikeme I, Ghanem AM. A systematic review of delayed inflammatory reactions after hyaluronic acid filler injection to estimate the incidence of delayed type hypersensitivity reaction. <em>Aesthet Surg J</em>. 2020;40(5):NP286–NP300. doi:<a href="https://doi.org/10.1093/asj/sjz222">10.1093/asj/sjz222</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/31410442/">31410442</a>.</li>
+      <li id="ref7">Ganske I, Hoyler M, Fox SE, et al. Delayed hypersensitivity reaction to acellular dermal matrix in breast reconstruction: the red breast syndrome? <em>Ann Plast Surg</em>. 2014;73 Suppl 2:S139–S143. doi:<a href="https://doi.org/10.1097/SAP.0000000000000130">10.1097/SAP.0000000000000130</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/24691314/">24691314</a>.</li>
+      <li id="ref8">Vedak P, St John J, Watson A, et al. Delayed type IV hypersensitivity reaction to porcine acellular dermal matrix masquerading as infection resulting in multiple debridements. <em>Hernia</em>. 2017;21(3):489–492. doi:<a href="https://doi.org/10.1007/s10029-015-1440-z">10.1007/s10029-015-1440-z</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/26693715/">26693715</a>.</li>
+      <li id="ref9">Reddy S, Yi L, Shields B, et al. Alpha-gal syndrome: a review for the dermatologist. <em>J Am Acad Dermatol</em>. 2023;89(4):750–757. doi:<a href="https://doi.org/10.1016/j.jaad.2023.04.054">10.1016/j.jaad.2023.04.054</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/37150300/">37150300</a>.</li>
+      <li id="ref10">Saunders EF, Taylor ML, Jones ES, et al. Alpha-gal immunoglobulin E seroprevalence among blood donors — 10 states, 2024–2025. <em>MMWR Morb Mortal Wkly Rep</em>. 2026;75(25):315–321. doi:<a href="https://doi.org/10.15585/mmwr.mm7525a1">10.15585/mmwr.mm7525a1</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/42391055/">42391055</a>.</li>
+      <li id="ref11">Mabelane T, Basera W, Botha M, et al. Predictive values of alpha-gal IgE levels and alpha-gal IgE:total IgE ratio and oral food challenge-proven meat allergy in a population with a high prevalence of reported red meat allergy. <em>Pediatr Allergy Immunol</em>. 2018;29(8):841–849. doi:<a href="https://doi.org/10.1111/pai.12969">10.1111/pai.12969</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/30144162/">30144162</a>.</li>
+      <li id="ref12">Thompson JM, Carpenter A, Kersh GJ, et al. Geographic distribution of suspected alpha-gal syndrome cases — United States, January 2017–December 2022. <em>MMWR Morb Mortal Wkly Rep</em>. 2023;72(30):815–820. doi:<a href="https://doi.org/10.15585/mmwr.mm7230a2">10.15585/mmwr.mm7230a2</a>.</li>
+      <li id="ref13">Pfizer. GELFOAM® and GEL-FLOW NT product information. Accessed 26 August 2026. <a href="https://www.pfizer.com/products/product-detail/gelfoam_and_gel_flow_nt">Official product page</a>.</li>
+      <li id="ref14">Baxter. FLOSEAL Hemostatic Matrix, 5 mL product information. Accessed 26 August 2026. <a href="https://catalog.baxter.com/baxterUS/en/Products/Surgical-Equipment-%26-Technologies/Adjunctive-Hemostats-%26-Sealants/Floseal-NT-Hemostatic-Matrix%2C-5mL/p/ADS201883">Official product page</a>.</li>
+      <li id="ref15">DailyMed. Heparin Sodium Injection, USP labeling. Accessed 26 August 2026. <a href="https://dailymed.nlm.nih.gov/dailymed/lookup.cfm?setid=2edf6d35-5cf3-b7ff-e063-6394a90a4f33">Official labeling</a>.</li>
+      <li id="ref16">Allergan Aesthetics. STRATTICE™ Reconstructive Tissue Matrix product information. Accessed 26 August 2026. <a href="https://www.allerganaesthetics.com/brands/regenerative-medicine">Official product page</a>.</li>
+      <li id="ref17">Integra LifeSciences. SurgiMend® Collagen Matrix for soft-tissue reconstruction. Accessed 26 August 2026. <a href="https://tissuetechnologies.integralife.com/ten-things-to-know-about-surgimend-collagen-matrix-for-soft-tissue-reconstruction/">Official product page</a>.</li>
+      <li id="ref18">Bellafill®. Instructions for Use. Accessed 26 August 2026. <a href="https://bellafill.com/instructions-for-use/">Official product page</a>.</li>
+      <li id="ref19">Nwamara U, Kaplan MC, Mason N, Ingemi AI. A retrospective evaluation of heparin product reactions in patients with alpha-gal allergies. <em>Ticks Tick Borne Dis</em>. 2022;13(1):101869. doi:<a href="https://doi.org/10.1016/j.ttbdis.2021.101869">10.1016/j.ttbdis.2021.101869</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/34798527/">34798527</a>.</li>
+    </ol>
+  </div>
+</details>
+
+<details class="section" id="reviews" open>
+  <summary><span class="section-num" aria-hidden="true">★</span><span role="heading" aria-level="2">Conference review · utility and value</span></summary>
+  <div class="section-body">
+    <p class="small">Not journal peer review. Structured, anonymous feedback from viewers. Formal peer review may be offered in person during the conference.</p>
+    <div id="reviews-root"><p>Anonymous utility/value scoring is available when this companion is opened from the conference session.</p></div>
+  </div>
+</details>
+</main>
+
+<footer>
+  Poster companion · updated 27 August 2026 · Full methods, limitations, disclosures, 19 references, and accessible narration transcripts<br>
+  <span style="opacity:.82">For licensed-clinician decision support · © authors · CENTER for Advanced Facial Plastic Surgery · Cedars-Sinai Otolaryngology–Head and Neck Surgery</span><br>
+  <a href="qr/poster-qr-pack.zip" download="tick-primed-poster-qr.zip" style="color:var(--gold);font-weight:800">Poster QR pack</a>
+  <span style="opacity:.82"> · type </span><a href="https://tinyurl.com/tph-companion" style="color:var(--gold);font-weight:800">tinyurl.com/tph-companion</a>
+  <span style="opacity:.82"> · </span><a href="qr/lockup.svg" style="color:var(--gold)">lockup SVG</a>
+  <span style="opacity:.82"> · </span><a href="qr/qr.svg" style="color:var(--gold)">bare QR</a>
+</footer>
+
+<script>
+document.querySelectorAll('.nav a,.hero-actions a[href^="#"]').forEach(link=>{
+  link.addEventListener("click",()=>{
+    const target=document.querySelector(link.getAttribute("href"));
+    if(target?.tagName==="DETAILS") target.open=true;
+  });
+});
+document.querySelectorAll('sup a[href^="#ref"]').forEach(link=>{
+  link.addEventListener("click",()=>{document.querySelector("#references").open=true;});
+});
+const player=document.querySelector("#track-a-player");
+const statusEl=document.querySelector("#poster-status");
+function setAudioStatus(text){ if(statusEl) statusEl.textContent=text; }
+if(player){
+  player.addEventListener("play",()=>setAudioStatus("Narration playing."));
+  player.addEventListener("pause",()=>setAudioStatus(player.ended ? "Narration complete." : "Narration paused."));
+  player.addEventListener("ended",()=>setAudioStatus("Narration complete."));
+  player.addEventListener("error",()=>setAudioStatus("Audio could not play. Please use the transcript."));
+}
+document.querySelectorAll("[data-seek]").forEach(button=>{
+  button.addEventListener("click",()=>{
+    if(!player) return;
+    player.currentTime=Number(button.getAttribute("data-seek"))||0;
+    player.play().catch(()=>setAudioStatus("Audio could not play. Please use the transcript."));
+  });
+});
+</script>
+</body>
+</html>

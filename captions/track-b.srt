@@ -1,0 +1,307 @@
+1
+00:00:01,000 --> 00:00:08,000
+Alpha-Gal Audio Companion. Track B, Digital Companion.
+
+2
+00:00:08,000 --> 00:00:12,000
+The Track A script is estimated at 6 minutes 32 seconds.
+
+3
+00:00:12,000 --> 00:00:17,000
+This Track B script is estimated at 7 minutes 49 seconds.
+
+4
+00:00:17,000 --> 00:00:21,000
+The combined estimated duration is 14 minutes 21 seconds.
+
+5
+00:00:21,000 --> 00:00:27,000
+Final measured times will replace these estimates after recording.
+
+6
+00:00:27,000 --> 00:00:31,000
+Playback may be paused or stopped at any time.
+
+7
+00:00:31,000 --> 00:00:33,000
+This companion has 10 sections.
+
+8
+00:00:33,000 --> 00:00:37,000
+Section 1, Overview and framing statement.
+
+9
+00:00:37,000 --> 00:00:43,000
+Section 2, What alpha-gal syndrome, or A-G-S, is.
+
+10
+00:00:43,000 --> 00:00:49,000
+Section 3, Why it matters to cosmetic and aesthetic practice.
+
+11
+00:00:49,000 --> 00:00:52,000
+Section 4, Epidemiology.
+
+12
+00:00:52,000 --> 00:00:58,000
+Section 5, Route and timing of exposure.
+
+13
+00:00:58,000 --> 00:01:02,000
+Section 6, Mechanistic context—companion detail.
+
+14
+00:01:02,000 --> 00:01:10,000
+Section 7, Material risk by evidence tier, including the heparin clinical signal.
+
+15
+00:01:10,000 --> 00:01:13,000
+Section 8, Substitution guidance.
+
+16
+00:01:13,000 --> 00:01:19,000
+Section 9, Prolonged exposure and other hypersensitivity mechanisms.
+
+17
+00:01:19,000 --> 00:01:29,000
+Section 10, Evidence gaps, methods, disclosures, artificial intelligence use statement, and references.
+
+18
+00:01:29,000 --> 00:01:34,000
+Section 1 of 10. Overview and framing statement.
+
+19
+00:01:34,000 --> 00:01:51,000
+Welcome to the digital companion for Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures, by Marielle He, Jordan Kai Simmons, and Babak Azizzadeh.
+
+20
+00:01:51,000 --> 00:01:55,000
+Screen. Substitute. Prevent.
+
+21
+00:01:55,000 --> 00:02:06,000
+No study has quantified cosmetic or aesthetic alpha-gal reactions or directly assayed a cosmetic or aesthetic product brand.
+
+22
+00:02:06,000 --> 00:02:16,000
+The tiers are precautionary extrapolations, and no validated product-specific immunoglobulin E cutoff exists.
+
+23
+00:02:16,000 --> 00:02:19,000
+End of Section 1.
+
+24
+00:02:19,000 --> 00:02:25,000
+Section 2 of 10. What alpha-gal syndrome, or A-G-S, is.
+
+25
+00:02:25,000 --> 00:02:45,000
+Alpha-gal syndrome is an acquired immunoglobulin E–mediated, or I-G-E–mediated, allergy to galactose-alpha-1,3-galactose, a carbohydrate in non-primate mammalian tissue and products.
+
+26
+00:02:45,000 --> 00:02:48,000
+Tick bites can induce alpha-gal I-G-E.
+
+27
+00:02:48,000 --> 00:02:57,000
+Diagnosis requires compatible symptoms plus alpha-gal-specific I-G-E. Sensitization alone is not A-G-S.
+
+28
+00:02:57,000 --> 00:03:00,000
+End of Section 2.
+
+29
+00:03:00,000 --> 00:03:07,000
+Section 3 of 10. Why it matters to cosmetic and aesthetic practice.
+
+30
+00:03:07,000 --> 00:03:18,000
+Cosmetic and aesthetic practice uses gelatin, collagen, thrombin, grafts, implants, sutures, heparin, injectables, and excipients.
+
+31
+00:03:18,000 --> 00:03:25,000
+Some are mammalian-derived, and source may vary by formulation or lot.
+
+32
+00:03:25,000 --> 00:03:33,000
+Composition is an audit prompt, not proof of reaction. Prior tolerance is not a guarantee.
+
+33
+00:03:33,000 --> 00:03:36,000
+End of Section 3.
+
+34
+00:03:36,000 --> 00:03:42,000
+Section 4 of 10. Epidemiology.
+
+35
+00:03:42,000 --> 00:04:00,000
+The C-D-C identified 90,018 suspected United States cases during 2017 through 2022, and estimated 96,000 to 450,000 affected since 2010.
+
+36
+00:04:00,000 --> 00:04:07,000
+Suspected cases were positive alpha-gal-specific I-G-E tests without clinical data.
+
+37
+00:04:07,000 --> 00:04:13,000
+A blood-donor serosurvey tested 300 samples per state across 10 states.
+
+38
+00:04:13,000 --> 00:04:34,000
+Arkansas seroprevalence was 31.2 percent, 95 percent confidence interval 25.7 to 36.6. Missouri was 26.0 percent, 95 percent confidence interval 22.0 to 30.0.
+
+39
+00:04:34,000 --> 00:04:38,000
+Seropositivity is not clinical A-G-S.
+
+40
+00:04:38,000 --> 00:04:40,000
+End of Section 4.
+
+41
+00:04:40,000 --> 00:04:45,000
+Section 5 of 10. Route and timing of exposure.
+
+42
+00:04:45,000 --> 00:05:04,000
+Route determines timing. Oral reactions are delayed three to six hours. Parenteral reactions may be immediate. Implants can prolong exposure. Dose and dwell time are also relevant.
+
+43
+00:05:04,000 --> 00:05:37,000
+In one food-challenge cohort, 2.0 kilounits per liter or 0.75 percent of total I-G-E had greater than 95 percent positive predictive value. Above 5.5 kilounits per liter or 2.12 percent corresponded to about 95 percent modeled probability. These are food-allergy results, not cosmetic-product cutoffs.
+
+44
+00:05:37,000 --> 00:06:13,000
+The six steps are: one, history; two, confirm history plus alpha-gal I-G-E; three, audit products; four, verify species, source, excipients, and lot; five, substitute source-verified hyaluronic acid, or H-A, and non-gelatin options; six, prepare epinephrine and a reaction plan, with allergy input if uncertain.
+
+45
+00:06:13,000 --> 00:06:16,000
+End of Section 5.
+
+46
+00:06:16,000 --> 00:06:26,000
+Section 6 of 10. Mechanistic context—companion detail.
+
+47
+00:06:26,000 --> 00:06:43,000
+Established pathway: tick, alpha-gal I-G-E, mammalian product, reaction. Screening can detect existing sensitization, not a product-specific reaction. Human evidence includes cetuximab reactions.
+
+48
+00:06:43,000 --> 00:07:05,000
+Emerging question: xenogeneic product, new alpha-gal I-G-E, future reaction? Product-associated sensitization is unestablished in humans and supported only by in vitro or animal evidence. Baseline screening cannot predict future sensitization.
+
+49
+00:07:05,000 --> 00:07:07,000
+End of Section 6.
+
+50
+00:07:07,000 --> 00:07:18,000
+Section 7 of 10. Material risk by evidence tier, including the heparin clinical signal.
+
+51
+00:07:18,000 --> 00:07:27,000
+First, Demonstrated: gelatin hemostats, with class-level human perioperative anaphylaxis reports, not evidence against every brand.
+
+52
+00:07:27,000 --> 00:07:49,000
+Second, Clinical signal: porcine unfractionated heparin, or U-F-H. With high-dose intravenous cardiac exposure, severe reactions occurred in 4 of 17 patients, or 24 percent. Among 8 patients with recent titers, 4 reacted, or 50 percent.
+
+53
+00:07:49,000 --> 00:08:15,000
+A lower-dose inpatient series found 1 of 39 U-F-H reactions, 2.6 percent, and 0 of 22 enoxaparin reactions, or 0 percent. The differing exposure settings underscore why the high-dose cardiac estimate cannot be generalized to other routes or doses.
+
+54
+00:08:15,000 --> 00:08:30,000
+Third, Mechanistic: mammalian matrices, without a prospective cosmetic or aesthetic cohort. Fourth, Theoretical: collagen P-M-M-A filler and catgut, without an aesthetic A-G-S reaction series.
+
+55
+00:08:30,000 --> 00:08:51,000
+Fifth, No established A-G-S-specific risk: source-verified H-A, calcium hydroxylapatite, poly-L-lactic acid, or P-L-L-A, and lidocaine. Other hypersensitivity remains possible. Review every finished formulation.
+
+56
+00:08:51,000 --> 00:08:53,000
+End of Section 7.
+
+57
+00:08:53,000 --> 00:08:57,000
+Section 8 of 10. Substitution guidance.
+
+58
+00:08:57,000 --> 00:09:27,000
+Possible substitutes include oxidized regenerated cellulose for gelatin hemostats; recombinant thrombin or a verified human or synthetic sealant; source-verified H-A, calcium hydroxylapatite, P-L-L-A, or autologous fat for collagen filler; human, synthetic, or autologous grafts for xenogeneic matrices; and synthetic absorbable sutures for catgut.
+
+59
+00:09:27,000 --> 00:09:33,000
+Verify the finished formulation, species, source, excipients, and lot.
+
+60
+00:09:33,000 --> 00:09:35,000
+End of Section 8.
+
+61
+00:09:35,000 --> 00:09:42,000
+Section 9 of 10. Prolonged exposure and other hypersensitivity mechanisms.
+
+62
+00:09:42,000 --> 00:10:08,000
+Implants and matrices can prolong exposure, but duration-related A-G-S risk is not quantified in cosmetic and aesthetic practice. Delayed filler nodules or matrix reactions may be inflammatory, infectious, foreign-body, or other hypersensitivity events. They do not by themselves prove A-G-S, and alpha-gal screening does not detect those pathways.
+
+63
+00:10:08,000 --> 00:10:11,000
+End of Section 9.
+
+64
+00:10:11,000 --> 00:10:19,000
+Section 10 of 10. Evidence gaps, methods, disclosures, artificial intelligence use statement, and references.
+
+65
+00:10:19,000 --> 00:10:40,000
+Evidence comes from clinical reports, adjacent specialties, product composition, in vitro and animal studies, and surveillance. There is no prospective cosmetic or aesthetic cohort, validated procedure-specific screening threshold, reaction registry, or brand-level alpha-gal assay.
+
+66
+00:10:40,000 --> 00:10:56,000
+Methods. Design: targeted, non-systematic narrative review of mammalian-derived materials used in cosmetic and aesthetic practice and their relationship to alpha-gal syndrome.
+
+67
+00:10:56,000 --> 00:11:09,000
+Data sources and search: PubMed, MEDLINE, Embase, and the Cochrane Library, supplemented by C-D-C M-M-W-R surveillance and F-D-A or manufacturer product labeling.
+
+68
+00:11:09,000 --> 00:11:45,000
+Searches combined A-G-S terms with material and procedure terms. Included literature published January 2010 through July 2026. Final search August 2, 2026. Foundational pre-2010 studies were added by hand-searching reference lists when necessary.
+
+69
+00:11:45,000 --> 00:12:25,000
+Selection: records were prioritized as A-G-S-specific human evidence; specialty-facing facial plastics and aesthetic evidence; cross-specialty clinical precedent, including cardiac surgery, transplantation, and anesthesiology; and mechanistic in vitro or animal evidence. Non-English records without a translation and reports without extractable clinical or compositional detail were excluded. Nineteen sources were retained.
+
+70
+00:12:25,000 --> 00:12:47,000
+Appraisal: no formal risk-of-bias assessment or quantitative pooling was performed. Evidence was graded qualitatively into the five tiers shown in the material-risk table: demonstrated, clinical signal, mechanistic, theoretical, no established A-G-S-specific risk.
+
+71
+00:12:47,000 --> 00:13:05,000
+Limitations: the evidence base is dominated by case reports and cross-specialty or mechanistic extrapolation. Direct aesthetic or cosmetic-surgery outcome data are absent. See A-G-S evidence gaps.
+
+72
+00:13:05,000 --> 00:13:09,000
+Disclosures: none. Funding: none.
+
+73
+00:13:09,000 --> 00:13:23,000
+Artificial-intelligence assistance was used for formatting and layout of the poster and generating code associated with the accompanying companion.
+
+74
+00:13:23,000 --> 00:13:44,000
+The complete reference list is available in text form below the transcript. References 1 through 12 match the poster. Companion references 13 through 18 expand the poster’s collective reference 13. Companion reference 19 adds the lower-dose heparin series.
+
+75
+00:13:44,000 --> 00:13:46,000
+End of Section 10.
+
+76
+00:13:46,000 --> 00:14:06,000
+Closing. This narration is decision support for licensed clinicians. It is not medical advice and does not replace clinical judgment, allergy consultation, institutional protocols, or manufacturer verification. Premedication does not reliably prevent anaphylaxis.
+
+77
+00:14:06,000 --> 00:14:10,790
+Narrated by Marielle He. End of narration.
