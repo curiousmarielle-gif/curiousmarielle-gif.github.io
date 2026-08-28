@@ -1,20 +1,19 @@
 POSTER QR + TYPE-IN
 ====================
-Public URL (QR payload and type-in — no grok in the address):
+Public URL encoded in the QR (and the type-in):
   https://tinyurl.com/tphsite
+
+That short URL currently opens:
+  https://curiousmarielle-gif.github.io/
 
 Print on the poster:
   tinyurl.com/tphsite
 
-How to publish the companion
-  In the Grok Publish sheet, set Website URL to: tick-primed
-  Access: Anyone with the link.
-  The short URL already points at that published app.
+Do not use tinyurl.com/tphags (that still points at a dead grok.me page).
 
 Files
-  qr.svg / qr-1024.png / qr-2048.png   QR only
+  qr.svg / qr-1024.png / qr-2048.png   QR only (black on white)
   lockup.svg / lockup-2048.png         QR + type-in caption
-  tiny.txt                             Public URL
 
 Print
   Place at least 0.9 in (23 mm) on the short side, 1.2 in preferred.
