@@ -131,12 +131,13 @@ main{max-width:1120px;margin:0 auto 40px;padding:20px 20px 72px;background:rgba(
 .evidence-line{margin-top:12px;padding:10px 14px;background:var(--burgundy-deep);color:var(--white);font-weight:800}
 .pathway.hypothesis .evidence-line{background:var(--graphite)}
 .table-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
-table{width:100%;border-collapse:collapse;min-width:920px;font-size:16px}
+table{width:100%;border-collapse:collapse;min-width:820px;font-size:16px}
 th{padding:14px 16px;background:var(--ink);color:var(--white);text-align:left;font-size:14px;letter-spacing:.035em;text-transform:uppercase}
 td{padding:16px 16px;border-bottom:1px solid var(--line);vertical-align:top}
 tbody tr:nth-child(even){background:var(--ivory)}
 tbody tr:last-child td{border-bottom:0}
-td:nth-child(2){font-weight:900;color:var(--burgundy-deep)}
+td:nth-child(2),td:nth-child(3){font-weight:800}
+td:nth-child(3){color:var(--burgundy-deep)}
 sup a{font-size:.72em;font-weight:800;text-decoration:none}
 .audio-panel{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .audio-card{padding:22px 24px;border:2px solid var(--gold);border-radius:10px;background:var(--ink);color:var(--white)}
@@ -234,6 +235,7 @@ body[data-theme="dark"]::after{background:radial-gradient(70% 55% at 16% 6%,rgba
 [data-theme="dark"] .kicker,
 [data-theme="dark"] .meta-list dt,
 [data-theme="dark"] td:nth-child(2),
+[data-theme="dark"] td:nth-child(3),
 [data-theme="dark"] .review-comments h3,
 [data-theme="dark"] .review-stats strong{color:#b8e0f0}
 [data-theme="dark"] .pathway.hypothesis{background:#32363c;border-color:#c5d0da}
@@ -363,30 +365,18 @@ html.theme-dark .take-label{color:#d6eef7}
         <p class="act">Avoid α-gal–containing materials. Use documented non-mammalian alternatives and coordinate with allergy/anesthesia as appropriate.</p>
       </article>
     </div>
-    <div class="callout dark" style="margin-top:16px"><strong>SCREEN · SUBSTITUTE · PREVENT</strong> — history first; then verify source; then substitute or prepare.</div>
-    <div class="grid" style="margin-top:14px">
-      <div class="checklist" aria-label="Supporting six-step checklist">
-        <div class="check"><strong>HISTORY</strong> · reactions + tick exposure</div>
-        <div class="check"><strong>CONFIRM</strong> · compatible history + α-gal IgE when indicated</div>
-        <div class="check"><strong>AUDIT</strong> · hemostats · fillers · grafts · sutures · hyaluronidase</div>
-        <div class="check"><strong>VERIFY</strong> · species · source · excipients · lot · current IFU</div>
-        <div class="check"><strong>SUBSTITUTE</strong> · non-mammalian options when indicated</div>
-        <div class="check"><strong>PREPARE</strong> · allergy input + epinephrine readiness when risk is material</div>
-      </div>
-      <div>
-        <div class="grid three">
-          <article class="route"><h3>ORAL</h3><p>Delayed 3–6 h</p></article>
-          <article class="route"><h3>PARENTERAL</h3><p>Immediate possible</p></article>
-          <article class="route"><h3>IMPLANT</h3><p>Prolonged exposure</p></article>
-        </div>
-        <div class="card" style="margin-top:14px"><h3>What this tool is</h3>
-          <ol class="scope-list">
-            <li><strong>Decision tool</strong> — this pathway plus materials verification (the object being validated).</li>
-            <li><strong>Prevalidation questionnaire</strong> — optional, respondent-facing, no on-page citations.</li>
-            <li><strong>This companion</strong> — evidentiary record: bibliography and item-source map.</li>
-          </ol>
-        </div>
-      </div>
+    <div class="callout dark" style="margin-top:16px"><strong>SCREEN · SUBSTITUTE · PREVENT</strong> — history first; then verify source; then substitute or prepare. Confirm is not a mandatory lab step before every procedure.</div>
+    <p class="kicker">Intraprocedural verification</p>
+    <div class="checklist" aria-label="Four-step operational verification">
+      <div class="check"><strong>IDENTIFY</strong> every mammalian-derived item on the field — hemostats, matrices, sutures, injectables, hyaluronidase, excipients.</div>
+      <div class="check"><strong>VERIFY</strong> species, source, excipients, and lot against the current instructions for use — not the brand name alone.</div>
+      <div class="check"><strong>SUBSTITUTE</strong> with a source-verified non-mammalian option where one exists.</div>
+      <div class="check"><strong>IF NO SUBSTITUTE</strong> — flag for allergy/immunology input and anaphylaxis precautions.</div>
+    </div>
+    <div class="grid three" style="margin-top:14px">
+      <article class="route"><h3>ORAL</h3><p>Delayed 3–6 h</p></article>
+      <article class="route"><h3>PARENTERAL</h3><p>Immediate possible</p></article>
+      <article class="route"><h3>IMPLANT</h3><p>Prolonged exposure</p></article>
     </div>
   </div>
 </details>
@@ -394,90 +384,61 @@ html.theme-dark .take-label{color:#d6eef7}
 <details class="section" id="materials" open>
   <summary><span class="section-num">2</span><span role="heading" aria-level="2">Materials verification</span></summary>
   <div class="section-body">
-    <p>No aesthetic-specific literature directly assays α-gal epitope content in cosmetic products. Rows are built on <strong>mechanism</strong> (mammalian-derived = potential α-gal) and flagged as such. The epitope persists in non-primate mammalian products after commercial processing; the operational question is source species, not procedure-specific testing.<sup><a href="#ref21">21</a>,<a href="#ref22">22</a>,<a href="#ref20">20</a></sup></p>
-    <p class="kicker">Verification steps — do not rely on product name</p>
-    <div class="checklist" aria-label="Material verification steps">
-      <div class="check">Obtain the specific product, lot, and current manufacturer IFU/package insert.</div>
-      <div class="check">Identify the source species of each biologic component (bovine, porcine, ovine, or synthetic/non-mammalian).</div>
-      <div class="check">If mammalian-derived, treat as potentially α-gal–containing unless the manufacturer documents removal or absence of the epitope.</div>
-      <div class="check">Record the verification source and date on the procedure record.</div>
-    </div>
-    <p class="table-hint">On a phone, swipe the table sideways. Named products are accurate only as of the 2 August 2026 review date; re-verify current IFUs before each use.</p>
+    <p>No aesthetic-specific literature directly assays α-gal epitope content in cosmetic products. Rows grade <strong>literature evidence</strong> separately from the <strong>action that evidence supports</strong>. A weak evidence grade can still warrant a simple substitution (e.g., recombinant hyaluronidase).<sup><a href="#ref21">21</a>,<a href="#ref22">22</a>,<a href="#ref20">20</a></sup></p>
+    <p class="table-hint">On a phone, swipe the table sideways. Named products illustrate class as of the 2 August 2026 review date; re-verify current IFUs. Evidence strength is not the same as clinical action.</p>
     <div class="table-wrap">
       <table>
-        <caption class="sr-only">Materials reference table: source, literature evidence strength, and clinical risk if sensitized</caption>
+        <caption class="sr-only">Materials: evidence strength versus clinical risk and action</caption>
         <thead>
           <tr>
-            <th scope="col">Material / component</th>
-            <th scope="col">Typical source</th>
+            <th scope="col">Exposure</th>
             <th scope="col">Evidence strength</th>
-            <th scope="col">Clinical risk if sensitized</th>
-            <th scope="col">Verification note</th>
+            <th scope="col">Clinical risk / action</th>
+            <th scope="col">Significance</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td>Gelatin-based hemostatic agents</td>
-            <td>Bovine / porcine</td>
-            <td>High — case reports + device immunoblot; class-level human anaphylaxis</td>
-            <td>Higher — documented procedural trigger</td>
-            <td>Highest-yield aesthetic/procedural flag. Brand names (e.g., GELFOAM, FLOSEAL) illustrate class, not a brand assay. Re-verify IFU.<sup><a href="#ref1">1</a>,<a href="#ref23">23</a>,<a href="#ref24">24</a>,<a href="#ref25">25</a>,<a href="#ref13">13</a>,<a href="#ref14">14</a></sup></td>
+            <td>Gelatin hemostats<br><span class="small">Bovine / porcine · e.g. GELFOAM, FLOSEAL</span></td>
+            <td>Demonstrated</td>
+            <td>Avoid; use non-gelatin</td>
+            <td>Class-level perioperative anaphylaxis; not a brand assay.<sup><a href="#ref1">1</a>,<a href="#ref5">5</a>,<a href="#ref13">13</a>,<a href="#ref14">14</a></sup></td>
           </tr>
           <tr>
-            <td>Collagen dermal fillers / hemostatic matrices</td>
-            <td>Bovine / porcine</td>
-            <td>Moderate — immunoblot of mammalian tissue; no aesthetic-specific AGS reports</td>
-            <td>Plausible; undocumented in aesthetics</td>
-            <td>Mammalian collagen retains the epitope in principle. Hypersensitivity to injected collagen is separately described, not proven α-gal.<sup><a href="#ref22">22</a>,<a href="#ref26">26</a></sup></td>
+            <td>Porcine UFH<br><span class="small">Porcine mucosa</span></td>
+            <td>Clinical signal</td>
+            <td>Substitute if feasible; caution high-dose IV</td>
+            <td>Route/dose dependent. High-dose IV cardiac: 4/17 severe (24%); 4/8 with recent titers (50%). Lower-dose inpatient: 1/39 UFH (2.6%); 0/22 enoxaparin (0%). Not an absolute contraindication.<sup><a href="#ref4">4</a>,<a href="#ref15">15</a>,<a href="#ref19">19</a></sup></td>
           </tr>
           <tr>
-            <td>Absorbable gut sutures (surgical / chromic gut)</td>
-            <td>Bovine / porcine collagen</td>
-            <td>Low — expected but undocumented; no direct AGS reports identified</td>
-            <td>Plausible; undocumented</td>
-            <td>Mechanistic flag. Prefer synthetic absorbable suture when AGS is suspected or established.<sup><a href="#ref22">22</a>,<a href="#ref24">24</a></sup></td>
-          </tr>
-          <tr>
-            <td>Hyaluronidase (animal-derived)<sup><a href="#fn-hyal" id="fn-hyal-ref">†</a></sup></td>
-            <td>Ovine / bovine testis-derived (e.g., Vitrase, Amphadase/Hydase as of review date)</td>
+            <td>Mammalian matrices<br><span class="small">Porcine / bovine · e.g. Strattice, SurgiMend</span></td>
             <td>Mechanistic</td>
-            <td>Theoretical — no AGS cases reported</td>
-            <td>Testis-derived; contains mammalian N-glycans (including core-fucosylated species).<sup><a href="#ref36">36</a></sup> No AGS cases reported. Recombinant (Hylenex) is the non-mammalian alternative.<sup><a href="#ref32">32</a></sup></td>
+            <td>Verify source; consider alternative</td>
+            <td>Adjacent-specialty precedent; no prospective cosmetic or aesthetic cohort.<sup><a href="#ref3">3</a>,<a href="#ref16">16</a>,<a href="#ref17">17</a></sup></td>
           </tr>
           <tr>
-            <td>Mammalian acellular matrices</td>
-            <td>Porcine / bovine (e.g., Strattice, SurgiMend as of review date)</td>
-            <td>Moderate — adjacent-specialty precedent; no prospective cosmetic cohort</td>
-            <td>Plausible; undocumented in aesthetics</td>
-            <td>Cross-specialty immunoblot/clinical precedent. Delayed matrix reactions are not themselves α-gal evidence.<sup><a href="#ref3">3</a>,<a href="#ref16">16</a>,<a href="#ref17">17</a>,<a href="#ref22">22</a></sup></td>
+            <td>Collagen fillers / catgut<br><span class="small">Bovine / porcine collagen · e.g. PMMA–collagen</span></td>
+            <td>Theoretical</td>
+            <td>Verify species/lot; document; prefer synthetic suture</td>
+            <td>Composition-based only; no aesthetic AGS reaction series.<sup><a href="#ref22">22</a>,<a href="#ref26">26</a>,<a href="#ref18">18</a></sup></td>
           </tr>
           <tr>
-            <td>Porcine unfractionated heparin</td>
-            <td>Porcine</td>
-            <td>High — cardiac and inpatient series (not aesthetic cohorts)</td>
-            <td>Variable — dose/route dependent; not an absolute contraindication</td>
-            <td>High-dose IV cardiac: 4/17 severe (24%); 4/8 with recent titers (50%). Lower-dose inpatient: 1/39 UFH (2.6%); 0/22 enoxaparin (0%). Shared decision with allergy when heparin is the preferred agent.<sup><a href="#ref4">4</a>,<a href="#ref15">15</a>,<a href="#ref19">19</a></sup></td>
+            <td>Testicular hyaluronidase<sup><a href="#fn-hyal" id="fn-hyal-ref">†</a></sup><br><span class="small">Ovine / bovine testis · e.g. Vitrase, Amphadase/Hydase</span></td>
+            <td>Theoretical</td>
+            <td>Prefer recombinant (Hylenex)</td>
+            <td>Mammalian-extract N-glycans, including core-fucosylated species; no AGS cases reported.<sup><a href="#ref36">36</a>,<a href="#ref32">32</a></sup></td>
           </tr>
           <tr>
-            <td>Hyaluronic acid fillers</td>
-            <td>Usually bacterial fermentation (Streptococcus)</td>
-            <td>N/A for α-gal unless animal-sourced</td>
-            <td>No AGS-specific risk identified in the available literature</td>
-            <td>Verify source. Older avian (rooster-comb) HA is not mammalian. HA hypersensitivity is attributed to protein impurities/crosslinkers, not α-gal.<sup><a href="#ref2">2</a>,<a href="#ref26">26</a>,<a href="#ref6">6</a></sup></td>
+            <td>HA / CaHA / PLLA / lidocaine<br><span class="small">Bacterial HA, synthetic, or non-mammalian after source check</span></td>
+            <td>No established AGS risk</td>
+            <td>Standard use</td>
+            <td>Other hypersensitivity still possible. Older avian HA is not mammalian. Verify source.<sup><a href="#ref2">2</a>,<a href="#ref6">6</a>,<a href="#ref26">26</a>,<a href="#ref27">27</a></sup></td>
           </tr>
           <tr>
-            <td>CaHA / PLLA / PCL fillers</td>
-            <td>Synthetic</td>
-            <td>N/A</td>
-            <td>No AGS-specific risk identified in the available literature</td>
-            <td>Other hypersensitivity remains possible; some series report higher overall hypersensitivity rates. Not an α-gal source after source check.<sup><a href="#ref2">2</a>,<a href="#ref27">27</a></sup></td>
-          </tr>
-          <tr>
-            <td>Botulinum toxin</td>
-            <td>Human albumin excipient (verify IFU)</td>
-            <td>N/A</td>
-            <td>No AGS-specific risk identified in the available literature</td>
-            <td>Historically animal-stabilized lots would warrant IFU review. No α-gal reaction data identified.<sup><a href="#ref26">26</a></sup></td>
+            <td>Botulinum toxin<br><span class="small">Human albumin excipient — verify IFU</span></td>
+            <td>No established AGS risk</td>
+            <td>Standard use after IFU check</td>
+            <td>No α-gal reaction data identified. Historically animal-stabilized lots would warrant IFU review.<sup><a href="#ref26">26</a></sup></td>
           </tr>
         </tbody>
       </table>
@@ -697,16 +658,6 @@ html.theme-dark .take-label{color:#d6eef7}
   </div>
 </details>
 
-<details class="section rater-section" id="rater">
-  <summary><span class="section-num" aria-hidden="true">✓</span><span role="heading" aria-level="2">Prevalidation questionnaire (inspection only)</span></summary>
-  <div class="section-body">
-    <p>Inspection copy only. Responses are not collected on this page. Completion is not required to use this companion.</p>
-    <div id="rater-root"><p class="small">Loading questionnaire preview…</p></div>
-  </div>
-</details>
-
-
-
 <details class="section" id="reviews" open>
   <summary><span class="section-num" aria-hidden="true">★</span><span role="heading" aria-level="2">Attendee feedback</span></summary>
   <div class="section-body">
@@ -722,7 +673,7 @@ html.theme-dark .take-label{color:#d6eef7}
       <dt>Design</dt><dd>Targeted, non-systematic narrative review of mammalian-derived materials used in cosmetic and aesthetic practice and their relationship to alpha-gal syndrome (AGS).</dd>
       <dt>Data sources and search</dt><dd>PubMed/MEDLINE, Embase, and the Cochrane Library, supplemented by CDC/MMWR surveillance and FDA/manufacturer product labeling. Searches combined AGS terms (alpha-gal, galactose-alpha-1,3-galactose, mammalian meat allergy, tick-bite allergy) with material and procedure terms (gelatin hemostat, collagen, acellular dermal matrix, heparin, catgut, dermal filler, thrombin, hyaluronidase, botulinum, excipient). Included literature published January 2010 through July 2026; final search 2 August 2026. Foundational pre-2010 studies were added by hand-searching reference lists when necessary.</dd>
       <dt>Selection</dt><dd>Records were prioritized in the following order: (1) AGS-specific human evidence; (2) specialty-facing (facial plastics / aesthetic) evidence; (3) cross-specialty clinical precedent (e.g., cardiac surgery, transplantation, dentistry, spine, anesthesiology); and (4) mechanistic in vitro or animal evidence. Non-English records without a translation and reports without extractable clinical or compositional detail were excluded. Poster references 1–19 are retained. Hyaluronidase is cited to Yang (36) for N-glycan/α-gal plausibility, Guliyeva (33) for intrinsic non-AGS allergy, and the HYLENEX label (32) for the recombinant alternative.</dd>
-      <dt>Appraisal</dt><dd>No formal risk-of-bias assessment or quantitative pooling was performed. Materials are graded on two axes: literature evidence strength (how well-established α-gal content or reactivity is) and clinical risk if sensitized. These are reported separately. Where no signal exists, the table records “no AGS-specific risk identified in the available literature,” not “no risk.”</dd>
+      <dt>Appraisal</dt><dd>No formal risk-of-bias assessment or quantitative pooling was performed. Materials are graded on two axes, reported as separate columns: literature evidence strength (demonstrated, clinical signal, mechanistic, theoretical, no established AGS-specific risk) and clinical risk/action (what to do). These can diverge — a clinical-signal exposure with catastrophic route/dose (high-dose IV porcine heparin) may warrant more caution than a demonstrated exposure that is easily substituted.</dd>
       <dt>Prevalidation (bias control)</dt><dd>The questionnaire is optional and is shown on this companion as a view-only instrument (not collecting responses here). When collection opens, Round 1 is independent and blinded; item order is randomized; names are not collected; an access phrase, reCAPTCHA v3, timing, and a honeypot limit automated or drive-by submissions. Self-rated expertise and the validation profile are captured in one sitting. Item provenance is documented in the item-source table, not on the form. Residual risks include volunteer bias and purposive conference sampling.</dd>
       <dt>Limitations</dt><dd>The evidence base is dominated by case reports and cross-specialty or mechanistic extrapolation; direct aesthetic outcome data are absent (see “AGS evidence gaps”).</dd>
       <dt>Disclosures</dt><dd>None.</dd>
@@ -830,6 +781,14 @@ html.theme-dark .take-label{color:#d6eef7}
       <li id="ref35">Rutkowski K, Wagner A, Rutkowski R, et al. Alpha-gal syndrome: an emerging cause of food and drug allergy. <em>Clin Exp Allergy</em>. 2020;50(8):894–903. doi:<a href="https://doi.org/10.1111/cea.13683">10.1111/cea.13683</a>.</li>
       <li id="ref36">Yang S, Kim HH, Kim JI. Identification, quantification, and structural role of N-glycans in two highly purified isoforms of sheep testicular hyaluronidase. <em>Int J Biol Macromol</em>. 2023;252:126437. doi:<a href="https://doi.org/10.1016/j.ijbiomac.2023.126437">10.1016/j.ijbiomac.2023.126437</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/37611686/">37611686</a>.</li>
     </ol>
+  </div>
+</details>
+
+<details class="section rater-section" id="rater">
+  <summary><span class="section-num" aria-hidden="true">✓</span><span role="heading" aria-level="2">Prevalidation questionnaire (optional)</span></summary>
+  <div class="section-body">
+    <p>Optional inspection copy after the clinical sections. Responses are not collected on this page. Completion is not required to use this companion.</p>
+    <div id="rater-root"><p class="small">Loading questionnaire preview…</p></div>
   </div>
 </details>
 </main>
