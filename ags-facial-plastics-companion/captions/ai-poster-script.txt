@@ -4,7 +4,7 @@ Section one: Alpha-gal syndrome overview. The central concept is that being sens
 
 What it is: Alpha-gal syndrome is an I-G-E–mediated allergy to galactose-alpha-1,3-galactose, called alpha-gal, a sugar found in non-primate mammalian tissues and products.
 
-Why it matters: In cosmetic and aesthetic practice, this creates a potential anaphylaxis risk from gelatin hemostats, collagen-containing fillers, mammalian grafts, catgut sutures, and various excipients.
+Why it matters: In cosmetic and aesthetic practice, this creates a potential anaphylaxis risk from gelatin hemostats, collagen-containing fillers, mammalian grafts, catgut sutures, hyaluronidase, and various excipients.
 
 Epidemiology: According to C-D-C Morbidity and Mortality Weekly Report data from 2017 to 2022, there were about 90,018 suspected cases. An estimated 96,000 to 450,000 people have been affected since 2010. Importantly, being seropositive does not equal having disease—for example, seropositivity reached 31.2 percent in Arkansas and 26 percent in Missouri. Geographically, cases cluster in the southern and eastern United States.
 
@@ -14,9 +14,9 @@ Limits: There is no prospective cosmetic or aesthetic cohort, no reaction regist
 
 Section two: Clinical decision-making. The framework is Screen, then Stratify, then Act.
 
-Under Screen: Step one, take a history of prior reactions and tick exposure. Step two, establish the diagnosis once, based on a compatible history plus alpha-gal I-G-E.
+Under Screen: Step one, take a history of prior reactions and tick exposure. Step two, establish the diagnosis once, based on a compatible history plus alpha-gal I-G-E. Confirmation defines the diagnosis; it is not a per-procedure laboratory gate.
 
-Under Stratify: Step three, audit all materials—hemostats, fillers, grafts, sutures, and excipients. Step four, verify the species, source, excipients, and lot number.
+Under Stratify: Step three, audit all materials—hemostats, fillers, grafts, sutures, hyaluronidase, and excipients. Step four, verify the species, source, excipients, and lot number.
 
 Under Act: Step five, substitute with source-verified hyaluronic acid and non-gelatin options. Step six, prepare with epinephrine and a reaction plan, and consult allergy if the situation is uncertain.
 
@@ -34,20 +34,20 @@ The recurring principle: sensitized is not reactive—history plus alpha-gal I-G
 
 Gelatin hemostats, such as Gelfoam and Floseal, have demonstrated evidence. There is class-level perioperative anaphylaxis, though not every brand is implicated.
 
-Porcine unfractionated heparin, at cardiac-dose intravenous levels, shows a clinical signal. Risk is strongest with high-dose I-V; route and dose matter.
+Porcine unfractionated heparin, at cardiac-dose intravenous levels, shows a clinical signal. High-dose intravenous cardiac exposure: 4 of 17 severe reactions, or 24 percent. Route and dose matter. Heparin is not an absolute contraindication.
 
-Mammalian matrices, such as Strattice and SurgiMend, have mechanistic evidence. There is surgical precedent but no aesthetic cohort.
+Mammalian matrices, such as Strattice and SurgiMend, have mechanistic evidence. There is surgical precedent but no prospective cosmetic or aesthetic cohort.
 
 Collagen, P-M-M-A, and catgut—for example Bellafill and surgical gut—are rated theoretical. Concern is composition-based, with no A-G-S reaction series.
 
-Animal hyaluronidase, such as Amphadase and Vitrase, is also theoretical. These are testicular extracts. Recombinant human hyaluronidase—Hylenex—is a non-animal-extract alternative.
+Animal hyaluronidase, such as Amphadase and Vitrase, is theoretical for alpha-gal only. These are testicular extracts. Recombinant human hyaluronidase—Hylenex—is the non-animal-extract alternative. Animal-derived products also carry an independent, label-documented, non-A-G-S anaphylaxis risk. Theoretical does not equal low overall risk.
 
-Finally, source-verified substitutes—hyaluronic acid, calcium hydroxylapatite, poly-L-lactic acid, and lidocaine—have no A-G-S-specific literature, though other hypersensitivity mechanisms remain possible.
+Finally, source-verified substitutes—hyaluronic acid, calcium hydroxylapatite, poly-L-lactic acid, and lidocaine—have no A-G-S-specific literature, though other hypersensitivity mechanisms remain possible. Absence of A-G-S-specific literature does not equal proven safe.
 
-Three closing notes. On hyaluronidase: animal-derived ovine and bovine testicular products carry independent, non-A-G-S allergy and anaphylaxis risk; recombinant human Hylenex is the non-animal-extract alternative. On neutrality: brands are cited to illustrate material classes—this is not endorsement, and no brand-level alpha-gal assays were performed. On currency: examples are current as of August 2026; always verify the current F-D-A label and instructions for use, plus species, source, excipients, and lot.
+Three closing notes. On hyaluronidase: recombinant sourcing removes only the glycan variable; protein-directed allergy remains. On neutrality: brands are cited to illustrate material classes—this is not endorsement, and no brand-level alpha-gal assays were performed. On currency: examples are current as of August 2026; always verify the current F-D-A label and instructions for use, plus species, source, excipients, and lot.
 
 The take-home message: In alpha-gal syndrome, sensitization does not equal reactivity—diagnosis requires both a compatible history and alpha-gal-specific I-G-E. For cosmetic and aesthetic procedures, screen for history and tick exposure, stratify by auditing and verifying all mammalian-derived materials, and act by substituting source-verified non-gelatin, non-animal options while preparing for anaphylaxis when risk is uncertain.
 
 A digital companion with full citations, accessible text, and audio is available at the Q-R code, at tinyurl.com/AGS-FPRS.
 
-This concludes the transcript.
+This concludes the poster narration.

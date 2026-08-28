@@ -1,107 +1,239 @@
 1
-00:00:00,250 --> 00:00:33,112
-This poster is titled Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures. The authors are Marielle He, M-D, M-S; Jordan Kai Simmons, M-D; and Babak Azizzadeh, M-D, F-A-C-S. They are affiliated with the CENTER for Advanced Facial Plastic Surgery in Beverly Hills, California, and the Division of Otolaryngology–Head and Neck Surgery at Cedars-Sinai Medical Center in Los Angeles.
+00:00:00,100 --> 00:00:06,395
+This poster is titled Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures.
 
 2
-00:00:33,112 --> 00:00:56,342
-Section one: Alpha-gal syndrome overview. The central concept is that being sensitized is not the same as being reactive. Alpha-gal syndrome, abbreviated A-G-S, requires both a compatible clinical history and alpha-gal–specific I-G-E. Elevated I-G-E alone does not establish the diagnosis.
+00:00:06,345 --> 00:00:15,978
+The authors are Marielle He, M-D, M-S; Jordan Kai Simmons, M-D; and Babak Azizzadeh, M-D, F-A-C-S.
 
 3
-00:00:56,342 --> 00:01:09,940
-What it is: Alpha-gal syndrome is an I-G-E–mediated allergy to galactose-alpha-1,3-galactose, called alpha-gal, a sugar found in non-primate mammalian tissues and products.
+00:00:15,978 --> 00:00:29,279
+They are affiliated with the CENTER for Advanced Facial Plastic Surgery in Beverly Hills, California, and the Division of Otolaryngology–Head and Neck Surgery at Cedars-Sinai Medical Center in Los Angeles.
 
 4
-00:01:09,940 --> 00:01:24,671
-Why it matters: In cosmetic and aesthetic practice, this creates a potential anaphylaxis risk from gelatin hemostats, collagen-containing fillers, mammalian grafts, catgut sutures, and various excipients.
+00:00:29,279 --> 00:00:32,934
+Section one: Alpha-gal syndrome overview.
 
 5
-00:01:24,671 --> 00:02:02,066
-Epidemiology: According to C-D-C Morbidity and Mortality Weekly Report data from 2017 to 2022, there were about 90,018 suspected cases. An estimated 96,000 to 450,000 people have been affected since 2010. Importantly, being seropositive does not equal having disease—for example, seropositivity reached 31.2 percent in Arkansas and 26 percent in Missouri. Geographically, cases cluster in the southern and eastern United States.
+00:00:32,934 --> 00:00:38,519
+The central concept is that being sensitized is not the same as being reactive.
 
 6
-00:02:02,066 --> 00:02:17,363
-Review design: The authors reviewed literature published from January 2010 through July 2026, with a final search on August 2, 2026, prioritizing surgical and perioperative alpha-gal data.
+00:00:38,519 --> 00:00:50,842
+Alpha-gal syndrome, abbreviated A-G-S, requires both a compatible clinical history and alpha-gal–specific I-G-E. Elevated I-G-E alone does not establish the diagnosis.
 
 7
-00:02:17,363 --> 00:02:29,828
-Limits: There is no prospective cosmetic or aesthetic cohort, no reaction registry, and no validated product-specific I-G-E threshold or brand-level alpha-gal assay.
+00:00:50,842 --> 00:01:03,505
+What it is: Alpha-gal syndrome is an I-G-E–mediated allergy to galactose-alpha-1,3-galactose, called alpha-gal, a sugar found in non-primate mammalian tissues and products.
 
 8
-00:02:29,828 --> 00:02:36,627
-Section two: Clinical decision-making. The framework is Screen, then Stratify, then Act.
+00:01:03,505 --> 00:01:20,054
+Why it matters: In cosmetic and aesthetic practice, this creates a potential anaphylaxis risk from gelatin hemostats, collagen-containing fillers, mammalian grafts, catgut sutures, hyaluronidase, and various excipients.
 
 9
-00:02:36,627 --> 00:02:51,925
-Under Screen: Step one, take a history of prior reactions and tick exposure. Step two, establish the diagnosis once, based on a compatible history plus alpha-gal I-G-E.
+00:01:20,054 --> 00:01:32,622
+Epidemiology: According to C-D-C Morbidity and Mortality Weekly Report data from 2017 to 2022, there were about 90,018 suspected cases.
 
 10
-00:02:51,925 --> 00:03:04,957
-Under Stratify: Step three, audit all materials—hemostats, fillers, grafts, sutures, and excipients. Step four, verify the species, source, excipients, and lot number.
+00:01:32,622 --> 00:01:39,891
+An estimated 96,000 to 450,000 people have been affected since 2010.
 
 11
-00:03:04,957 --> 00:03:21,388
-Under Act: Step five, substitute with source-verified hyaluronic acid and non-gelatin options. Step six, prepare with epinephrine and a reaction plan, and consult allergy if the situation is uncertain.
+00:01:39,891 --> 00:01:52,432
+Importantly, being seropositive does not equal having disease—for example, seropositivity reached 31.2 percent in Arkansas and 26 percent in Missouri.
 
 12
-00:03:21,388 --> 00:03:25,354
-Three key clinical caveats accompany this framework.
+00:01:52,432 --> 00:01:57,921
+Geographically, cases cluster in the southern and eastern United States.
 
 13
-00:03:25,354 --> 00:03:56,516
-First, food data does not equal product cutoffs. Reference thresholds—such as 2.0 kilounits per liter or 0.75 percent total I-G-E giving greater than 95 percent positive predictive value, and greater than 5.5 kilounits per liter or 2.12 percent giving roughly 95 percent modeled probability—are not validated for cosmetic products.
+00:01:57,921 --> 00:02:13,342
+Review design: The authors reviewed literature published from January 2010 through July 2026, with a final search on August 2, 2026, prioritizing surgical and perioperative alpha-gal data.
 
 14
-00:03:56,516 --> 00:04:12,380
-Second, route changes timing. Oral exposure causes delayed reactions at three to six hours. Parenteral exposure may be immediate. Implants cause prolonged exposure. Parenteral delivery bypasses gut processing.
+00:02:13,342 --> 00:02:25,407
+Limits: There is no prospective cosmetic or aesthetic cohort, no reaction registry, and no validated product-specific I-G-E threshold or brand-level alpha-gal assay.
 
 15
-00:04:12,380 --> 00:04:23,145
-Third, source and lot matter. Verify species, source, excipients, and lot, because formulations change and labels may be incomplete.
+00:02:25,407 --> 00:02:28,980
+Section two: Clinical decision-making.
 
 16
-00:04:23,145 --> 00:04:27,111
-Section three: Material risk, graded by evidence.
+00:02:28,980 --> 00:02:33,369
+The framework is Screen, then Stratify, then Act.
 
 17
-00:04:27,111 --> 00:04:47,508
-The recurring principle: sensitized is not reactive—history plus alpha-gal I-G-E define A-G-S risk. Evidence is graded from strongest to weakest as follows: documented reaction, then clinical signal, then mechanism, then theory, then no A-G-S-specific literature.
+00:02:33,369 --> 00:02:39,388
+Under Screen: Step one, take a history of prior reactions and tick exposure.
 
 18
-00:04:47,508 --> 00:04:59,407
-Gelatin hemostats, such as Gelfoam and Floseal, have demonstrated evidence. There is class-level perioperative anaphylaxis, though not every brand is implicated.
+00:02:39,388 --> 00:02:51,711
+Step two, establish the diagnosis once, based on a compatible history plus alpha-gal I-G-E. Confirmation defines the diagnosis; it is not a per-procedure laboratory gate.
 
 19
-00:04:59,407 --> 00:05:11,305
-Porcine unfractionated heparin, at cardiac-dose intravenous levels, shows a clinical signal. Risk is strongest with high-dose I-V; route and dose matter.
+00:02:51,711 --> 00:03:02,336
+Under Stratify: Step three, audit all materials—hemostats, fillers, grafts, sutures, hyaluronidase, and excipients.
 
 20
-00:05:11,305 --> 00:05:21,503
-Mammalian matrices, such as Strattice and SurgiMend, have mechanistic evidence. There is surgical precedent but no aesthetic cohort.
+00:03:02,336 --> 00:03:08,559
+Step four, verify the species, source, excipients, and lot number.
 
 21
-00:05:21,503 --> 00:05:33,402
-Collagen, P-M-M-A, and catgut—for example Bellafill and surgical gut—are rated theoretical. Concern is composition-based, with no A-G-S reaction series.
+00:03:08,559 --> 00:03:16,059
+Under Act: Step five, substitute with source-verified hyaluronic acid and non-gelatin options.
 
 22
-00:05:33,402 --> 00:05:45,867
-Animal hyaluronidase, such as Amphadase and Vitrase, is also theoretical. These are testicular extracts. Recombinant human hyaluronidase—Hylenex—is a non-animal-extract alternative.
+00:03:16,059 --> 00:03:23,722
+Step six, prepare with epinephrine and a reaction plan, and consult allergy if the situation is uncertain.
 
 23
-00:05:45,867 --> 00:05:57,765
-Finally, source-verified substitutes—hyaluronic acid, calcium hydroxylapatite, poly-L-lactic acid, and lidocaine—have no A-G-S-specific literature, though other hypersensitivity mechanisms remain possible.
+00:03:23,722 --> 00:03:27,635
+Three key clinical caveats accompany this framework.
 
 24
-00:05:57,765 --> 00:06:37,426
-Three closing notes. On hyaluronidase: animal-derived ovine and bovine testicular products carry independent, non-A-G-S allergy and anaphylaxis risk; recombinant human Hylenex is the non-animal-extract alternative. On neutrality: brands are cited to illustrate material classes—this is not endorsement, and no brand-level alpha-gal assays were performed. On currency: examples are current as of August 2026; always verify the current F-D-A label and instructions for use, plus species, source, excipients, and lot.
+00:03:27,635 --> 00:03:31,739
+First, food data does not equal product cutoffs.
 
 25
-00:06:37,426 --> 00:07:08,588
-The take-home message: In alpha-gal syndrome, sensitization does not equal reactivity—diagnosis requires both a compatible history and alpha-gal-specific I-G-E. For cosmetic and aesthetic procedures, screen for history and tick exposure, stratify by auditing and verifying all mammalian-derived materials, and act by substituting source-verified non-gelatin, non-animal options while preparing for anaphylaxis when risk is uncertain.
+00:03:31,739 --> 00:03:54,605
+Reference thresholds—such as 2.0 kilounits per liter or 0.75 percent total I-G-E giving greater than 95 percent positive predictive value, and greater than 5.5 kilounits per liter or 2.12 percent giving roughly 95 percent modeled probability—are not validated for cosmetic products.
 
 26
-00:07:08,588 --> 00:07:19,920
-A digital companion with full citations, accessible text, and audio is available at the Q-R code, at tinyurl.com/AGS-FPRS.
+00:03:54,605 --> 00:03:57,595
+Second, route changes timing.
 
 27
-00:07:19,920 --> 00:07:21,886
-This concludes the transcript.
+00:03:57,595 --> 00:04:02,527
+Oral exposure causes delayed reactions at three to six hours.
+
+28
+00:04:02,527 --> 00:04:05,624
+Parenteral exposure may be immediate.
+
+29
+00:04:05,624 --> 00:04:08,641
+Implants cause prolonged exposure.
+
+30
+00:04:08,641 --> 00:04:12,282
+Parenteral delivery bypasses gut processing.
+
+31
+00:04:12,282 --> 00:04:15,149
+Third, source and lot matter.
+
+32
+00:04:15,149 --> 00:04:23,152
+Verify species, source, excipients, and lot, because formulations change and labels may be incomplete.
+
+33
+00:04:23,152 --> 00:04:27,717
+Section three: Material risk, graded by evidence.
+
+34
+00:04:27,717 --> 00:04:35,815
+The recurring principle: sensitized is not reactive—history plus alpha-gal I-G-E define A-G-S risk.
+
+35
+00:04:35,815 --> 00:04:47,921
+Evidence is graded from strongest to weakest as follows: documented reaction, then clinical signal, then mechanism, then theory, then no A-G-S-specific literature.
+
+36
+00:04:47,921 --> 00:04:53,994
+Gelatin hemostats, such as Gelfoam and Floseal, have demonstrated evidence.
+
+37
+00:04:53,994 --> 00:04:59,891
+There is class-level perioperative anaphylaxis, though not every brand is implicated.
+
+38
+00:04:59,891 --> 00:05:06,793
+Porcine unfractionated heparin, at cardiac-dose intravenous levels, shows a clinical signal.
+
+39
+00:05:06,793 --> 00:05:14,130
+High-dose intravenous cardiac exposure: 4 of 17 severe reactions, or 24 percent.
+
+40
+00:05:14,130 --> 00:05:16,331
+Route and dose matter.
+
+41
+00:05:16,331 --> 00:05:20,081
+Heparin is not an absolute contraindication.
+
+42
+00:05:20,236 --> 00:05:26,300
+Mammalian matrices, such as Strattice and SurgiMend, have mechanistic evidence.
+
+43
+00:05:26,250 --> 00:05:31,644
+There is surgical precedent but no prospective cosmetic or aesthetic cohort.
+
+44
+00:05:31,644 --> 00:05:39,402
+Collagen, P-M-M-A, and catgut—for example Bellafill and surgical gut—are rated theoretical.
+
+45
+00:05:39,402 --> 00:05:44,538
+Concern is composition-based, with no A-G-S reaction series.
+
+46
+00:05:44,538 --> 00:05:51,222
+Animal hyaluronidase, such as Amphadase and Vitrase, is theoretical for alpha-gal only.
+
+47
+00:05:51,222 --> 00:05:54,130
+These are testicular extracts.
+
+48
+00:05:54,130 --> 00:06:00,543
+Recombinant human hyaluronidase—Hylenex—is the non-animal-extract alternative.
+
+49
+00:06:00,543 --> 00:06:08,097
+Animal-derived products also carry an independent, label-documented, non-A-G-S anaphylaxis risk.
+
+50
+00:06:08,097 --> 00:06:11,834
+Theoretical does not equal low overall risk.
+
+51
+00:06:11,834 --> 00:06:27,649
+Finally, source-verified substitutes—hyaluronic acid, calcium hydroxylapatite, poly-L-lactic acid, and lidocaine—have no A-G-S-specific literature, though other hypersensitivity mechanisms remain possible.
+
+52
+00:06:27,649 --> 00:06:32,527
+Absence of A-G-S-specific literature does not equal proven safe.
+
+53
+00:06:32,527 --> 00:06:34,769
+Three closing notes.
+
+54
+00:06:34,769 --> 00:06:42,839
+On hyaluronidase: recombinant sourcing removes only the glycan variable; protein-directed allergy remains.
+
+55
+00:06:42,839 --> 00:06:52,676
+On neutrality: brands are cited to illustrate material classes—this is not endorsement, and no brand-level alpha-gal assays were performed.
+
+56
+00:06:52,676 --> 00:07:05,720
+On currency: examples are current as of August 2026; always verify the current F-D-A label and instructions for use, plus species, source, excipients, and lot.
+
+57
+00:07:05,720 --> 00:07:17,649
+The take-home message: In alpha-gal syndrome, sensitization does not equal reactivity—diagnosis requires both a compatible history and alpha-gal-specific I-G-E.
+
+58
+00:07:17,649 --> 00:07:35,978
+For cosmetic and aesthetic procedures, screen for history and tick exposure, stratify by auditing and verifying all mammalian-derived materials, and act by substituting source-verified non-gelatin, non-animal options while preparing for anaphylaxis when risk is uncertain.
+
+59
+00:07:35,978 --> 00:07:47,894
+A digital companion with full citations, accessible text, and audio is available at the Q-R code, at tinyurl.com/AGS-FPRS.
+
+60
+00:07:47,894 --> 00:07:50,869
+This concludes the poster narration.
