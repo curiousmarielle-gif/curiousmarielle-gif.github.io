@@ -60,6 +60,14 @@ h1{max-width:900px;margin:0;font-size:clamp(34px,6vw,62px);line-height:1.03;lett
 .typein-qr img{display:block;width:100%;height:100%}
 .typein-copy{margin:0;color:var(--cream-2);font-size:15px;line-height:1.4}
 .principle{display:block;margin:8px 0 24px;padding:18px 28px;background:#d6eef7;color:#073451;border:3px solid #073451;border-radius:10px;font-size:clamp(14px,2.4vw,18px);font-weight:800;letter-spacing:.06em;text-align:center;line-height:1.45;box-shadow:inset 0 1px 0 rgba(255,255,255,.7),0 8px 20px rgba(0,20,40,.2)}
+.algo-lead{margin:0 0 14px;font-size:16px}
+.algo-entry{margin:0 0 16px;padding:16px 18px;background:var(--ivory);border:2px solid var(--ink);border-radius:8px}
+.algo-expand{margin:12px 0 0;font-size:15px;font-weight:500}
+.algo-expand ul{margin:6px 0 0;padding-left:1.2em}
+.algo-expand li{margin:6px 0}
+.action-card.proceed{border-top:8px solid #6b7280}
+.action-card.suspect{border-top:8px solid #b45309}
+.action-card.avoid{border-top:8px solid #9a3412}
 .hero-actions .button,.hero-actions button.button{width:100%;text-align:center;min-height:50px;padding:13px 31px;border-radius:10em;font:inherit;font-size:13px;font-weight:700;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.45),0 3px 0 rgba(0,0,0,.28),0 8px 16px rgba(0,20,40,.28);transition:background-color 180ms ease,color 180ms ease,border-color 180ms ease,box-shadow 180ms ease,transform 180ms ease}
 .hero-actions .button:hover,.hero-actions .button:focus-visible{transform:translateY(2px);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 1px 0 rgba(0,0,0,.2),0 4px 8px rgba(0,20,40,.2)}
 .hero-actions .button.audio-author{background:#7ec8e3;color:var(--ink);border:1px solid #4aa9c4;letter-spacing:.08em}
@@ -278,9 +286,10 @@ html.theme-dark .principle,
 [data-theme="dark"] .take-label,
 html.theme-dark .take-label{color:#d6eef7}
 [data-theme="dark"] .action-card{background:#273544;color:#eef3f8;border-color:#7d8b99}
-[data-theme="dark"] .action-card.proceed .act{background:#1a3a2a;color:#d7f0e2}
+[data-theme="dark"] .action-card.proceed .act{background:#2a3340;color:#d5dde6}
 [data-theme="dark"] .action-card.suspect .act{background:#3a3424;color:#f7eddb}
 [data-theme="dark"] .action-card.avoid .act{background:#3a1c12;color:#f8e4d8}
+[data-theme="dark"] .algo-entry{background:#273544;color:#eef3f8;border-color:#7d8b99}
 [data-theme="dark"] .table-hint{color:#c5d0da}
 </style>
 </head>
@@ -307,7 +316,7 @@ html.theme-dark .take-label{color:#d6eef7}
   <strong>Clinical-use notice</strong>
   For licensed clinicians as educational decision support. Not a substitute for clinical judgment, specialty consultation, institutional protocol, or current manufacturer labeling. Verify species origin, formulation, excipients, and lot before use. Premedication does not reliably prevent anaphylaxis. Not peer-reviewed. Not FDA-evaluated.
 </div>
-<p class="face-stamp"><span data-release-stamp>v1.2 • reviewed 2026-08-28</span> • Authors: no relevant financial relationships • Funding: none • Brand names are class examples, not a brand-level α-gal assay • Verify current FDA label/IFU before use • Not CME • Not medical advice</p>
+<p class="face-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Authors: no relevant financial relationships • Funding: none • Brand names are class examples, not a brand-level α-gal assay • Verify current FDA label/IFU before use • Not CME • Not medical advice</p>
 
 <header class="masthead">
   <div class="logo-strip-wrap">
@@ -331,7 +340,7 @@ html.theme-dark .take-label{color:#d6eef7}
   <div class="masthead-inner">
     <div class="masthead-copy">
     <h1>Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures</h1>
-    <p class="masthead-stamp" data-release-stamp>v1.2 • reviewed 2026-08-28</p>
+    <p class="masthead-stamp" data-release-stamp>v2.0 • reviewed 2026-08-28</p>
     <p class="authors">Marielle He, MD, MS<sup>1</sup> · Jordan Kai Simmons, MD<sup>2</sup> · Babak Azizzadeh, MD, FACS<sup>1,2</sup></p>
     <p class="affiliation"><sup>1</sup> CENTER for Advanced Facial Plastic Surgery, Beverly Hills, CA<br>
     <sup>2</sup> Division of Otolaryngology–Head and Neck Surgery, Cedars-Sinai Medical Center, Los Angeles, CA</p>
@@ -353,32 +362,64 @@ html.theme-dark .take-label{color:#d6eef7}
 </header>
 
 <main id="main">
-  <p class="principle">SCREEN · SUBSTITUTE · PREVENT</p>
+  <p class="principle">SCREEN → STRATIFY → ACT</p>
 
 <details class="section" id="decision" open>
   <summary><span class="section-num">1</span><span role="heading" aria-level="2">Clinical action pathway — read this first</span></summary>
   <div class="section-body">
-    <p class="kicker">One-screen algorithm</p>
-    <p>Classify the patient, then act. Testing is triggered by history, not by the mere presence of a mammalian-derived material.</p>
+    <p class="algo-lead"><strong>Sensitized ≠ reactive.</strong> AGS = compatible history + α-gal IgE. Screening detects current sensitization, not future risk. Confirmation defines the diagnosis; it is not a per-procedure laboratory gate.<sup><a href="#ref9">9</a>,<a href="#ref3">3</a>,<a href="#ref30">30</a></sup></p>
+    <div class="algo-entry">
+      <p class="kicker" style="margin:0 0 6px">Entry question (all patients)</p>
+      <p style="margin:0">Compatible history? — delayed (2–6 h) urticaria, GI symptoms, or anaphylaxis after mammalian meat; tick exposure; or residence in an endemic (lone-star tick) region.</p>
+    </div>
+    <p class="small">State labels and triggers match the poster face. Detail below is what the face defers to this companion.</p>
     <div class="action-grid" role="list">
       <article class="action-card proceed" role="listitem">
-        <h3>No suggestive history</h3>
-        <p>No prior red-meat or mammalian-product reaction, no known alpha-gal sensitization, and no tick-exposure history that has produced symptoms.</p>
-        <p class="act">Proceed. No routine pre-procedure α-gal testing is indicated solely because a mammalian-derived material may be used. Document the negative screen.</p>
+        <h3>STATE 1 — No suggestive history</h3>
+        <p><strong>Trigger:</strong> No compatible symptoms, no relevant tick/endemic exposure.</p>
+        <p class="act">Do not screen α-gal IgE and do not restrict materials on an AGS basis. Proceed with standard care; remain alert to unexplained peri-procedural reactions.</p>
+        <div class="algo-expand">
+          <p><strong>Companion detail</strong></p>
+          <ul>
+            <li>α-gal sensitization is common and does not equal clinical reactivity. Do not test without a compatible history — asymptomatic sensitization risks false-positive labeling.<sup><a href="#ref10">10</a>,<a href="#ref12">12</a>,<a href="#ref30">30</a></sup></li>
+            <li>No material restriction is warranted on an AGS basis in this state. Standard allergy/anaphylaxis vigilance still applies.<sup><a href="#ref38">38</a></sup></li>
+            <li>A new suggestive event moves the patient to State 2.</li>
+          </ul>
+        </div>
       </article>
       <article class="action-card suspect" role="listitem">
-        <h3>Suspected AGS</h3>
-        <p>Suggestive history (delayed urticaria/anaphylaxis after mammalian products, gelatin/dairy reactions, or symptomatic tick-bite history) without confirmatory testing.</p>
-        <p class="act">Defer elective use of α-gal–containing materials. Refer for α-gal sIgE and/or allergy evaluation, or select a non-mammalian alternative. Testing is not mandated before every procedure.</p>
+        <h3>STATE 2 — Suspected AGS</h3>
+        <p><strong>Trigger:</strong> Compatible history/exposure, not yet confirmed.</p>
+        <p class="act">Order α-gal sIgE; refer to allergy/immunology; prefer non-mammalian materials pending results. If urgent, treat as State 3 until proven otherwise. → see Materials, panel 02</p>
+        <div class="algo-expand">
+          <p><strong>Companion detail</strong></p>
+          <ul>
+            <li>Order α-gal–specific IgE — a value ≥0.1 kU/L is suggestive; interpret with the compatible history. Sensitization alone is not diagnostic and is not a cosmetic-product cutoff.<sup><a href="#ref9">9</a>,<a href="#ref11">11</a>,<a href="#ref30">30</a></sup></li>
+            <li>Refer to allergy/immunology, particularly after any systemic or anaphylactic reaction.<sup><a href="#ref30">30</a>,<a href="#ref37">37</a></sup></li>
+            <li>Prefer source-verified non-mammalian materials pending results for elective mammalian-derived exposure (→ <a href="#materials">Materials table</a>).</li>
+            <li>If an elective procedure can wait, complete workup first; if urgent, manage as State 3 until AGS is excluded.</li>
+          </ul>
+        </div>
       </article>
       <article class="action-card avoid" role="listitem">
-        <h3>Established AGS</h3>
-        <p>Prior clinical reaction plus positive α-gal sIgE, or specialist diagnosis.</p>
-        <p class="act">Avoid α-gal–containing materials. Use documented non-mammalian alternatives and coordinate with allergy/anesthesia as appropriate.</p>
+        <h3>STATE 3 — Established AGS</h3>
+        <p><strong>Trigger:</strong> Compatible history + positive α-gal IgE.</p>
+        <p class="act">Default to source-verified non-mammalian substitutes; allergy/immunology involvement; anaphylaxis readiness. → see Materials, panel 02</p>
+        <div class="algo-expand">
+          <p><strong>Companion detail</strong></p>
+          <ul>
+            <li>Verify species/source, excipients, and lot against the current IFU before use (→ <a href="#verify">Verification checklist</a> and <a href="#materials">Materials table</a>).</li>
+            <li>Heparin: high-dose IV UFH 4/17 severe (24%); lower-dose inpatient UFH 1/39 (2.6%); enoxaparin 0/22 (0%). Prefer an indication-appropriate non-mammalian or lower-risk anticoagulant when feasible; heparin is not an absolute contraindication.<sup><a href="#ref4">4</a>,<a href="#ref19">19</a></sup></li>
+            <li>If a mammalian-derived agent is unavoidable: consider premedication (corticosteroid + antihistamine) per expert opinion and monitor. Premedication is not proven to prevent IgE-mediated reactions and does not replace epinephrine readiness.<sup><a href="#ref30">30</a>,<a href="#ref38">38</a></sup></li>
+            <li>Anaphylaxis readiness: epinephrine immediately available. Optional prevalidation questionnaire is not part of this pathway (→ <a href="#rater">questionnaire</a>).</li>
+          </ul>
+        </div>
       </article>
     </div>
-    <div class="callout dark" style="margin-top:16px"><strong>SCREEN · SUBSTITUTE · PREVENT</strong> — history first; then verify source; then substitute or prepare. Confirm is not a mandatory lab step before every procedure.</div>
-    <p class="kicker">Intraprocedural verification</p>
+    <div class="callout" style="margin-top:16px">
+      Confirmation defines the diagnosis; it is not a per-procedure laboratory gate. “No AGS-specific risk identified in the available literature” ≠ proven safe. Named products are composition examples as of August 2026 — composition and availability change; re-verify current IFU.
+    </div>
+    <p class="kicker" id="verify">Intraprocedural verification</p>
     <div class="checklist" aria-label="Four-step operational verification">
       <div class="check"><strong>IDENTIFY</strong> every mammalian-derived item on the field — hemostats, matrices, sutures, injectables, hyaluronidase, excipients.</div>
       <div class="check"><strong>VERIFY</strong> species, source, excipients, and lot against the current instructions for use — not the brand name alone.</div>
@@ -386,7 +427,7 @@ html.theme-dark .take-label{color:#d6eef7}
       <div class="check"><strong>IF NO SUBSTITUTE</strong> — flag for allergy/immunology input and anaphylaxis precautions.</div>
     </div>
     <div class="grid three" style="margin-top:14px">
-      <article class="route"><h3>ORAL</h3><p>Delayed 3–6 h</p></article>
+      <article class="route"><h3>ORAL</h3><p>Delayed 2–6 h</p></article>
       <article class="route"><h3>PARENTERAL</h3><p>Immediate possible</p></article>
       <article class="route"><h3>IMPLANT</h3><p>Prolonged exposure</p></article>
     </div>
@@ -442,15 +483,15 @@ html.theme-dark .take-label{color:#d6eef7}
           </tr>
           <tr>
             <td>HA / CaHA / PLLA / lidocaine<br><span class="small">Bacterial HA, synthetic, or non-mammalian after source check</span></td>
-            <td>No established AGS risk</td>
+            <td>No AGS-specific risk identified in the available literature</td>
             <td>Standard use</td>
-            <td>Other hypersensitivity still possible. Older avian HA is not mammalian. Verify source.<sup><a href="#ref2">2</a>,<a href="#ref6">6</a>,<a href="#ref26">26</a>,<a href="#ref27">27</a></sup></td>
+            <td>Other hypersensitivity still possible. Older avian HA is not mammalian. Verify source. Absence of AGS-specific literature ≠ proven safe.<sup><a href="#ref2">2</a>,<a href="#ref6">6</a>,<a href="#ref26">26</a>,<a href="#ref27">27</a></sup></td>
           </tr>
           <tr>
             <td>Botulinum toxin<br><span class="small">Human albumin excipient — verify IFU</span></td>
-            <td>No established AGS risk</td>
+            <td>No AGS-specific risk identified in the available literature</td>
             <td>Standard use after IFU check</td>
-            <td>No α-gal reaction data identified. Historically animal-stabilized lots would warrant IFU review.<sup><a href="#ref26">26</a></sup></td>
+            <td>No α-gal reaction data identified. Historically animal-stabilized lots would warrant IFU review. Absence of AGS-specific literature ≠ proven safe.<sup><a href="#ref26">26</a></sup></td>
           </tr>
         </tbody>
       </table>
@@ -637,7 +678,7 @@ html.theme-dark .take-label{color:#d6eef7}
     <div class="grid three">
       <article class="card"><h3>Definition</h3><p>IgE-mediated allergy to galactose-α-1,3-galactose in nonprimate mammalian tissue and products.<sup><a href="#ref9">9</a></sup></p></article>
       <article class="card"><h3>Diagnosis</h3><p>Requires compatible clinical history plus α-gal IgE. Sensitization alone is not AGS.<sup><a href="#ref3">3</a>,<a href="#ref9">9</a>,<a href="#ref10">10</a></sup></p></article>
-      <article class="card"><h3>Route</h3><p>Oral exposure is commonly delayed 3–6 hours; parenteral exposure may be immediate.<sup><a href="#ref5">5</a>,<a href="#ref9">9</a></sup></p></article>
+      <article class="card"><h3>Route</h3><p>Oral exposure is commonly delayed 2–6 hours; parenteral exposure may be immediate.<sup><a href="#ref5">5</a>,<a href="#ref9">9</a></sup></p></article>
     </div>
     <div class="callout dark"><strong>SENSITIZED ≠ REACTIVE.</strong> Clinical history determines diagnosis. α-Gal IgE alone does not. Food thresholds ≠ product safety.</div>
     <div class="callout gold"><strong>Food-challenge data ≠ product cutoffs:</strong> in one high-prevalence cohort, 2.0 kU/L or 0.75% of total IgE provided the best classification and &gt;95% positive predictive value; &gt;5.5 kU/L or 2.12% corresponded to approximately 95% modeled probability. <strong>Not validated for cosmetic-product decisions.</strong><sup><a href="#ref11">11</a></sup></div>
@@ -721,7 +762,7 @@ html.theme-dark .take-label{color:#d6eef7}
     </article>
     <article class="card" style="margin-top:14px">
       <h3>Maintenance</h3>
-      <p>Version <span data-release-stamp>v1.2 • reviewed 2026-08-28</span>. This document is reviewed at least every 12 months and whenever a named product is reformulated, recalled, withdrawn, or relabeled; the affected row is updated in a focused revision. Next scheduled review: 2027-08-28. Owner: Marielle He, MD, MS, CENTER for Advanced Facial Plastic Surgery.</p>
+      <p>Version <span data-release-stamp>v2.0 • reviewed 2026-08-28</span>. This document is reviewed at least every 12 months and whenever a named product is reformulated, recalled, withdrawn, or relabeled; the affected row is updated in a focused revision. Next scheduled review: 2027-08-28. Owner: Marielle He, MD, MS, CENTER for Advanced Facial Plastic Surgery.</p>
     </article>
     <article class="card" style="margin-top:14px">
       <h3>Limitations / not medical advice</h3>
@@ -729,14 +770,15 @@ html.theme-dark .take-label{color:#d6eef7}
     </article>
     <article class="card" id="ack-brenner" style="margin-top:14px">
       <h3>Acknowledgments</h3>
-      <p>The authors thank Michael Joel Brenner, MD, FACS (Associate Professor, University of Michigan Health; Facial Plastic Surgery and Otolaryngology) for reviewing the clinical content of version <span data-release-stamp>v1.2 • reviewed 2026-08-28</span>. Acknowledgment reflects review of that version only and does not constitute authorship, endorsement of the final content, or responsibility for subsequent revisions. Named with permission. Affiliation as listed at <a href="https://www.uofmhealth.org/profile/1023146776/michael-joel-brenner">University of Michigan Health</a>.</p>
+      <p>The authors thank Michael Joel Brenner, MD, FACS (Associate Professor, University of Michigan Health; Facial Plastic Surgery and Otolaryngology) for reviewing the clinical content of version v1.2 (reviewed 2026-08-28). Acknowledgment reflects review of that version only and does not constitute authorship, endorsement of the final content, or responsibility for subsequent revisions — including the v2.0 three-state algorithm. Named with permission. Affiliation as listed at <a href="https://www.uofmhealth.org/profile/1023146776/michael-joel-brenner">University of Michigan Health</a>.</p>
       <p class="small">This line is independent of the AI-assistance statement. Reviewers who did not meet authorship criteria are not listed on the byline.</p>
     </article>
     <article class="card" style="margin-top:14px">
       <h3>Changelog</h3>
       <ul>
-        <li><span data-release-stamp>v1.2 • reviewed 2026-08-28</span> — MAJOR. Evidence strength split from clinical action; four-step Identify/Verify/Substitute/If-no-substitute checklist; hyaluronidase dual-risk footnote; Yang (36), Guliyeva (33), Hylenex (32); questionnaire after clinical sections; brand-neutrality and non-CME language. Verified: M. He.</li>
-        <li>v1.1 • reviewed 2026-08-26 — Companion aligned to accepted poster title and Track A/B scripts (cosmetic and aesthetic scope; heparin 24%; AGS first-use expansion).</li>
+        <li><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> — MAJOR. SCREEN → STRATIFY → ACT three-state algorithm first (No suggestive history / Suspected AGS / Established AGS) with companion-expanded workup; Confirm is not a per-procedure lab gate; “No AGS-specific risk identified in the available literature”; Iglesia 2024 and Golden 2024 added. Dr. Brenner’s acknowledgment remains pinned to v1.2. Verified: M. He.</li>
+        <li>v1.2 • reviewed 2026-08-28 — MAJOR. Evidence strength split from clinical action; four-step checklist; hyaluronidase dual-risk footnote; Yang (36), Guliyeva (33), Hylenex (32); questionnaire after clinical sections; brand-neutrality language.</li>
+        <li>v1.1 • reviewed 2026-08-26 — Companion aligned to accepted poster title and Track A/B scripts.</li>
       </ul>
     </article>
   </div>
@@ -839,6 +881,8 @@ html.theme-dark .take-label{color:#d6eef7}
       <li id="ref34">Bertlich M, Hartmann D, Freytag S, French LE, Oppel E. Sensitization against medical hyaluronidase in patients with confirmed hypersensitivity against hymenoptera species and its clinical implications. <em>Br J Dermatol</em>. 2024;191(6):1000–1007. doi:<a href="https://doi.org/10.1093/bjd/ljae290">10.1093/bjd/ljae290</a>.</li>
       <li id="ref35">Rutkowski K, Wagner A, Rutkowski R, et al. Alpha-gal syndrome: an emerging cause of food and drug allergy. <em>Clin Exp Allergy</em>. 2020;50(8):894–903. doi:<a href="https://doi.org/10.1111/cea.13683">10.1111/cea.13683</a>.</li>
       <li id="ref36">Yang S, Kim HH, Kim JI. Identification, quantification, and structural role of N-glycans in two highly purified isoforms of sheep testicular hyaluronidase. <em>Int J Biol Macromol</em>. 2023;252:126437. doi:<a href="https://doi.org/10.1016/j.ijbiomac.2023.126437">10.1016/j.ijbiomac.2023.126437</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/37611686/">37611686</a>.</li>
+      <li id="ref37">Iglesia EGA, et al. Management of food allergies and food-related anaphylaxis. <em>JAMA</em>. 2024;331(6):510–521. doi:<a href="https://doi.org/10.1001/jama.2023.26857">10.1001/jama.2023.26857</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/38349368/">38349368</a>.</li>
+      <li id="ref38">Golden DBK, Wang J, Waserman S, et al. Anaphylaxis: a 2023 practice parameter update. <em>Ann Allergy Asthma Immunol</em>. 2024;132(2):124–176. doi:<a href="https://doi.org/10.1016/j.anai.2023.09.015">10.1016/j.anai.2023.09.015</a>. PMID: <a href="https://pubmed.ncbi.nlm.nih.gov/38108678/">38108678</a>.</li>
     </ol>
   </div>
 </details>
@@ -856,12 +900,12 @@ html.theme-dark .take-label{color:#d6eef7}
   <p><strong>Disclosures:</strong> Authors report no financial relationships with the manufacturers of any product named here. <strong>Funding:</strong> None.</p>
   <p><strong>Neutrality:</strong> Brand names are examples that illustrate a material class, not an endorsement and not a brand-level α-gal assay. Products from more than one manufacturer are shown for each class.</p>
   <p><strong>Currency:</strong> Product examples and composition current as of August 2026. Composition and market availability change — verify the current FDA label/IFU (species, source, excipients, lot) before each use.</p>
-  <p><strong>Version:</strong> <span data-release-stamp>v1.2 • reviewed 2026-08-28</span> • Next scheduled review 2027-08-28 • Owner Marielle He, MD, MS.</p>
+  <p><strong>Version:</strong> <span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Next scheduled review 2027-08-28 • Owner Marielle He, MD, MS.</p>
   <p>Educational; not certified for CME credit. Not medical advice / not a substitute for the approved labeling. <a href="https://tinyurl.com/tphags">tinyurl.com/tphags</a></p>
 </footer>
 
 <script>
-const RELEASE_STAMP="v1.2 • reviewed 2026-08-28";
+const RELEASE_STAMP="v2.0 • reviewed 2026-08-28";
 document.querySelectorAll("[data-release-stamp]").forEach(el=>{el.textContent=RELEASE_STAMP;});
 document.querySelectorAll('.nav a,.hero-actions a[href^="#"]').forEach(link=>{
   link.addEventListener("click",()=>{
