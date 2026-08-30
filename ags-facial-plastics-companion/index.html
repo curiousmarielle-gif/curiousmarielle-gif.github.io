@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="index, follow">
-<meta name="googlebot" content="index, follow">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
 <link rel="canonical" href="https://curiousmarielle-gif.github.io/ags-facial-plastics-companion/">
 <meta name="theme-color" content="#141618">
 <title>AGS Companion — Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures</title>
@@ -196,6 +196,7 @@ h1{max-width:900px;margin:0;font-size:clamp(34px,6vw,62px);line-height:1.03;lett
 .disclaimer{margin:0;padding:6px 16px 6px 18px;background:rgba(255,244,212,.86);border:0;border-bottom:1px solid var(--alert-edge);border-left:8px solid var(--alert-edge);border-radius:0;color:var(--alert-ink);font-size:11px;font-style:italic;line-height:1.35;backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
 .disclaimer strong{display:inline;margin:0 .55em 0 0;color:var(--alert-edge);font-size:10px;font-style:normal;letter-spacing:.08em;text-transform:uppercase}
 .face-stamp{margin:0;padding:6px 16px 8px 18px;background:rgba(7,20,36,.88);color:#d6eef7;font-size:11px;line-height:1.45;letter-spacing:.01em}
+.status-bar{margin:0;padding:5px 16px 6px 18px;background:#3d2a12;color:#f3e2c4;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid #c4a574}
 .masthead-stamp{margin:8px 0 0;color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.04em}
 main{max-width:1120px;margin:0 auto 40px;padding:20px 20px 72px;background:rgba(247,246,240,.05);border-radius:0 0 18px 18px;position:relative;backdrop-filter:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 2px 3px rgba(255,255,255,.12),0 8px 16px rgba(0,20,40,.1),0 24px 48px rgba(0,20,40,.16),0 48px 80px rgba(0,20,40,.12)}
 .section{margin:16px 0;border:2px solid var(--ink);border-radius:10px;background:var(--well);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 6px 8px rgba(0,20,40,.08),0 16px 28px rgba(0,20,40,.16);overflow:hidden;scroll-margin-top:74px}
@@ -436,6 +437,7 @@ html.theme-dark .take-label{color:#d6eef7}
   <strong>Clinical-use notice</strong>
   For licensed clinicians as educational decision support. Not a substitute for clinical judgment, specialty consultation, institutional protocol, or current manufacturer labeling. Verify species origin, formulation, excipients, and lot before use. Premedication does not reliably prevent anaphylaxis. Not peer-reviewed. Not FDA-evaluated.
 </div>
+<p class="status-bar" role="status">Status: inactive until 23 September 2026 · not listed for public search · QR and TinyURL access unchanged</p>
 <p class="face-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Authors: no relevant financial relationships • Funding: none</p>
 
 <header class="masthead">
@@ -1134,6 +1136,7 @@ html.theme-dark .take-label{color:#d6eef7}
   <p><strong>Currency:</strong> Product examples and composition current as of August 2026. Composition and market availability change — verify the current FDA label/IFU (species, source, excipients, lot) before each use.</p>
   <p><strong>Version:</strong> <span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Next scheduled review 2027-08-28 • Owner Marielle He, MD, MS.</p>
   <p><strong>Content review:</strong> Expert content review (M.J. Brenner, MD, FACS) applies to v1.2; the v2.0 algorithm was not reviewed. Named with permission. See acknowledgments.</p>
+  <p><strong>Status:</strong> Inactive until 23 September 2026. This companion is not submitted for public search-engine listing before that date. QR and TinyURL access are unchanged.</p>
   <p>Educational; not certified for CME credit. Not medical advice / not a substitute for the approved labeling. <a href="https://tinyurl.com/AGS-FPRS">tinyurl.com/AGS-FPRS</a></p>
 </footer>
 
@@ -1206,7 +1209,7 @@ document.querySelectorAll('a[href="#audio"],a[href="#poster"],a[href="#poster-tr
       }
       if(!d.open){ d.open=true; restore.push(()=>{ d.open=false; }); }
     });
-    const bits=[".disclaimer",".face-stamp","header.masthead","#main","footer"]
+    const bits=[".disclaimer",".status-bar",".face-stamp","header.masthead","#main","footer"]
       .map(sel=>document.querySelector(sel))
       .filter(Boolean)
       .map(el=>el.innerText||"");
