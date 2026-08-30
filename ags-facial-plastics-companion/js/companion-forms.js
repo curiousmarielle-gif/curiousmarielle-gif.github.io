@@ -42,9 +42,8 @@
     slot.innerHTML = `
       <div class="review-panel">
         <p>Anonymous ratings of clinical utility and time-value. One response per browser. No names or patient information.</p>
-        <div class="review-stats" id="review-stats"><article><strong id="review-n">—</strong><span>responses</span></article></div>
+        <div class="review-stats" id="review-stats" hidden><article><strong id="review-n">—</strong><span>responses</span></article></div>
         <form class="review-form preview-lock" id="review-form" inert>
-          <p class="preview-banner">${PREVIEW_NOTE}</p>
           <fieldset><legend>Utility for clinical decisions</legend>
             ${scores("utility", 5)}
             <p class="small">1 = not useful · 5 = immediately useful</p>
@@ -74,7 +73,6 @@
             <textarea name="comment" maxlength="240" rows="3" placeholder="What would make this more useful in practice?"></textarea>
           </label>
           <label class="hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-          <p class="small">Send control hidden until 23 September 2026.</p>
           <p class="small" id="review-status" role="status"></p>
         </form>
       </div>`;
@@ -160,12 +158,12 @@
 
   function renderRater(slot) {
     if (slot.querySelector("form")) return;
-    const b = shuffle(B);
-    const c = shuffle(C);
-    const d = shuffle(["D1", "D2", "D3"]);
-    const e = shuffle(E);
-    const f = shuffle(F);
-    const g = shuffle(["G1", "G2"]);
+    const b = PREVIEW_ONLY ? B : shuffle(B);
+    const c = PREVIEW_ONLY ? C : shuffle(C);
+    const d = PREVIEW_ONLY ? ["D1", "D2", "D3"] : shuffle(["D1", "D2", "D3"]);
+    const e = PREVIEW_ONLY ? E : shuffle(E);
+    const f = PREVIEW_ONLY ? F : shuffle(F);
+    const g = PREVIEW_ONLY ? ["G1", "G2"] : shuffle(["G1", "G2"]);
     const row4 = (id) => scores(id, 4);
     const row5 = (id) => scores(id, 5);
     const chips = (id, opts) =>
@@ -198,7 +196,6 @@
 
     slot.innerHTML = `
       <form class="review-form rater-form preview-lock" id="rater-form" inert>
-        <p class="preview-banner">${PREVIEW_NOTE}</p>
         <p class="small">Items within each section are shown in a random order for this session. Access phrase: the short URL on the poster (AGS-FPRS).</p>
         <fieldset>
           <legend>A · Who you are</legend>
@@ -258,7 +255,6 @@
           <label>H2. Single most important improvement needed <textarea name="h2" required></textarea></label>
           <label>H3. Additional comments <textarea name="h3"></textarea></label>
         </fieldset>
-        <p class="small">Submit control hidden until 23 September 2026.</p>
         <p class="small" id="rater-status" role="status"></p>
       </form>`;
     if (!PREVIEW_ONLY) bindScores(slot);
