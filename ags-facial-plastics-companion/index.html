@@ -68,6 +68,7 @@ html[data-cb="on"] .masthead{background:#001F3F}
 html[data-cb="on"] .logo-strip-wrap{background:#003D6B;border-bottom-color:#E69F00}
 html[data-cb="on"] .banner-kicker,html[data-cb="on"] .subtitle,html[data-cb="on"] .eyebrow{color:#E69F00}
 html[data-cb="on"] footer{background:#001F3F;border-top-color:#E69F00}
+html[data-cb="on"] .rights-band{background:rgba(0,18,40,.4)}
 html[data-theme="dark"][data-cb="on"],html[data-theme="dark"][data-cb="on"] body,[data-theme="dark"][data-cb="on"]{
   --ink:#E6F2FA;--graphite:#9BD4EE;--burgundy:#56B4E9;--burgundy-deep:#9BD4EE;
   --gold:#F0E442;--well:#0B2744;--ivory:#0F2238;--preval:#CC79A7;--preval-deep:#882255;
@@ -197,7 +198,7 @@ h1{max-width:900px;margin:0;font-size:clamp(34px,6vw,62px);line-height:1.03;lett
 .disclaimer strong{display:inline;margin:0 .55em 0 0;color:var(--alert-edge);font-size:10px;font-style:normal;letter-spacing:.08em;text-transform:uppercase}
 .face-stamp{margin:0;padding:6px 16px 8px 18px;background:rgba(7,20,36,.88);color:#d6eef7;font-size:11px;line-height:1.45;letter-spacing:.01em}
 .masthead-stamp{margin:8px 0 0;color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.04em}
-main{max-width:1120px;margin:0 auto 40px;padding:20px 20px 72px;background:rgba(247,246,240,.05);border-radius:0 0 18px 18px;position:relative;backdrop-filter:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 2px 3px rgba(255,255,255,.12),0 8px 16px rgba(0,20,40,.1),0 24px 48px rgba(0,20,40,.16),0 48px 80px rgba(0,20,40,.12)}
+main{max-width:1120px;margin:0 auto;padding:20px 20px 32px;background:rgba(247,246,240,.05);border-radius:0;position:relative;backdrop-filter:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 2px 3px rgba(255,255,255,.12),0 8px 16px rgba(0,20,40,.1),0 24px 48px rgba(0,20,40,.16),0 48px 80px rgba(0,20,40,.12)}
 .section{margin:16px 0;border:2px solid var(--ink);border-radius:10px;background:var(--well);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 6px 8px rgba(0,20,40,.08),0 16px 28px rgba(0,20,40,.16);overflow:hidden;scroll-margin-top:74px}
 #fn-hyal{scroll-margin-top:82px}
 .section-body{padding:28px 30px;background:var(--well);line-height:1.65}
@@ -297,10 +298,11 @@ sup a{font-size:.72em;font-weight:800;text-decoration:none}
 .review-form.preview-lock textarea,
 .review-form.preview-lock select,
 .review-form.preview-lock button.score{cursor:not-allowed}
-.contact-gate{margin:12px 0 0;padding:14px 16px;border:2px solid var(--ink);border-radius:8px;background:var(--ivory);display:grid;gap:10px;max-width:42rem}
+.contact-gate{margin:4px 0 0;padding:0;border:0;background:transparent;display:grid;gap:10px;max-width:28rem}
 .contact-gate .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
 #contact-addr{margin:0;font-weight:800}
 #contact-addr a{color:var(--burgundy-deep);font-weight:800}
+.preview-banner{margin:0 0 14px;padding:12px 14px;background:var(--alert-bg);border-left:8px solid var(--alert-edge);color:var(--alert-ink);font-weight:800}
 .recaptcha-legal{font-size:13px;color:var(--graphite);font-weight:500}
 .grecaptcha-badge{visibility:hidden}
 .score-row{display:flex;flex-wrap:wrap;gap:8px}
@@ -311,11 +313,14 @@ sup a{font-size:.72em;font-weight:800;text-decoration:none}
 .review-comments h3{margin:0 0 8px;color:var(--burgundy-deep)}
 .review-comments ul{margin:0;padding:0;list-style:none}
 .review-comments li{margin:0 0 12px;padding:10px 12px;background:var(--cream-2);border-radius:8px}
-footer{max-width:1120px;margin:0 auto 28px;padding:22px 24px 26px;background:rgba(7,20,40,.92);border-top:5px solid var(--gold);color:var(--stone);text-align:left;font-size:13px;line-height:1.5;border-radius:0 0 14px 14px;box-shadow:0 16px 40px rgba(0,0,0,.3);backdrop-filter:blur(8px)}
+footer{max-width:1120px;margin:0 auto;padding:20px 24px 28px;background:rgba(7,20,40,.72);border-top:5px solid var(--gold);color:var(--stone);text-align:left;font-size:13px;line-height:1.5;border-radius:0 0 18px 18px;box-shadow:0 24px 48px rgba(0,20,40,.16),0 48px 80px rgba(0,20,40,.12);backdrop-filter:blur(6px)}
 footer p{margin:0 0 8px}
 footer p:last-child{margin:0}
 footer strong{color:var(--gold)}
 footer a{color:var(--gold);font-weight:800}
+.rights-band{position:relative;z-index:1;width:100%;margin:56px 0 0;padding:36px 20px 64px;background:rgba(2,8,18,.46);color:#d7e6ef;border:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.rights-inner{max-width:1120px;margin:0 auto;font-size:13px;line-height:1.55;letter-spacing:.02em}
+.rights-inner p{margin:0;font-weight:600}
 .table-hint{margin:0 0 8px;font-size:14px;font-weight:700;color:var(--graphite)}
 caption{caption-side:top;text-align:left;padding:0 0 8px;font-size:14px;font-weight:700;color:var(--graphite)}
 .action-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
@@ -396,6 +401,7 @@ body[data-theme="dark"]::after{background:radial-gradient(70% 55% at 16% 6%,rgba
 [data-theme="dark"] .review-thanks{background:#273544;color:#eef3f8}
 [data-theme="dark"] .review-stats span{color:#c5d0da}
 [data-theme="dark"] main{background:rgba(8,16,28,.12)}
+[data-theme="dark"] .rights-band{background:rgba(1,6,16,.4);color:#d5e3ec}
 [data-theme="dark"] .references a{color:#9bd4ee}
 [data-theme="dark"] .principle,
 html.theme-dark .principle,
@@ -432,10 +438,10 @@ html.theme-dark .take-label{color:#d6eef7}
     <a href="#audio"><span class="clin-only">Audio</span><span class="acc-only">Text + audio</span></a>
     <a class="preval" href="#rater">Prevalidation questionnaire</a>
     <a href="#reviews">Feedback</a>
+    <a href="#contact">Contact</a>
     <a href="#methods">Methods</a>
     <a href="#disclosures">Disclosures</a>
     <a href="#instrument">Item sources</a>
-    <a href="#contact">Contact</a>
     <a href="#references">References</a>
   </div>
 </nav>
@@ -444,7 +450,7 @@ html.theme-dark .take-label{color:#d6eef7}
   <strong>Clinical-use notice</strong>
   For licensed clinicians as educational decision support. Not a substitute for clinical judgment, specialty consultation, institutional protocol, or current manufacturer labeling. Verify species origin, formulation, excipients, and lot before use. Premedication does not reliably prevent anaphylaxis. Not peer-reviewed. Not FDA-evaluated.
 </div>
-<p class="face-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 29 Aug 2026 2347 hours PDT • Companion © 2026 M. He • Authors: no relevant financial relationships • Funding: none</p>
+<p class="face-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 30 Aug 2026 0030 hours PDT • Authors: no relevant financial relationships • Funding: none</p>
 
 <header class="masthead">
   <div class="logo-strip-wrap">
@@ -469,7 +475,7 @@ html.theme-dark .take-label{color:#d6eef7}
   <div class="masthead-inner">
     <div class="masthead-copy">
     <h1>Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures</h1>
-    <p class="masthead-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 29 Aug 2026 2347 hours PDT</p>
+    <p class="masthead-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 30 Aug 2026 0030 hours PDT</p>
     <p class="authors">Marielle He, MD, MS<sup>1</sup> · Jordan Kai Simmons, MD<sup>2</sup> · Babak Azizzadeh, MD, FACS<sup>1,2</sup></p>
     <p class="affiliation"><sup>1</sup> CENTER for Advanced Facial Plastic Surgery, Beverly Hills, CA<br>
     <sup>2</sup> Division of Otolaryngology–Head and Neck Surgery, Cedars-Sinai Medical Center, Los Angeles, CA</p>
@@ -950,9 +956,25 @@ html.theme-dark .take-label{color:#d6eef7}
 <details class="section" id="reviews" open>
   <summary><span class="section-num" aria-hidden="true">★</span><span role="heading" aria-level="2">Attendee feedback</span></summary>
   <div class="section-body">
-    <p class="preview-banner">Attendee feedback is inactive until 23 September 2026. Non-interactive preview. No responses are collected. Questions, concerns, or recommendations: use <a href="#contact">Contact</a> at the bottom of this page.</p>
+    <p class="preview-banner">Attendee feedback is inactive until 23 September 2026. Non-interactive preview.</p>
     <p class="small">Anonymous attendee feedback. This is not journal peer review and does not constitute validation of the companion.</p>
     <div id="reviews-root"></div>
+  </div>
+</details>
+
+<details class="section" id="contact" open>
+  <summary><span class="section-num" aria-hidden="true">✉</span><span role="heading" aria-level="2">Contact</span></summary>
+  <div class="section-body">
+    <form class="contact-gate" id="contact-form" action="#" method="post">
+      <label class="hp" aria-hidden="true">Company website <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+      <label class="check-line">
+        <input type="checkbox" name="legit" required>
+        <span>I am contacting in good faith.</span>
+      </label>
+      <button type="submit" class="button primary" id="contact-reveal">Show email</button>
+      <p class="small" id="contact-status" role="status"></p>
+      <p id="contact-addr" hidden></p>
+    </form>
   </div>
 </details>
 
@@ -1118,7 +1140,7 @@ html.theme-dark .take-label{color:#d6eef7}
   <summary><span class="section-num" aria-hidden="true">✓</span><span role="heading" aria-level="2">Prevalidation questionnaire (optional)</span></summary>
   <div class="section-body">
     <div class="callout gold" role="note">
-      <strong>Inactive until 23 September 2026.</strong> Non-interactive preview. Collection is closed. Questions, concerns, or recommendations: use <a href="#contact">Contact</a> at the bottom of this page.
+      <strong>Inactive until 23 September 2026.</strong> Non-interactive preview. Collection is closed.
     </div>
     <p>Optional. Completion is not required to use this companion.</p>
     <div id="rater-root"></div>
@@ -1141,29 +1163,21 @@ html.theme-dark .take-label{color:#d6eef7}
   <p><strong>Disclosures:</strong> Authors report no financial relationships with the manufacturers of any product named here. <strong>Funding:</strong> None.</p>
   <p><strong>Neutrality:</strong> Brand names are examples that illustrate a material class, not an endorsement and not a brand-level α-gal assay. Products from more than one manufacturer are shown for each class.</p>
   <p><strong>Currency:</strong> Product examples and composition current as of August 2026. Composition and market availability change — verify the current FDA label/IFU (species, source, excipients, lot) before each use.</p>
-  <p><strong>Version:</strong> <span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 29 Aug 2026 2347 hours PDT • Next scheduled review 2027-08-28 • Owner Marielle He, MD, MS.</p>
+  <p><strong>Version:</strong> <span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 30 Aug 2026 0030 hours PDT • Next scheduled review 2027-08-28 • Owner Marielle He, MD, MS.</p>
   <p><strong>Content review:</strong> Expert content review (M.J. Brenner, MD, FACS) applies to v1.2; the v2.0 algorithm was not reviewed. Named with permission. See acknowledgments.</p>
-  <p><strong>Contact:</strong> Questions, concerns, or recommendations — use the contact step below. The address is not posted in the page source.</p>
-  <form class="contact-gate" id="contact" action="#" method="post">
-    <p class="small">Shown only after you confirm you are contacting in good faith. Automated collection is blocked.</p>
-    <label class="hp" aria-hidden="true">Company website <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
-    <label class="check-line">
-      <input type="checkbox" name="legit" required>
-      <span>I am a clinician, conference attendee, or invited reviewer contacting in good faith. I am not a bot.</span>
-    </label>
-    <button type="submit" class="button primary" id="contact-reveal">Show contact email</button>
-    <p class="small" id="contact-status" role="status"></p>
-    <p id="contact-addr" hidden></p>
-  </form>
-  <p><strong>Copyright:</strong> This digital companion (design, code, audio production, and questionnaire implementation) was built by Marielle He, MD, MS and is © 2026 Marielle He. All rights reserved. It is a separate work from the AAFPRS poster file. Scientific content that also appears on the poster remains the work of Marielle He, Jordan Kai Simmons, and Babak Azizzadeh. Viewing and citing with attribution are permitted. Copying, republication, or commercial reuse of the companion without written permission from M. He is not permitted.</p>
   <p>Educational; not certified for CME credit. Not medical advice / not a substitute for the approved labeling. <a href="https://tinyurl.com/AGS-FPRS">tinyurl.com/AGS-FPRS</a></p>
 </footer>
+<div class="rights-band">
+  <div class="rights-inner">
+    <p>© 2026 Marielle He. Cite with attribution.</p>
+  </div>
+</div>
 
 <script>
 const RELEASE_STAMP="v2.0 • reviewed 2026-08-28";
 document.querySelectorAll("[data-release-stamp]").forEach(el=>{el.textContent=RELEASE_STAMP;});
 (function(){
-  const form=document.getElementById("contact");
+  const form=document.getElementById("contact-form");
   if(!form||form.dataset.bound==="1") return;
   form.dataset.bound="1";
   const started=Date.now();
@@ -1185,7 +1199,7 @@ document.querySelectorAll("[data-release-stamp]").forEach(el=>{el.textContent=RE
     a.textContent=addr;
     out.hidden=false;
     out.replaceChildren(a);
-    if(status) status.textContent="Contact address shown. It is not listed in the page source as a mailto link.";
+    if(status) status.textContent="Email shown.";
   });
 })();
 (function(){
@@ -1254,7 +1268,7 @@ document.querySelectorAll('a[href="#audio"],a[href="#poster"],a[href="#poster-tr
       }
       if(!d.open){ d.open=true; restore.push(()=>{ d.open=false; }); }
     });
-    const bits=[".disclaimer",".face-stamp","header.masthead","#main","footer"]
+    const bits=[".disclaimer",".face-stamp","header.masthead","#main","footer",".rights-band"]
       .map(sel=>document.querySelector(sel))
       .filter(Boolean)
       .map(el=>el.innerText||"");
