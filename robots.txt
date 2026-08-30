@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /ags-facial-plastics-companion/
+Allow: /
+
+Sitemap: https://curiousmarielle-gif.github.io/ags-facial-plastics-companion/sitemap.xml
