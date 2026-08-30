@@ -1,5 +1,8 @@
-/* Live attendee feedback + prevalidation questionnaire for the static GitHub companion. */
+/* Attendee feedback + prevalidation questionnaire (preview until 23 Sep 2026). */
 (function () {
+  const PREVIEW_ONLY = true;
+  const PREVIEW_NOTE =
+    "Collection inactive until 23 September 2026. Non-interactive preview. No responses are collected.";
   function shuffle(items) {
     const a = items.slice();
     for (let i = a.length - 1; i > 0; i--) {
@@ -40,7 +43,8 @@
       <div class="review-panel">
         <p>Anonymous ratings of clinical utility and time-value. One response per browser. No names or patient information.</p>
         <div class="review-stats" id="review-stats"><article><strong id="review-n">—</strong><span>responses</span></article></div>
-        <form class="review-form" id="review-form">
+        <form class="review-form preview-lock" id="review-form" inert>
+          <p class="preview-banner">${PREVIEW_NOTE}</p>
           <fieldset><legend>Utility for clinical decisions</legend>
             ${scores("utility", 5)}
             <p class="small">1 = not useful · 5 = immediately useful</p>
@@ -70,12 +74,12 @@
             <textarea name="comment" maxlength="240" rows="3" placeholder="What would make this more useful in practice?"></textarea>
           </label>
           <label class="hp" aria-hidden="true">Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label>
-          <button type="submit" class="button primary">Send feedback</button>
+          <p class="small">Send control hidden until 23 September 2026.</p>
           <p class="small" id="review-status" role="status"></p>
         </form>
       </div>`;
-    bindScores(slot);
-    const KEY = "ags-companion-reviewed";
+    if (!PREVIEW_ONLY) bindScores(slot);
+    if (PREVIEW_ONLY) return;
     const STORE = "ags-companion-reviews-v1";
     const form = slot.querySelector("#review-form");
     const status = slot.querySelector("#review-status");
@@ -193,7 +197,8 @@
     };
 
     slot.innerHTML = `
-      <form class="review-form rater-form" id="rater-form">
+      <form class="review-form rater-form preview-lock" id="rater-form" inert>
+        <p class="preview-banner">${PREVIEW_NOTE}</p>
         <p class="small">Items within each section are shown in a random order for this session. Access phrase: the short URL on the poster (AGS-FPRS).</p>
         <fieldset>
           <legend>A · Who you are</legend>
@@ -253,10 +258,11 @@
           <label>H2. Single most important improvement needed <textarea name="h2" required></textarea></label>
           <label>H3. Additional comments <textarea name="h3"></textarea></label>
         </fieldset>
-        <button class="button primary" type="submit">Submit questionnaire</button>
+        <p class="small">Submit control hidden until 23 September 2026.</p>
         <p class="small" id="rater-status" role="status"></p>
       </form>`;
-    bindScores(slot);
+    if (!PREVIEW_ONLY) bindScores(slot);
+    if (PREVIEW_ONLY) return;
     const form = slot.querySelector("#rater-form");
     const status = slot.querySelector("#rater-status");
     const STORE = "ags-companion-rater-submissions-v1";

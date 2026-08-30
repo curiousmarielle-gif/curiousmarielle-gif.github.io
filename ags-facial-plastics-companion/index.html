@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="robots" content="noindex, nofollow">
-<meta name="googlebot" content="noindex, nofollow">
+<meta name="robots" content="index, follow">
+<meta name="googlebot" content="index, follow">
 <link rel="canonical" href="https://curiousmarielle-gif.github.io/ags-facial-plastics-companion/">
 <meta name="theme-color" content="#141618">
 <title>AGS Companion — Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures</title>
@@ -196,7 +196,6 @@ h1{max-width:900px;margin:0;font-size:clamp(34px,6vw,62px);line-height:1.03;lett
 .disclaimer{margin:0;padding:6px 16px 6px 18px;background:rgba(255,244,212,.86);border:0;border-bottom:1px solid var(--alert-edge);border-left:8px solid var(--alert-edge);border-radius:0;color:var(--alert-ink);font-size:11px;font-style:italic;line-height:1.35;backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
 .disclaimer strong{display:inline;margin:0 .55em 0 0;color:var(--alert-edge);font-size:10px;font-style:normal;letter-spacing:.08em;text-transform:uppercase}
 .face-stamp{margin:0;padding:6px 16px 8px 18px;background:rgba(7,20,36,.88);color:#d6eef7;font-size:11px;line-height:1.45;letter-spacing:.01em}
-.status-bar{margin:0;padding:5px 16px 6px 18px;background:#3d2a12;color:#f3e2c4;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;border-bottom:1px solid #c4a574}
 .masthead-stamp{margin:8px 0 0;color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.04em}
 main{max-width:1120px;margin:0 auto 40px;padding:20px 20px 72px;background:rgba(247,246,240,.05);border-radius:0 0 18px 18px;position:relative;backdrop-filter:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 2px 3px rgba(255,255,255,.12),0 8px 16px rgba(0,20,40,.1),0 24px 48px rgba(0,20,40,.16),0 48px 80px rgba(0,20,40,.12)}
 .section{margin:16px 0;border:2px solid var(--ink);border-radius:10px;background:var(--well);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 6px 8px rgba(0,20,40,.08),0 16px 28px rgba(0,20,40,.16);overflow:hidden;scroll-margin-top:74px}
@@ -290,10 +289,14 @@ sup a{font-size:.72em;font-weight:800;text-decoration:none}
 .review-form label{display:grid;gap:6px;font-weight:700;color:var(--ink)}
 .review-form select,.review-form textarea,.review-form input{font:inherit;padding:10px;border:2px solid var(--ink);border-radius:7px;background:#fff;color:var(--ink);min-height:44px}
 .review-form textarea{min-height:88px}
-.rater-form.preview-lock{pointer-events:none;user-select:none}
+.rater-form.preview-lock,.review-form.preview-lock{pointer-events:none;user-select:none;opacity:.92}
 .rater-form.preview-lock input,
 .rater-form.preview-lock textarea,
-.rater-form.preview-lock button.score{cursor:not-allowed}
+.rater-form.preview-lock button.score,
+.review-form.preview-lock input,
+.review-form.preview-lock textarea,
+.review-form.preview-lock select,
+.review-form.preview-lock button.score{cursor:not-allowed}
 .preview-banner{margin:0 0 14px;padding:12px 14px;background:var(--alert-bg);border-left:8px solid var(--alert-edge);color:var(--alert-ink);font-weight:800}
 .recaptcha-legal{font-size:13px;color:var(--graphite);font-weight:500}
 .grecaptcha-badge{visibility:hidden}
@@ -437,7 +440,6 @@ html.theme-dark .take-label{color:#d6eef7}
   <strong>Clinical-use notice</strong>
   For licensed clinicians as educational decision support. Not a substitute for clinical judgment, specialty consultation, institutional protocol, or current manufacturer labeling. Verify species origin, formulation, excipients, and lot before use. Premedication does not reliably prevent anaphylaxis. Not peer-reviewed. Not FDA-evaluated.
 </div>
-<p class="status-bar" role="status">Status: inactive until 23 September 2026 · not listed for public search · QR and TinyURL access unchanged</p>
 <p class="face-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Authors: no relevant financial relationships • Funding: none</p>
 
 <header class="masthead">
@@ -944,6 +946,7 @@ html.theme-dark .take-label{color:#d6eef7}
 <details class="section" id="reviews" open>
   <summary><span class="section-num" aria-hidden="true">★</span><span role="heading" aria-level="2">Attendee feedback</span></summary>
   <div class="section-body">
+    <p class="preview-banner">Attendee feedback is inactive until 23 September 2026. The form below is a non-interactive preview. No responses are collected.</p>
     <p class="small">Anonymous attendee feedback. This is not journal peer review and does not constitute validation of the companion.</p>
     <div id="reviews-root"></div>
   </div>
@@ -957,7 +960,7 @@ html.theme-dark .take-label{color:#d6eef7}
       <dt>Data sources and search</dt><dd>PubMed/MEDLINE, Embase, and the Cochrane Library, supplemented by CDC/MMWR surveillance and FDA/manufacturer product labeling. Searches combined AGS terms (alpha-gal, galactose-alpha-1,3-galactose, mammalian meat allergy, tick-bite allergy) with material and procedure terms (gelatin hemostat, collagen, acellular dermal matrix, heparin, catgut, dermal filler, thrombin, hyaluronidase, botulinum, excipient). Included literature published January 2010 through July 2026; final search 2 August 2026. Foundational pre-2010 studies were added by hand-searching reference lists when necessary.</dd>
       <dt>Selection</dt><dd>Records were prioritized in the following order: (1) AGS-specific human evidence; (2) specialty-facing (cosmetic and aesthetic) evidence; (3) cross-specialty clinical precedent (e.g., cardiac surgery, transplantation, dentistry, spine, anesthesiology); and (4) mechanistic in vitro or animal evidence. Non-English records without a translation and reports without extractable clinical or compositional detail were excluded. Poster selected references 1–16 are retained. Companion numbering continues beyond the poster. Hyaluronidase is cited to Yang (36) for N-glycan/α-gal plausibility, Guliyeva (33) for intrinsic non-AGS allergy, and the HYLENEX label (32) for the recombinant alternative.</dd>
       <dt>Appraisal</dt><dd>No formal risk-of-bias assessment or quantitative pooling was performed. Materials are graded on two axes, reported as separate columns: literature evidence strength (demonstrated, clinical signal, mechanistic inference, theoretical, no established AGS-specific risk) and clinical risk/action (what to do). These can diverge — a clinical-signal exposure with catastrophic route/dose (high-dose IV porcine heparin) may warrant more caution than a demonstrated exposure that is easily substituted.</dd>
-      <dt>Questionnaire (internal feasibility only)</dt><dd>The questionnaire is optional and anonymous. It is an internal feasibility inspection of the instrument, not a research dataset. Responses will not be published and will not be merged into a later study from this page. Anonymity is a privacy safeguard, not a way to reclassify the activity as non-research.</dd>
+      <dt>Questionnaire (internal feasibility only)</dt><dd>The questionnaire is optional and anonymous. Collection is inactive until 23 September 2026; until then the instrument is shown as a non-interactive preview only. It is an internal feasibility inspection of the instrument, not a research dataset.</dd>
       <dt>Limitations</dt><dd>The evidence base is dominated by case reports and cross-specialty or mechanistic extrapolation; direct aesthetic outcome data are absent (see “AGS evidence gaps”).</dd>
       <dt>Disclosures</dt><dd>The authors report no relevant financial relationships with the manufacturers of any product named in this companion. See <a href="#disclosures">Independence, brand names, and maintenance</a>.</dd>
       <dt>Funding</dt><dd>None. No manufacturer provided funding, product, or input into content.</dd>
@@ -1111,9 +1114,9 @@ html.theme-dark .take-label{color:#d6eef7}
   <summary><span class="section-num" aria-hidden="true">✓</span><span role="heading" aria-level="2">Prevalidation questionnaire (optional)</span></summary>
   <div class="section-body">
     <div class="callout gold" role="note">
-      <strong>Data use — internal only.</strong> Optional anonymous questionnaire. Responses are stored for internal feasibility of this companion. They are not published as research and are not merged into a later study from this page.
+      <strong>Inactive until 23 September 2026.</strong> Optional questionnaire shown as a non-interactive preview. Collection is closed. No responses are accepted before that date. Internal feasibility only if later opened — not published as research.
     </div>
-    <p>Optional. Completion is not required to use this companion. Access phrase: <strong>AGS-FPRS</strong> (the short URL on the poster).</p>
+    <p>Optional. Completion is not required to use this companion. Access phrase (when collection opens): <strong>AGS-FPRS</strong>.</p>
     <div id="rater-root"></div>
   </div>
 </details>
@@ -1136,7 +1139,6 @@ html.theme-dark .take-label{color:#d6eef7}
   <p><strong>Currency:</strong> Product examples and composition current as of August 2026. Composition and market availability change — verify the current FDA label/IFU (species, source, excipients, lot) before each use.</p>
   <p><strong>Version:</strong> <span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Next scheduled review 2027-08-28 • Owner Marielle He, MD, MS.</p>
   <p><strong>Content review:</strong> Expert content review (M.J. Brenner, MD, FACS) applies to v1.2; the v2.0 algorithm was not reviewed. Named with permission. See acknowledgments.</p>
-  <p><strong>Status:</strong> Inactive until 23 September 2026. This companion is not submitted for public search-engine listing before that date. QR and TinyURL access are unchanged.</p>
   <p>Educational; not certified for CME credit. Not medical advice / not a substitute for the approved labeling. <a href="https://tinyurl.com/AGS-FPRS">tinyurl.com/AGS-FPRS</a></p>
 </footer>
 
@@ -1209,7 +1211,7 @@ document.querySelectorAll('a[href="#audio"],a[href="#poster"],a[href="#poster-tr
       }
       if(!d.open){ d.open=true; restore.push(()=>{ d.open=false; }); }
     });
-    const bits=[".disclaimer",".status-bar",".face-stamp","header.masthead","#main","footer"]
+    const bits=[".disclaimer",".face-stamp","header.masthead","#main","footer"]
       .map(sel=>document.querySelector(sel))
       .filter(Boolean)
       .map(el=>el.innerText||"");

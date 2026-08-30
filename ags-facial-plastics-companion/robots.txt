@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /ags-facial-plastics-companion/
+Allow: /
 
-# Public listing inactive until 23 September 2026.
-# After that date, replace Disallow with Allow and resubmit the sitemap.
+Sitemap: https://curiousmarielle-gif.github.io/ags-facial-plastics-companion/sitemap.xml
