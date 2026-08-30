@@ -297,7 +297,10 @@ sup a{font-size:.72em;font-weight:800;text-decoration:none}
 .review-form.preview-lock textarea,
 .review-form.preview-lock select,
 .review-form.preview-lock button.score{cursor:not-allowed}
-.preview-banner{margin:0 0 14px;padding:12px 14px;background:var(--alert-bg);border-left:8px solid var(--alert-edge);color:var(--alert-ink);font-weight:800}
+.contact-gate{margin:12px 0 0;padding:14px 16px;border:2px solid var(--ink);border-radius:8px;background:var(--ivory);display:grid;gap:10px;max-width:42rem}
+.contact-gate .hp{position:absolute;left:-9999px;height:0;overflow:hidden}
+#contact-addr{margin:0;font-weight:800}
+#contact-addr a{color:var(--burgundy-deep);font-weight:800}
 .recaptcha-legal{font-size:13px;color:var(--graphite);font-weight:500}
 .grecaptcha-badge{visibility:hidden}
 .score-row{display:flex;flex-wrap:wrap;gap:8px}
@@ -432,6 +435,7 @@ html.theme-dark .take-label{color:#d6eef7}
     <a href="#methods">Methods</a>
     <a href="#disclosures">Disclosures</a>
     <a href="#instrument">Item sources</a>
+    <a href="#contact">Contact</a>
     <a href="#references">References</a>
   </div>
 </nav>
@@ -946,7 +950,7 @@ html.theme-dark .take-label{color:#d6eef7}
 <details class="section" id="reviews" open>
   <summary><span class="section-num" aria-hidden="true">★</span><span role="heading" aria-level="2">Attendee feedback</span></summary>
   <div class="section-body">
-    <p class="preview-banner">Attendee feedback is inactive until 23 September 2026. Non-interactive preview. No responses are collected. Questions, concerns, or recommendations: <a href="mailto:clinicaltrial@facialplasticsbh.com">clinicaltrial@facialplasticsbh.com</a></p>
+    <p class="preview-banner">Attendee feedback is inactive until 23 September 2026. Non-interactive preview. No responses are collected. Questions, concerns, or recommendations: use <a href="#contact">Contact</a> at the bottom of this page.</p>
     <p class="small">Anonymous attendee feedback. This is not journal peer review and does not constitute validation of the companion.</p>
     <div id="reviews-root"></div>
   </div>
@@ -1114,7 +1118,7 @@ html.theme-dark .take-label{color:#d6eef7}
   <summary><span class="section-num" aria-hidden="true">✓</span><span role="heading" aria-level="2">Prevalidation questionnaire (optional)</span></summary>
   <div class="section-body">
     <div class="callout gold" role="note">
-      <strong>Inactive until 23 September 2026.</strong> Non-interactive preview. Collection is closed. Questions, concerns, or recommendations: <a href="mailto:clinicaltrial@facialplasticsbh.com">clinicaltrial@facialplasticsbh.com</a>
+      <strong>Inactive until 23 September 2026.</strong> Non-interactive preview. Collection is closed. Questions, concerns, or recommendations: use <a href="#contact">Contact</a> at the bottom of this page.
     </div>
     <p>Optional. Completion is not required to use this companion.</p>
     <div id="rater-root"></div>
@@ -1139,13 +1143,50 @@ html.theme-dark .take-label{color:#d6eef7}
   <p><strong>Currency:</strong> Product examples and composition current as of August 2026. Composition and market availability change — verify the current FDA label/IFU (species, source, excipients, lot) before each use.</p>
   <p><strong>Version:</strong> <span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 29 Aug 2026 2347 hours PDT • Next scheduled review 2027-08-28 • Owner Marielle He, MD, MS.</p>
   <p><strong>Content review:</strong> Expert content review (M.J. Brenner, MD, FACS) applies to v1.2; the v2.0 algorithm was not reviewed. Named with permission. See acknowledgments.</p>
-  <p><strong>Contact:</strong> Questions, concerns, or recommendations — <a href="mailto:clinicaltrial@facialplasticsbh.com">clinicaltrial@facialplasticsbh.com</a></p>
+  <p><strong>Contact:</strong> Questions, concerns, or recommendations — use the contact step below. The address is not posted in the page source.</p>
+  <form class="contact-gate" id="contact" action="#" method="post">
+    <p class="small">Shown only after you confirm you are contacting in good faith. Automated collection is blocked.</p>
+    <label class="hp" aria-hidden="true">Company website <input type="text" name="company" tabindex="-1" autocomplete="off"></label>
+    <label class="check-line">
+      <input type="checkbox" name="legit" required>
+      <span>I am a clinician, conference attendee, or invited reviewer contacting in good faith. I am not a bot.</span>
+    </label>
+    <button type="submit" class="button primary" id="contact-reveal">Show contact email</button>
+    <p class="small" id="contact-status" role="status"></p>
+    <p id="contact-addr" hidden></p>
+  </form>
   <p>Educational; not certified for CME credit. Not medical advice / not a substitute for the approved labeling. <a href="https://tinyurl.com/AGS-FPRS">tinyurl.com/AGS-FPRS</a></p>
 </footer>
 
 <script>
 const RELEASE_STAMP="v2.0 • reviewed 2026-08-28";
 document.querySelectorAll("[data-release-stamp]").forEach(el=>{el.textContent=RELEASE_STAMP;});
+(function(){
+  const form=document.getElementById("contact");
+  if(!form||form.dataset.bound==="1") return;
+  form.dataset.bound="1";
+  const started=Date.now();
+  const status=document.getElementById("contact-status");
+  const out=document.getElementById("contact-addr");
+  form.addEventListener("submit",function(e){
+    e.preventDefault();
+    if((form.company&&form.company.value)||(Date.now()-started<1800)){
+      if(status) status.textContent="Try again in a moment.";
+      return;
+    }
+    if(!form.legit||!form.legit.checked){
+      if(status) status.textContent="Confirm that you are contacting in good faith.";
+      return;
+    }
+    const addr=["clinicaltrial","facialplasticsbh.com"].join(String.fromCharCode(64));
+    const a=document.createElement("a");
+    a.href="mailto:"+addr;
+    a.textContent=addr;
+    out.hidden=false;
+    out.replaceChildren(a);
+    if(status) status.textContent="Contact address shown. It is not listed in the page source as a mailto link.";
+  });
+})();
 (function(){
   const root=[document.documentElement,document.body];
   const applyCb=on=>{
