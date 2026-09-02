@@ -63,7 +63,6 @@ html[data-cb="on"] .section-num{background:#E69F00;color:#001F3F}
 html[data-cb="on"] tbody tr:nth-child(odd){background:#E6F2FA}
 html[data-cb="on"] tbody tr:nth-child(even){background:#FFF3C4}
 html[data-cb="on"] .table-wrap{background:#E6F2FA;border-color:#003D6B}
-html[data-cb="on"] .disclaimer{background:#FFF3C4;color:#3D2E00;border-color:#D55E00}
 html[data-cb="on"] .masthead{background:#001F3F}
 html[data-cb="on"] .logo-strip-wrap{background:#003D6B;border-bottom-color:#E69F00}
 html[data-cb="on"] .banner-kicker,html[data-cb="on"] .subtitle,html[data-cb="on"] .eyebrow{color:#E69F00}
@@ -79,8 +78,18 @@ html[data-theme="dark"][data-cb="on"] tbody tr:nth-child(even){background:#5C430
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;background:#045a86}
 body{margin:0;background:transparent;color:var(--ink);font-family:Arial,"Helvetica Neue",sans-serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+html,body,.companion-root{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+input,textarea,select,#contact-addr,#contact-addr *{-webkit-user-select:text !important;user-select:text !important;-webkit-touch-callout:default}
+img,svg,canvas,video{-webkit-user-drag:none;user-select:none}
+::selection{background:transparent;color:inherit}
+input::selection,textarea::selection,#contact-addr::selection,#contact-addr *::selection{background:#9bd4ee;color:#073451}
 body::before{content:"";position:fixed;inset:0;z-index:0;background:#046b9a url("water.jpg") 42% 38% / 240% auto no-repeat}
 body::after{content:"";position:fixed;inset:0;z-index:0;pointer-events:none;background:radial-gradient(70% 55% at 16% 6%,rgba(180,230,255,.1),transparent 52%),radial-gradient(55% 40% at 92% 96%,rgba(0,30,70,.16),transparent 62%),linear-gradient(180deg,rgba(255,255,255,.04),transparent 22%,rgba(0,40,80,.08) 100%)}
+@media print{
+  body::before{display:none !important;content:none !important}
+  body::after{content:"© 2026 Marielle He. This companion is not licensed for reproduction.";position:fixed;inset:0;z-index:99999;background:#fff !important;color:#111;display:flex;align-items:center;justify-content:center;font:600 16px/1.45 Arial,sans-serif;pointer-events:none;filter:none !important}
+  nav,header,main,footer,.face-stamp,.rights-band,.companion-root,.skip{display:none !important}
+}
 .companion-root{position:relative;z-index:1}
 a{color:var(--burgundy-deep);text-underline-offset:.16em}
 .section-body a{text-decoration:underline}
@@ -133,18 +142,18 @@ abbr{text-decoration:underline dotted;text-underline-offset:.16em;cursor:help}
 .theme-toggle:hover,.theme-toggle:focus-visible{background:#0b4f70;color:#e8f4fa;border-color:#7ec8e3}
 .cb-toggle{display:inline-flex;align-items:center;min-height:44px;padding:8px 16px;margin-right:8px;border-radius:22px;border:2px solid #3b0764;background:#ede9fe;color:#3b0764;font:inherit;font-size:14px;font-weight:800;cursor:pointer;letter-spacing:.04em;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 3px 0 #3b0764,0 6px 12px rgba(0,0,0,.25)}
 .cb-toggle:hover,.cb-toggle:focus-visible,.cb-toggle[aria-pressed="true"]{background:#3b0764;color:#f5f3ff;border-color:#c4b5fd}
-.logo-strip{display:grid;grid-template-columns:minmax(200px,1.3fr) repeat(3,auto);align-items:center;gap:16px 36px;padding:18px 28px;max-width:1120px;margin:0 auto;width:100%}
+.logo-strip{display:grid;grid-template-columns:minmax(180px,1.3fr) repeat(3,auto);align-items:center;gap:8px 24px;padding:8px 20px;max-width:1120px;margin:0 auto;width:100%}
 .masthead{background:linear-gradient(180deg,rgba(4,28,56,.58),rgba(7,20,40,.9));color:var(--white);border-bottom:0;box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 10px 20px rgba(0,20,40,.2),0 28px 56px rgba(0,20,40,.28)}
-.logo-strip-wrap{background:linear-gradient(105deg,rgba(4,70,130,.55) 0%,rgba(0,140,180,.4) 48%,rgba(8,80,140,.55) 100%);border-bottom:3px solid var(--gold);width:100%;backdrop-filter:blur(8px);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(0,0,0,.2)}
-.banner-lockup{display:flex;flex-direction:column;gap:2px;min-width:0;justify-self:start}
-.banner-kicker{color:#f0d27a;font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;line-height:1.3}
-.banner-title{color:#fff;font-size:clamp(22px,3vw,30px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
-.banner-sub{color:#dff4f7;font-size:14px;font-weight:700}
+.logo-strip-wrap{background:linear-gradient(105deg,rgba(4,70,130,.55) 0%,rgba(0,140,180,.4) 48%,rgba(8,80,140,.55) 100%);border-bottom:2px solid var(--gold);width:100%;backdrop-filter:blur(8px);box-shadow:inset 0 1px 0 rgba(255,255,255,.28),inset 0 -1px 0 rgba(0,0,0,.2)}
+.banner-lockup{display:flex;flex-direction:column;gap:0;min-width:0;justify-self:start}
+.banner-kicker{color:#f0d27a;font-size:9px;font-weight:800;letter-spacing:.07em;text-transform:uppercase;line-height:1.25}
+.banner-title{color:#fff;font-size:clamp(18px,2.4vw,24px);font-weight:800;letter-spacing:-.02em;line-height:1.1}
+.banner-sub{color:#dff4f7;font-size:11px;font-weight:700}
 .logo-item{display:flex;align-items:center;gap:0;background:none}
-.logo-item img{height:52px;width:auto;max-width:200px;display:block;background:none;border:0;padding:0;filter:none}
-.logo-item img.aafprs{height:58px;max-width:220px}
-.logo-item img.center{height:44px;max-width:240px}
-.logo-item img.cedars{height:40px;max-width:180px}
+.logo-item img{height:36px;width:auto;max-width:150px;display:block;background:none;border:0;padding:0;filter:none}
+.logo-item img.aafprs{height:40px;max-width:170px}
+.logo-item img.center{height:30px;max-width:170px}
+.logo-item img.cedars{height:28px;max-width:140px}
 .masthead-banner{display:none}
 .masthead-inner{display:grid;grid-template-columns:1fr;gap:22px;align-items:end;max-width:1120px;margin:auto;padding:28px 20px 32px}
 .masthead-copy{min-width:0}
@@ -194,9 +203,7 @@ h1{max-width:900px;margin:0;font-size:clamp(34px,6vw,62px);line-height:1.03;lett
 .section.rater-section[open]>summary{background:var(--preval-deep)}
 .section.rater-section>summary::after{color:#f5f3ff}
 .section.rater-section .section-num{background:#f5f3ff;color:var(--preval)}
-.disclaimer{margin:0;padding:6px 16px 6px 18px;background:rgba(255,244,212,.86);border:0;border-bottom:1px solid var(--alert-edge);border-left:8px solid var(--alert-edge);border-radius:0;color:var(--alert-ink);font-size:11px;font-style:italic;line-height:1.35;backdrop-filter:blur(6px);box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
-.disclaimer strong{display:inline;margin:0 .55em 0 0;color:var(--alert-edge);font-size:10px;font-style:normal;letter-spacing:.08em;text-transform:uppercase}
-.face-stamp{margin:0;padding:6px 16px 8px 18px;background:rgba(7,20,36,.88);color:#d6eef7;font-size:11px;line-height:1.45;letter-spacing:.01em}
+.face-stamp{margin:0;padding:3px 14px 3px 16px;background:rgba(7,20,36,.88);color:#d6eef7;font-size:9px;line-height:1.3;letter-spacing:.01em}
 .masthead-stamp{margin:8px 0 0;color:var(--gold);font-size:13px;font-weight:800;letter-spacing:.04em}
 main{max-width:1120px;margin:0 auto;padding:20px 20px 32px;background:rgba(247,246,240,.05);border-radius:0;position:relative;backdrop-filter:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.4),0 2px 3px rgba(255,255,255,.12),0 8px 16px rgba(0,20,40,.1),0 24px 48px rgba(0,20,40,.16),0 48px 80px rgba(0,20,40,.12)}
 .section{margin:16px 0;border:2px solid var(--ink);border-radius:10px;background:var(--well);box-shadow:inset 0 1px 0 rgba(255,255,255,.35),0 6px 8px rgba(0,20,40,.08),0 16px 28px rgba(0,20,40,.16);overflow:hidden;scroll-margin-top:74px}
@@ -313,13 +320,13 @@ sup a{font-size:.72em;font-weight:800;text-decoration:none}
 .review-comments h3{margin:0 0 8px;color:var(--burgundy-deep)}
 .review-comments ul{margin:0;padding:0;list-style:none}
 .review-comments li{margin:0 0 12px;padding:10px 12px;background:var(--cream-2);border-radius:8px}
-footer{max-width:1120px;margin:0 auto;padding:20px 24px 28px;background:rgba(7,20,40,.72);border-top:5px solid var(--gold);color:var(--stone);text-align:left;font-size:13px;line-height:1.5;border-radius:0 0 18px 18px;box-shadow:0 24px 48px rgba(0,20,40,.16),0 48px 80px rgba(0,20,40,.12);backdrop-filter:blur(6px)}
-footer p{margin:0 0 8px}
+footer{max-width:1120px;margin:0 auto;padding:10px 20px 12px;background:rgba(7,20,40,.72);border-top:3px solid var(--gold);color:var(--stone);text-align:left;font-size:11px;line-height:1.4;border-radius:0 0 18px 18px;box-shadow:0 24px 48px rgba(0,20,40,.16),0 48px 80px rgba(0,20,40,.12);backdrop-filter:blur(6px)}
+footer p{margin:0 0 4px}
 footer p:last-child{margin:0}
 footer strong{color:var(--gold)}
 footer a{color:var(--gold);font-weight:800}
-.rights-band{position:relative;z-index:1;width:100%;margin:56px 0 0;padding:36px 20px 64px;background:rgba(2,8,18,.46);color:#d7e6ef;border:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
-.rights-inner{max-width:1120px;margin:0 auto;font-size:13px;line-height:1.55;letter-spacing:.02em}
+.rights-band{position:relative;z-index:1;width:100%;margin:16px 0 0;padding:10px 20px 16px;background:rgba(2,8,18,.46);color:#d7e6ef;border:0;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px)}
+.rights-inner{max-width:1120px;margin:0 auto;font-size:11px;line-height:1.4;letter-spacing:.02em}
 .rights-inner p{margin:0;font-weight:600}
 .table-hint{margin:0 0 8px;font-size:14px;font-weight:700;color:var(--graphite)}
 caption{caption-side:top;text-align:left;padding:0 0 8px;font-size:14px;font-weight:700;color:var(--graphite)}
@@ -446,11 +453,7 @@ html.theme-dark .take-label{color:#d6eef7}
   </div>
 </nav>
 
-<div class="disclaimer" role="alert">
-  <strong>Clinical-use notice</strong>
-  For licensed clinicians as educational decision support. Not a substitute for clinical judgment, specialty consultation, institutional protocol, or current manufacturer labeling. Verify species origin, formulation, excipients, and lot before use. Premedication does not reliably prevent anaphylaxis. Not peer-reviewed. Not FDA-evaluated.
-</div>
-<p class="face-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 30 Aug 2026 1252 hours PDT • Authors: no relevant financial relationships • Funding: none</p>
+<p class="face-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 1 Sep 2026 2312 hours PDT • Authors: no relevant financial relationships • Funding: none</p>
 
 <header class="masthead">
   <div class="logo-strip-wrap">
@@ -475,7 +478,7 @@ html.theme-dark .take-label{color:#d6eef7}
   <div class="masthead-inner">
     <div class="masthead-copy">
     <h1>Tick-Primed Hypersensitivity in Cosmetic and Aesthetic Procedures</h1>
-    <p class="masthead-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 30 Aug 2026 1252 hours PDT</p>
+    <p class="masthead-stamp"><span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 1 Sep 2026 2312 hours PDT</p>
     <p class="authors">Marielle He, MD, MS<sup>1</sup> · Jordan Kai Simmons, MD<sup>2</sup> · Babak Azizzadeh, MD, FACS<sup>1,2</sup></p>
     <p class="affiliation"><sup>1</sup> CENTER for Advanced Facial Plastic Surgery, Beverly Hills, CA<br>
     <sup>2</sup> Division of Otolaryngology–Head and Neck Surgery, Cedars-Sinai Medical Center, Los Angeles, CA</p>
@@ -1167,7 +1170,7 @@ html.theme-dark .take-label{color:#d6eef7}
   <p><strong>Disclosures:</strong> Authors report no financial relationships with the manufacturers of any product named here. <strong>Funding:</strong> None.</p>
   <p><strong>Neutrality:</strong> Brand names are examples that illustrate a material class, not an endorsement and not a brand-level α-gal assay. Products from more than one manufacturer are shown for each class.</p>
   <p><strong>Currency:</strong> Product examples and composition current as of August 2026. Composition and market availability change — verify the current FDA label/IFU (species, source, excipients, lot) before each use.</p>
-  <p><strong>Version:</strong> <span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 30 Aug 2026 1252 hours PDT • Next scheduled review 2027-08-28 • Owner Marielle He, MD, MS.</p>
+  <p><strong>Version:</strong> <span data-release-stamp>v2.0 • reviewed 2026-08-28</span> • Last updated 1 Sep 2026 2312 hours PDT • Next scheduled review 2027-08-28 • Owner Marielle He, MD, MS.</p>
   <p><strong>Meeting:</strong> Will be presented at AAFPRS Las Vegas 2026. Views are the authors’ own and do not represent the Academy. Presentation does not constitute AAFPRS review, approval, or endorsement; the Academy assumes no responsibility for this content. Institutional logos identify affiliations only.</p>
   <p><strong>Content review:</strong> Expert content review applies to v1.2; the v2.0 algorithm was not reviewed.</p>
   <p>Educational; not certified for CME credit. Not medical advice / not a substitute for the approved labeling. <a href="https://tinyurl.com/AGS-FPRS">tinyurl.com/AGS-FPRS</a></p>
@@ -1206,6 +1209,33 @@ document.querySelectorAll("[data-release-stamp]").forEach(el=>{el.textContent=RE
     out.replaceChildren(a);
     if(status) status.textContent="Email shown.";
   });
+})();
+(function(){
+  const unlocked=node=>{
+    const el=node instanceof Element?node:(node&&node.parentElement);
+    return !!(el&&el.closest("input,textarea,select,audio,#contact-addr,a[href]"));
+  };
+  const block=e=>{
+    if(unlocked(e.target)) return;
+    if(e.type==="copy"||e.type==="cut"){
+      const sel=window.getSelection();
+      if(sel&&sel.anchorNode&&unlocked(sel.anchorNode)) return;
+      if(unlocked(document.activeElement)) return;
+    }
+    e.preventDefault();
+  };
+  document.addEventListener("contextmenu",e=>{ if(!unlocked(e.target)) e.preventDefault(); });
+  document.addEventListener("copy",block,true);
+  document.addEventListener("cut",block,true);
+  document.addEventListener("dragstart",block,true);
+  document.addEventListener("selectstart",e=>{ if(!unlocked(e.target)) e.preventDefault(); },true);
+  document.addEventListener("keydown",e=>{
+    const k=e.key.toLowerCase();
+    if(!(e.ctrlKey||e.metaKey)) return;
+    if(unlocked(e.target)||unlocked(document.activeElement)) return;
+    if(k==="c"||k==="x"||k==="a"||k==="s"||k==="p") e.preventDefault();
+  },true);
+  document.querySelectorAll("img").forEach(img=>img.setAttribute("draggable","false"));
 })();
 (function(){
   const root=[document.documentElement,document.body];
@@ -1273,7 +1303,7 @@ document.querySelectorAll('a[href="#audio"],a[href="#poster"],a[href="#poster-tr
       }
       if(!d.open){ d.open=true; restore.push(()=>{ d.open=false; }); }
     });
-    const bits=[".disclaimer",".face-stamp","header.masthead","#main","footer",".rights-band"]
+    const bits=[".face-stamp","header.masthead","#main","footer",".rights-band"]
       .map(sel=>document.querySelector(sel))
       .filter(Boolean)
       .map(el=>el.innerText||"");
