@@ -1,19 +1,81 @@
 <!doctype html>
 <html lang="en">
+<head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>AGS Companion</title>
+<meta name="theme-color" content="#071428">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" href="data:,">
+<title>AGS Clinical Companion</title>
 <style>
-  html,body{margin:0;min-height:100%;background:#073451;color:#f4f7fb;font:16px/1.5 Georgia,serif}
-  main{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px;text-align:center}
-  p{margin:0;max-width:28rem}
-  .kicker{margin-bottom:10px;color:#f0d27a;font:700 12px/1.3 system-ui,sans-serif;letter-spacing:.12em;text-transform:uppercase}
+:root{
+  color-scheme:dark;
+  --navy:#071428;
+  --ivory:#fffcf6;
+  --muted:#e7eef4;
+  --gold:#f0d27a;
+  --line:#4d5d6a;
+  --radius-control:4px;
+  --radius-panel:6px;
+  --radius-section:8px;
+}
+*{box-sizing:border-box}
+html{background:var(--navy)}
+body{
+  margin:0;
+  min-height:100vh;
+  min-height:100svh;
+  display:grid;
+  place-items:center;
+  padding:64px 32px;
+  background:var(--navy);
+  color:var(--ivory);
+  font-family:Arial,"Helvetica Neue",sans-serif;
+  font-size:18px;
+  line-height:1.55;
+}
+main{width:100%;max-width:840px;padding:40px 0;border-top:1px solid var(--gold)}
+header{padding-bottom:36px;border-bottom:1px solid var(--line)}
+h1{margin:0;max-width:24ch;font-size:clamp(34px,4.4vw,48px);line-height:1.15;letter-spacing:-.025em;font-weight:700}
+p{margin:0;max-width:52ch}
+header p{margin-top:20px;font-size:22px;line-height:1.5;color:var(--muted)}
+.release-details{padding-top:32px}
+.release-date{font-size:20px;line-height:1.5;font-weight:700;color:var(--gold)}
+.preview-note{margin-top:12px;font-size:16px;line-height:1.5;color:var(--muted)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:8px;border-radius:var(--radius-control)}
+::selection{background:var(--gold);color:var(--navy)}
+@media(max-width:600px){
+  body{padding:40px 24px}
+  main{padding-block:32px}
+  header{padding-bottom:28px}
+  h1{max-width:16ch}
+  header p{margin-top:20px;font-size:20px}
+  .release-details{padding-top:28px}
+  .release-date{font-size:18px}
+}
+@media print{
+  :root{color-scheme:light}
+  html,body{background:#fff;color:#071428}
+  body{display:block;min-height:0;padding:24px}
+  main{max-width:none;border-top-color:#071428}
+  header{border-bottom-color:#4d5d6a}
+  header p,.release-date,.preview-note{color:#071428}
+}
 </style>
-<main>
-  <p class="kicker">AGS Companion</p>
-  <p>Under construction.</p>
+</head>
+<body>
+<main tabindex="-1" aria-labelledby="cover-title">
+  <header>
+    <h1 id="cover-title">AGS Clinical Companion</h1>
+    <p>Finalized for presentation.</p>
+  </header>
+  <div class="release-details">
+    <p class="release-date">Public release <time datetime="2026-09-22">September 22, 2026.</time></p>
+    <p class="preview-note">Preview access for invited reviewers.</p>
+  </div>
 </main>
+</body>
 </html>
-
