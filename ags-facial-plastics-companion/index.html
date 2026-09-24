@@ -1017,6 +1017,16 @@ body.reading-review .review-form :is(input:not([type="hidden"]),textarea){width:
 /* Preserve the questionnaire's purple active highlight within the slate group. */
 html body.reading-review #rater[open]>summary,
 html body.reading-review #rater>summary:is(:hover,:focus-visible){background:var(--preval-deep);color:#fff}
+/* Black footer with light blue-grey accents; print remains unchanged. */
+@media screen{
+ body.reading-review footer{background:#000;color:#e3e9ed;border-top:2px solid #a9bdcb;padding:20px 22px 12px}
+ body.reading-review footer a,body.reading-review footer strong{color:#bfd3e0}
+ body.reading-review footer a:hover{color:#fff}
+ body.reading-review footer :focus-visible{outline-color:#d7e7f2}
+ body.reading-review footer .review-acknowledgment{border-left-color:#a9bdcb}
+ body.reading-review footer .review-acknowledgment h2{color:#d7e7f2}
+ body.reading-review footer .bottom-strip{border-top-color:#46535c}
+}
 </style>
 </head>
 <body class="reading-review">
