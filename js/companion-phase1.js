@@ -90,6 +90,11 @@ export function bindCompanionPhase1() {
     let id;
     try { id = decodeURIComponent(hash.slice(1)); } catch { return; }
     const target = document.getElementById(id);
+    const historySection = document.getElementById('history');
+    if (historySection) {
+      historySection.hidden = !target || !historySection.contains(target);
+      historySection.classList.toggle('history-revealed', !historySection.hidden);
+    }
     if (!target) return;
     if (target.closest('tr[hidden], li[data-material-id][hidden]')) showAll();
     /** @type {HTMLElement | null} */
@@ -145,16 +150,16 @@ export function bindCompanionPhase1() {
   };
 }
 
-/** Inactive preparation only. Reveal and delivery require verified service configuration. */
+/** Visible feedback preparation; delivery remains disabled until a service is configured. */
 export function bindAttendeeFeedback() {
   const form = document.getElementById('review-form');
   const fields = document.getElementById('review-fields');
   const status = document.getElementById('review-status');
   if (!(form instanceof HTMLFormElement) || !(fields instanceof HTMLFieldSetElement) || !status || form.dataset.bound === 'true') return;
   form.dataset.bound = 'true';
-  const unavailable = 'Feedback collection is unavailable.';
+  const unavailable = 'Feedback submission is not yet available. Entries are not saved.';
   form.reset();
-  fields.disabled = true;
+  fields.disabled = false;
   const version = document.getElementById('review-version');
   if (version instanceof HTMLInputElement) version.value = document.querySelector('[data-release-stamp]')?.textContent?.trim() || '';
   form.addEventListener('submit', event => {

@@ -1000,6 +1000,23 @@ body.reading-review #materials-table :is(th,td):nth-child(n+3){border-left:1px s
 }
 @media print{body.reading-review sup{font-size:7pt}}
 
+/* Version history is available through its existing link only. */
+body.reading-review #history[hidden],body.reading-review #history:not(:target):not(.history-revealed){display:none !important}
+body.reading-review #history:target,body.reading-review #history.history-revealed{display:block}
+/* Supporting sections share a restrained slate treatment. */
+body.reading-review :is(#reviews,#rater,#instrument,#references,#history)>summary{background:#e4eaf0;color:#223746}
+body.reading-review :is(#reviews,#rater,#instrument,#references,#history)>summary .section-num{color:inherit;background:transparent}
+html[data-theme="dark"] body.reading-review :is(#reviews,#rater,#instrument,#references,#history)>summary{background:#293b49;color:#eef2f5}
+body.reading-review #instrument{padding:0;overflow:hidden}
+body.reading-review #instrument>summary{padding:15px 22px;margin:0;font-weight:600}
+body.reading-review #instrument>:not(summary){margin-left:22px;margin-right:22px}
+body.reading-review .review-form{max-width:680px}
+body.reading-review .review-form fieldset{border:1px solid var(--line);border-radius:6px;padding:16px}
+body.reading-review .review-form label{font-weight:400;margin:12px 0 6px}
+body.reading-review .review-form :is(input:not([type="hidden"]),textarea){width:100%;box-sizing:border-box;border:1px solid var(--line);border-radius:4px;background:var(--ivory);color:var(--ink)}
+/* Preserve the questionnaire's purple active highlight within the slate group. */
+html body.reading-review #rater[open]>summary,
+html body.reading-review #rater>summary:is(:hover,:focus-visible){background:var(--preval-deep);color:#fff}
 </style>
 </head>
 <body class="reading-review">
@@ -1034,7 +1051,7 @@ body.reading-review #materials-table :is(th,td):nth-child(n+3){border-left:1px s
           <a href="#disclosures">Disclosures</a>
           <a href="#abbrev">Abbreviations</a>
           <a href="#rater">Prevalidation questionnaire</a>
-          <a href="#reviews" hidden>Opinion / Feedback</a>
+          <a href="#reviews">Opinion / Feedback</a>
         </nav>
       </details>
     </div>
@@ -1391,6 +1408,117 @@ body.reading-review #materials-table :is(th,td):nth-child(n+3){border-left:1px s
   </div>
 </details>
 
+<details class="section" id="narration">
+  <summary><span class="section-num" aria-hidden="true">¶</span><span role="heading" aria-level="2">Audio / narration</span></summary>
+  <div class="section-body">
+    <h2 class="print-appendix-title">Poster and companion narration</h2>
+    <p class="small">Author narration only.</p>
+    <p class="small">Poster narration is not a complete accessible equivalent of the submitted poster.</p>
+    <section class="narration-pair" aria-labelledby="poster-narration">
+      <h3 id="poster-narration">Poster narration</h3>
+      <div id="poster-audio-slot" aria-describedby="poster-audio-status" data-author-audio="poster">
+        <p id="poster-audio-status" class="audio-status">Final author recording · 5 min 30 sec.</p>
+        <audio id="author-poster-player" class="audio-player" controls preload="none" aria-label="Poster narration by Marielle He" aria-describedby="poster-audio-status poster-recording-note" src="./audio/author-poster.m4a?v=b9d7a194359c">Your browser does not support audio playback. <a href="./audio/author-poster.m4a?v=b9d7a194359c">Open poster audio</a>.</audio>
+        <p id="poster-recording-note" class="small">Use the written companion for current clinical guidance.</p>
+      </div>
+    </section>
+    <section class="narration-pair" aria-labelledby="companion-narration">
+      <h3 id="companion-narration">Companion narration</h3>
+      <div id="companion-audio-slot" aria-describedby="companion-audio-status" data-author-audio="companion">
+        <p id="companion-audio-status" class="audio-status">Final author recording · 4 min 57 sec.</p>
+        <audio id="author-companion-player" class="audio-player" controls preload="none" aria-label="Companion narration by Marielle He" aria-describedby="companion-audio-status" src="./audio/author-companion.m4a?v=47927a9fd219">Your browser does not support audio playback. <a href="./audio/author-companion.m4a?v=47927a9fd219">Open companion audio</a>.</audio>
+      </div>
+    </section>
+  </div>
+</details>
+
+<details class="section" id="reviews">
+  <summary><span class="section-num" aria-hidden="true">•</span><span role="heading" aria-level="2">Opinion / Feedback</span></summary>
+  <div class="section-body" id="reviews-root">
+    <p>Name and email are optional. Please omit patient information.</p>
+    <p id="review-status" role="status" aria-live="polite">Feedback submission is not yet available. Entries are not saved.</p>
+    <form class="review-form" id="review-form" method="dialog" autocomplete="off" aria-describedby="review-status">
+      <fieldset id="review-fields">
+        <legend>Feedback to improve this companion</legend>
+        <label for="review-feedback">What would make this more useful in practice?</label>
+        <textarea id="review-feedback" name="feedback" rows="4" required></textarea>
+        <label for="review-name">Name (optional)</label>
+        <input id="review-name" name="name" type="text" autocomplete="name">
+        <label for="review-email">Email (optional)</label>
+        <input id="review-email" name="email" type="email" autocomplete="email">
+        <input id="review-version" type="hidden" name="companion_version" value="v2.0">
+        <div hidden aria-hidden="true"><label for="review-website">Website</label><input id="review-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+        <div class="feedback-actions"><button type="submit" disabled>Send feedback</button></div>
+      </fieldset>
+    </form>
+  </div>
+</details>
+
+<details class="section rater-section" id="rater">
+  <summary><span class="section-num" aria-hidden="true">✓</span><span role="heading" aria-level="2">Prevalidation questionnaire</span><span class="questionnaire-status">View-only</span></summary>
+  <div class="section-body" id="rater-root">
+    <p>Documentation of the planned 56-item instrument. Responses cannot be entered or submitted here.</p>
+    <p><a href="./questionnaire/reference.html">Read the questionnaire as accessible text</a></p>
+    <p class="small">Newly paginated reference copy in fixed preview order. <a href="./questionnaire/reference.pdf">View questionnaire PDF</a></p>
+    <figure class="questionnaire-viewer" id="questionnaire-viewer" data-page-count="5">
+      <div class="questionnaire-controls" id="questionnaire-controls" role="group" aria-label="Questionnaire pages" hidden>
+        <button type="button" id="questionnaire-previous" aria-disabled="true">Previous page</button>
+        <p id="questionnaire-page-status" role="status" aria-live="polite" aria-atomic="true">Page 1 of 5</p>
+        <button type="button" id="questionnaire-next" aria-disabled="false">Next page</button>
+      </div>
+      <a class="questionnaire-page" id="questionnaire-page" href="./questionnaire/page-01.png" aria-label="Enlarge page 1 of 5"><img id="questionnaire-image" src="./questionnaire/page-01.png" width="2550" height="3300" alt="Prevalidation questionnaire, page 1 of 5." loading="lazy" decoding="async"></a>
+      <figcaption><button type="button" id="questionnaire-enlarge" aria-haspopup="dialog" hidden>Enlarge page</button></figcaption>
+    </figure>
+    <noscript><p>Page navigation requires JavaScript. All 56 items are available in the accessible text and PDF linked above.</p></noscript>
+    <p class="questionnaire-print-note">Print the complete questionnaire from the accessible text or PDF linked above.</p>
+    <dialog class="questionnaire-dialog" id="questionnaire-dialog" aria-modal="true" aria-labelledby="questionnaire-dialog-title">
+      <div class="questionnaire-dialog-header">
+        <h3 id="questionnaire-dialog-title">Prevalidation questionnaire — Page 1 of 5</h3>
+        <div class="questionnaire-controls" role="group" aria-label="Page enlargement">
+          <button type="button" id="questionnaire-zoom-out" aria-disabled="true">Zoom out</button>
+          <span id="questionnaire-zoom-status" role="status" aria-live="polite" aria-atomic="true">100%</span>
+          <button type="button" id="questionnaire-zoom-in" aria-disabled="false">Zoom in</button>
+          <button type="button" id="questionnaire-close">Close</button>
+        </div>
+      </div>
+      <div class="questionnaire-zoom-viewport" id="questionnaire-zoom-viewport" tabindex="0" role="region" aria-label="Enlarged questionnaire page; use plus and minus keys to zoom and arrow keys to scroll">
+        <img id="questionnaire-enlarged-image" alt="Prevalidation questionnaire, page 1 of 5." width="2550" height="3300">
+      </div>
+    </dialog>
+  </div>
+</details>
+
+<details class="questionnaire-provenance" id="instrument">
+  <summary>Questionnaire provenance · item-source mapping</summary>
+  <h3>Methodology (prevalidation design)</h3>
+<ol class="references">
+      <li id="mref1">Brasel K, Haider A, Haukoos J. Practical guide to survey research. <em>JAMA Surg</em>. 2020;155(4):351-352. doi:<a href="https://doi.org/10.1001/jamasurg.2019.4401">10.1001/jamasurg.2019.4401</a>.</li>
+      <li id="mref2">Ziniel SI, McDaniel CE, Beck J. Bringing scientific rigor to survey design in health care research. <em>Hosp Pediatr</em>. 2019;9(10):743-748. doi:<a href="https://doi.org/10.1542/hpeds.2019-0101">10.1542/hpeds.2019-0101</a>.</li>
+      <li id="mref3">Prior ME, Hamzah JC, Francis JJ, et al. Pre-validation methods for developing a patient reported outcome instrument. <em>BMC Med Res Methodol</em>. 2011;11:179. doi:<a href="https://doi.org/10.1186/1471-2288-11-179">10.1186/1471-2288-11-179</a>.</li>
+      <li id="mref4">Terwee CB, Prinsen CAC, Chiarotto A, et al. COSMIN methodology for evaluating the content validity of patient-reported outcome measures: a Delphi study. <em>Qual Life Res</em>. 2018;27(5):1159-1170. doi:<a href="https://doi.org/10.1007/s11136-018-1829-0">10.1007/s11136-018-1829-0</a>.</li>
+      <li id="mref5">Mokkink L, Herbelet S, Tuinman P, Terwee C. Content validity: judging the relevance, comprehensiveness and comprehensibility of an outcome measurement instrument - a COSMIN perspective. <em>J Clin Epidemiol</em>. 2025.</li>
+      <li id="mref6">Gagnier JJ, de Arruda GT, Terwee CB, Mokkink LB. COSMIN reporting guideline for studies on measurement properties of patient-reported outcome measures: version 2.0. <em>Qual Life Res</em>. 2025.</li>
+      <li id="mref7">Streiner DL, Kottner J. Recommendations for reporting the results of studies of instrument and scale development and testing. <em>J Adv Nurs</em>. 2014;70(9):1970-1979. doi:<a href="https://doi.org/10.1111/jan.12402">10.1111/jan.12402</a>.</li>
+    </ol>
+<h3>Borrowed or adapted instruments</h3><p>None.</p>
+<ul class="provenance-items"><li><dl><dt>Item</dt><dd>B1</dd><dt>Domain</dt><dd>Material flag</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>1, 13, 14, 23, 24, 25</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>B2</dd><dt>Domain</dt><dd>Material flag</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>22, 26</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>B3</dd><dt>Domain</dt><dd>Material flag</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>3, 16, 17, 22</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>B4</dd><dt>Domain</dt><dd>Material flag</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>22, 24</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>B5</dd><dt>Domain</dt><dd>Material flag</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>36, 33, 32</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>B6</dd><dt>Domain</dt><dd>Screening</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>3, 5, 9, 12, 20, 25</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>B7</dd><dt>Domain</dt><dd>Screening</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>1, 3, 5, 20</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>B8</dd><dt>Domain</dt><dd>Substitution</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>2, 3, 9, 26, 28</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>B9</dd><dt>Domain</dt><dd>Management</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>4, 5, 3, 25</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>B10</dd><dt>Domain</dt><dd>Workflow</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>m1, m4</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>C1-C5</dd><dt>Domain</dt><dd>Lawshe essential</dd><dt>Origin</dt><dd>De novo; CVR format</dd><dt>Supporting refs</dt><dd>m1, m4</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>D1-D3</dd><dt>Domain</dt><dd>Comprehensiveness</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>m4, m5, 26, 28</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>E1-E4</dd><dt>Domain</dt><dd>Face / clarity</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>m2, m4, m5</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>F1-F5</dd><dt>Domain</dt><dd>Usability</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>m1, m2</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>G1-G2</dd><dt>Domain</dt><dd>Safety</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>4, 5, 9, 3</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
+<li><dl><dt>Item</dt><dd>H1-H3</dd><dt>Domain</dt><dd>Overall</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>m3, m7</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li></ul>
+</details>
+
 <details class="section" id="references">
   <summary><span class="section-num" aria-hidden="true">#</span><span role="heading" aria-level="2">Full References</span></summary>
   <div class="section-body">
@@ -1440,61 +1568,6 @@ body.reading-review #materials-table :is(th,td):nth-child(n+3){border-left:1px s
   </div>
 </details>
 
-<details class="section" id="narration">
-  <summary><span class="section-num" aria-hidden="true">¶</span><span role="heading" aria-level="2">Audio / narration</span></summary>
-  <div class="section-body">
-    <h2 class="print-appendix-title">Poster and companion narration</h2>
-    <p class="small">Author narration only.</p>
-    <p class="small">Poster narration is not a complete accessible equivalent of the submitted poster.</p>
-    <section class="narration-pair" aria-labelledby="poster-narration">
-      <h3 id="poster-narration">Poster narration</h3>
-      <div id="poster-audio-slot" aria-describedby="poster-audio-status" data-author-audio="poster">
-        <p id="poster-audio-status" class="audio-status">Final author recording · 5 min 30 sec.</p>
-        <audio id="author-poster-player" class="audio-player" controls preload="none" aria-label="Poster narration by Marielle He" aria-describedby="poster-audio-status poster-recording-note" src="./audio/author-poster.m4a?v=b9d7a194359c">Your browser does not support audio playback. <a href="./audio/author-poster.m4a?v=b9d7a194359c">Open poster audio</a>.</audio>
-        <p id="poster-recording-note" class="small">Use the written companion for current clinical guidance.</p>
-      </div>
-    </section>
-    <section class="narration-pair" aria-labelledby="companion-narration">
-      <h3 id="companion-narration">Companion narration</h3>
-      <div id="companion-audio-slot" aria-describedby="companion-audio-status" data-author-audio="companion">
-        <p id="companion-audio-status" class="audio-status">Final author recording · 4 min 57 sec.</p>
-        <audio id="author-companion-player" class="audio-player" controls preload="none" aria-label="Companion narration by Marielle He" aria-describedby="companion-audio-status" src="./audio/author-companion.m4a?v=47927a9fd219">Your browser does not support audio playback. <a href="./audio/author-companion.m4a?v=47927a9fd219">Open companion audio</a>.</audio>
-      </div>
-    </section>
-  </div>
-</details>
-
-<details class="questionnaire-provenance" id="instrument">
-  <summary>Questionnaire provenance · item-source mapping</summary>
-  <h3>Methodology (prevalidation design)</h3>
-<ol class="references">
-      <li id="mref1">Brasel K, Haider A, Haukoos J. Practical guide to survey research. <em>JAMA Surg</em>. 2020;155(4):351-352. doi:<a href="https://doi.org/10.1001/jamasurg.2019.4401">10.1001/jamasurg.2019.4401</a>.</li>
-      <li id="mref2">Ziniel SI, McDaniel CE, Beck J. Bringing scientific rigor to survey design in health care research. <em>Hosp Pediatr</em>. 2019;9(10):743-748. doi:<a href="https://doi.org/10.1542/hpeds.2019-0101">10.1542/hpeds.2019-0101</a>.</li>
-      <li id="mref3">Prior ME, Hamzah JC, Francis JJ, et al. Pre-validation methods for developing a patient reported outcome instrument. <em>BMC Med Res Methodol</em>. 2011;11:179. doi:<a href="https://doi.org/10.1186/1471-2288-11-179">10.1186/1471-2288-11-179</a>.</li>
-      <li id="mref4">Terwee CB, Prinsen CAC, Chiarotto A, et al. COSMIN methodology for evaluating the content validity of patient-reported outcome measures: a Delphi study. <em>Qual Life Res</em>. 2018;27(5):1159-1170. doi:<a href="https://doi.org/10.1007/s11136-018-1829-0">10.1007/s11136-018-1829-0</a>.</li>
-      <li id="mref5">Mokkink L, Herbelet S, Tuinman P, Terwee C. Content validity: judging the relevance, comprehensiveness and comprehensibility of an outcome measurement instrument - a COSMIN perspective. <em>J Clin Epidemiol</em>. 2025.</li>
-      <li id="mref6">Gagnier JJ, de Arruda GT, Terwee CB, Mokkink LB. COSMIN reporting guideline for studies on measurement properties of patient-reported outcome measures: version 2.0. <em>Qual Life Res</em>. 2025.</li>
-      <li id="mref7">Streiner DL, Kottner J. Recommendations for reporting the results of studies of instrument and scale development and testing. <em>J Adv Nurs</em>. 2014;70(9):1970-1979. doi:<a href="https://doi.org/10.1111/jan.12402">10.1111/jan.12402</a>.</li>
-    </ol>
-<h3>Borrowed or adapted instruments</h3><p>None.</p>
-<ul class="provenance-items"><li><dl><dt>Item</dt><dd>B1</dd><dt>Domain</dt><dd>Material flag</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>1, 13, 14, 23, 24, 25</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>B2</dd><dt>Domain</dt><dd>Material flag</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>22, 26</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>B3</dd><dt>Domain</dt><dd>Material flag</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>3, 16, 17, 22</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>B4</dd><dt>Domain</dt><dd>Material flag</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>22, 24</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>B5</dd><dt>Domain</dt><dd>Material flag</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>36, 33, 32</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>B6</dd><dt>Domain</dt><dd>Screening</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>3, 5, 9, 12, 20, 25</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>B7</dd><dt>Domain</dt><dd>Screening</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>1, 3, 5, 20</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>B8</dd><dt>Domain</dt><dd>Substitution</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>2, 3, 9, 26, 28</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>B9</dd><dt>Domain</dt><dd>Management</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>4, 5, 3, 25</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>B10</dd><dt>Domain</dt><dd>Workflow</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>m1, m4</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>C1-C5</dd><dt>Domain</dt><dd>Lawshe essential</dd><dt>Origin</dt><dd>De novo; CVR format</dd><dt>Supporting refs</dt><dd>m1, m4</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>D1-D3</dd><dt>Domain</dt><dd>Comprehensiveness</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>m4, m5, 26, 28</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>E1-E4</dd><dt>Domain</dt><dd>Face / clarity</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>m2, m4, m5</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>F1-F5</dd><dt>Domain</dt><dd>Usability</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>m1, m2</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>G1-G2</dd><dt>Domain</dt><dd>Safety</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>4, 5, 9, 3</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li>
-<li><dl><dt>Item</dt><dd>H1-H3</dd><dt>Domain</dt><dd>Overall</dd><dt>Origin</dt><dd>De novo</dd><dt>Supporting refs</dt><dd>m3, m7</dd><dt>I-CVI</dt><dd>-</dd><dt>Disposition</dt><dd>Pending</dd></dl></li></ul>
-</details>
-
 <details class="section" id="history">
   <summary><span class="section-num" aria-hidden="true">v</span><span role="heading" aria-level="2">Version history</span></summary>
   <div class="section-body">
@@ -1508,57 +1581,6 @@ body.reading-review #materials-table :is(th,td):nth-child(n+3){border-left:1px s
     </ul>
   </div>
 </details>
-<details class="section" id="reviews" hidden>
-  <summary><span class="section-num" aria-hidden="true">•</span><span role="heading" aria-level="2">Opinion / Feedback</span></summary>
-  <div class="section-body" id="reviews-root">
-    <p>No name or email is requested. Please omit patient information and personal details.</p>
-    <p id="review-status" role="status" aria-live="polite">Feedback collection is unavailable.</p>
-    <form class="review-form" id="review-form" autocomplete="off" aria-describedby="review-status">
-      <fieldset id="review-fields" disabled>
-        <legend>Feedback to improve this companion</legend>
-        <label for="review-feedback">What would make this more useful in practice?</label>
-        <textarea id="review-feedback" name="feedback" rows="4" required></textarea>
-        <input id="review-version" type="hidden" name="companion_version" value="v2.0">
-        <div hidden aria-hidden="true"><label for="review-website">Website</label><input id="review-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-        <div class="feedback-actions"><button type="submit" disabled>Send feedback</button></div>
-      </fieldset>
-    </form>
-  </div>
-</details>
-
-<details class="section rater-section" id="rater">
-  <summary><span class="section-num" aria-hidden="true">✓</span><span role="heading" aria-level="2">Prevalidation questionnaire</span><span class="questionnaire-status">View-only</span></summary>
-  <div class="section-body" id="rater-root">
-    <p>Documentation of the planned 56-item instrument. Responses cannot be entered or submitted here.</p>
-    <p><a href="./questionnaire/reference.html">Read the questionnaire as accessible text</a></p>
-    <p class="small">Newly paginated reference copy in fixed preview order. <a href="./questionnaire/reference.pdf">View questionnaire PDF</a></p>
-    <figure class="questionnaire-viewer" id="questionnaire-viewer" data-page-count="5">
-      <div class="questionnaire-controls" id="questionnaire-controls" role="group" aria-label="Questionnaire pages" hidden>
-        <button type="button" id="questionnaire-previous" aria-disabled="true">Previous page</button>
-        <p id="questionnaire-page-status" role="status" aria-live="polite" aria-atomic="true">Page 1 of 5</p>
-        <button type="button" id="questionnaire-next" aria-disabled="false">Next page</button>
-      </div>
-      <a class="questionnaire-page" id="questionnaire-page" href="./questionnaire/page-01.png" aria-label="Enlarge page 1 of 5"><img id="questionnaire-image" src="./questionnaire/page-01.png" width="2550" height="3300" alt="Prevalidation questionnaire, page 1 of 5." loading="lazy" decoding="async"></a>
-      <figcaption><button type="button" id="questionnaire-enlarge" aria-haspopup="dialog" hidden>Enlarge page</button></figcaption>
-    </figure>
-    <noscript><p>Page navigation requires JavaScript. All 56 items are available in the accessible text and PDF linked above.</p></noscript>
-    <p class="questionnaire-print-note">Print the complete questionnaire from the accessible text or PDF linked above.</p>
-    <dialog class="questionnaire-dialog" id="questionnaire-dialog" aria-modal="true" aria-labelledby="questionnaire-dialog-title">
-      <div class="questionnaire-dialog-header">
-        <h3 id="questionnaire-dialog-title">Prevalidation questionnaire — Page 1 of 5</h3>
-        <div class="questionnaire-controls" role="group" aria-label="Page enlargement">
-          <button type="button" id="questionnaire-zoom-out" aria-disabled="true">Zoom out</button>
-          <span id="questionnaire-zoom-status" role="status" aria-live="polite" aria-atomic="true">100%</span>
-          <button type="button" id="questionnaire-zoom-in" aria-disabled="false">Zoom in</button>
-          <button type="button" id="questionnaire-close">Close</button>
-        </div>
-      </div>
-      <div class="questionnaire-zoom-viewport" id="questionnaire-zoom-viewport" tabindex="0" role="region" aria-label="Enlarged questionnaire page; use plus and minus keys to zoom and arrow keys to scroll">
-        <img id="questionnaire-enlarged-image" alt="Prevalidation questionnaire, page 1 of 5." width="2550" height="3300">
-      </div>
-    </dialog>
-  </div>
-</details>
 </main>
 
 <footer>
@@ -1568,7 +1590,7 @@ body.reading-review #materials-table :is(th,td):nth-child(n+3){border-left:1px s
     </section>
   <div class="bottom-strip">
     <p>Marielle He, MD, MS · <span data-release-stamp>v2.0</span> · <a href="#disclosures">Responsibility and disclosures</a> · <a href="#ack-review">Version 1.2 content review</a> · <a href="#history">Version history</a></p>
-    <p>Educational; not certified for continuing medical education (CME) credit. Not medical advice / not a substitute for the approved labeling. <a href="https://tinyurl.com/AGS-FPRS">tinyurl.com/AGS-FPRS</a> · <a href="https://curiousmarielle-gif.github.io/ags-facial-plastics-companion/">Direct GitHub Pages link</a></p>
+    <p>Educational; not certified for continuing medical education (CME) credit. Not medical advice / not a substitute for the approved labeling. <a href="https://tinyurl.com/AGS-FPRS">tinyurl.com/AGS-FPRS</a></p>
     <p class="copyright">© 2026 Marielle He. All rights reserved.</p>
   </div>
 </footer>
@@ -1641,7 +1663,7 @@ window.addEventListener("afterprint",()=>{
 });
 </script>
 <script type="module">
-import { bindCompanionPhase1, bindAttendeeFeedback, bindQuestionnaireViewer } from "./js/companion-phase1.js";
+import { bindCompanionPhase1, bindAttendeeFeedback, bindQuestionnaireViewer } from "./js/companion-phase1.js?v=e1598b480951";
 bindCompanionPhase1();
 bindAttendeeFeedback();
 bindQuestionnaireViewer();
